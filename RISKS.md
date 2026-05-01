@@ -30,42 +30,46 @@
 
 ---
 
-### R-002 — No cultural reviewer secured
+### R-002 — No Digambara cultural reviewer secured
 **P:** 4 / **I:** 5 / **Score:** 20 (CRITICAL)
 
-**What:** Mayank cannot find or secure a willing, qualified cultural reviewer (D-004). Without one, content cannot publish under our quality bar.
+**What:** Mayank cannot find or secure a willing, qualified Digambara cultural reviewer (D-004). Without one, content cannot publish under our quality bar.
 
-**Specific scenario:** Project completes through Sprint 3 with no reviewer; Sprint 4 gate cannot open; project stalls indefinitely.
+**Specific scenario:** Project completes through Sprint 4 with no reviewer; Sprint 5 gate cannot open; project stalls indefinitely.
 
 **Mitigation:**
-- Treat this as Sprint 0 hard blocker — do not start Sprint 2 (content production) without confirmation
-- If no individual reviewer found, fallback options:
-  1. Reach out to L. D. Institute of Indology (Ahmedabad) for academic review
-  2. Reach out to Jaipur-based Bhattaraka traditions
-  3. Pay an honorarium ($100-500) to a willing scholar
-  4. Worst case: defer publish until reviewer found; build privately
+- Hard blocker before Sprint 5 (content expansion); Sprints 1-4 can proceed
+- Digambara-specific reviewer profiles to pursue:
+  1. Pandit / vidwat at any Digambara *peeth* — Shravanabelagola, Mudbidri, Humbach
+  2. Mahavir Aradhana Kendra, Koba — accepts review requests for serious projects
+  3. Bharatiya Jnanpith publication board — established translators, often willing to review
+  4. Pt. Phool Chand Shastri lineage scholars (Hindi belt)
+  5. Any *Bhattaraka* (for Bispanthi-leaning review) or senior *vidwat* (for Terapanthi-leaning review)
+  6. Indian Council for Philosophical Research scholars working on Digambara philosophy
+  7. Pay an honorarium ($100-500) to a willing scholar
+  8. Worst case: defer publish until reviewer found; build privately
 
 **Owner:** Mayank — this is the user's responsibility, not Claude's
 
 ---
 
-### R-003 — Tradition mishandling (Digambara/Shvetambara)
-**P:** 3 / **I:** 5 / **Score:** 15 (HIGH)
+### R-003 — Digambara sub-tradition mishandling (Bispanthi vs Terapanthi)
+**P:** 2 / **I:** 4 / **Score:** 8 (was 15; lowered after Digambara-focus narrowed the surface area)
 
-**What:** Selecting one tradition's reading silently, mis-stating where they differ, or misattributing a text or interpretation. Both communities are protective of their distinctness.
-
-**Specific failure modes:**
-- Showing Tattvartha Sutra Chapter 1 with only one tradition's interpretation
-- Implying Mahavir was/wasn't married without marking the disagreement
-- Using Shvetambara *Kalpa Sutra* as authoritative for Digambara biographical points
-- Spelling/transliteration biased to one tradition's conventions
+**What:** Phase 1 corpus is sub-tradition-neutral, so direct mishandling is unlikely. But subtle issues can surface:
+- About page voice presupposes one sub-tradition without intending to
+- Glossary entries describing Bhattaraka authority lean one way
+- Phase 2 aarti/puja content (when added) gets done in only one sub-tradition's form
 
 **Mitigation:**
-- D-002 forces an explicit decision on tradition presentation
-- GLOSSARY.md notes tradition differences for every relevant term
-- Reviewer ideally has familiarity with both traditions, or we engage one reviewer per tradition
+- Phase 1 corpus chosen to be sub-tradition-neutral (C-014 confirms)
+- Mayank to clarify own sub-tradition before Phase 2 content
+- About page wording reviewed by reviewer specifically for sub-tradition neutrality
+- If reviewer is strongly one sub-tradition, get a brief second-pass review from the other sub-tradition for About page only
 
-**Owner:** Mayank (D-002 decision), reviewer (validation)
+**Note on lowered probability:** R-003 was about Digambara/Shvetambara mishandling, which is no longer a risk because we explicitly do not present both. The risk now is *within* Digambara — much narrower surface area.
+
+**Owner:** Mayank (sub-tradition disclosure), reviewer (validation)
 
 ---
 

@@ -7,33 +7,41 @@
 
 ## What we are building
 
-A digital library for reading and learning Jain scriptural texts — stotras, sutras, and prayers — with parallel translations and meanings, optimized for daily reading on mobile and laptop.
+A digital library for reading and learning **Digambara Jain** scriptural texts — stotras, sutras, and philosophical works — with parallel translations and meanings, optimized for daily reading on mobile and laptop.
 
-The goal is a respectful, accurate, beautifully readable resource that helps people read, understand, and learn Jain texts. Reference quality bar: Sefaria.org, Quran.com, vedabase.io. Nothing of this quality currently exists for Jain texts.
+The goal is a respectful, accurate, beautifully readable resource that helps Digambara practitioners and learners read, understand, and learn the canonical and devotional texts of the tradition. Reference quality bar: Sefaria.org, Quran.com, vedabase.io. Nothing of this quality currently exists for Jain texts of any tradition.
 
 ## Why this project exists
 
-Existing Jain digital resources (jainworld.com, jainelibrary.org, JinVaani, etc.) hold the content but have outdated reading experiences. A modern reader who wants to learn Bhaktamara Stotra verse-by-verse, with Devanagari + transliteration + Hindi meaning + English meaning, on their phone, with audio, has no good option today. This fills that gap.
+Existing Jain digital resources (jainworld.com, jainelibrary.org, JinVaani, etc.) hold the content but have outdated reading experiences. A Digambara practitioner who wants to learn Bhaktamara Stotra (48-verse Digambara version) verse-by-verse, or study Samayasara, or read Chhah Dhala daily — with Devanagari + transliteration + Hindi meaning + English meaning, on their phone, with audio — has no good option today. This fills that gap for the Digambara tradition specifically.
+
+The owner (Mayank) is himself a Digambara practitioner building this resource for his own community.
+
+## Editorial focus
+
+This is a **Digambara-focused** library. It presents Digambara texts in their Digambara recensions and interpretations. It does not present Shvetambara variants side-by-side. The library is openly honest about its focus on the Home page, About page, and individual text intros — readers from other traditions are welcome to use the resource but are told upfront what they are reading.
+
+(See DECISIONS.md C-015 for the rationale.)
 
 ## Audience
 
-Primary: Jain practitioners (lay followers, *shravak* and *shravika*) who want to read and learn texts daily, especially those who can't read Devanagari fluently or need translations to understand meaning.
+Primary: Digambara Jain practitioners (lay followers, *shravak* and *shravika*) who want to read and learn texts daily, especially those who can't read Devanagari fluently or need translations to understand meaning.
 
-Secondary: Non-Jain learners and scholars who want accurate, accessible scriptural texts.
+Secondary: Students of Jain philosophy, scholars researching Digambara texts, Shvetambara practitioners curious about Digambara forms, non-Jain learners.
 
-We are not building for: children specifically, academic researchers needing critical apparatus, or temple ritual use. Those are different products.
+We are not building for: children specifically (that's a different product), academic researchers needing critical apparatus (manuscript variants, philological notes), or temple ritual use (aartis, full pujas — Phase 2 candidate).
 
 ## Scope (Phase 1)
 
 In scope:
-- 10 essential texts (final list pending Decision #1) — selected for breadth and devotional importance
-- Three reading modes: Read / Study / Listen
-- Sanskrit (Devanagari) + romanized transliteration (IAST) + Hindi translation + English translation + Hindi meaning + English meaning, per verse
+- 10 Digambara texts (locked in DECISIONS.md C-014) — Navkar, Chattari Mangalam, Bhaktamara (48), Mangalashtak, Chhah Dhala, Tattvartha Sutra Ch.1, Dravya Sangraha, Ratnakaranda Shravakachara, Samayasara (selected), Ishtopadesh
+- Three reading modes: *Pathan* (read) / *Adhyayan* (study) / *Shravan* (listen)
+- Sanskrit/Prakrit (Devanagari) + romanized transliteration (IAST) + Hindi translation + English translation + Hindi meaning (*bhavarth*) + English meaning, per verse
 - Mobile-first PWA, installable, works offline
 - Bookmarks, reading progress, adjustable text size — all client-side, no accounts
 - Verse-level permalinks for sharing and citation
 - Search across all texts
-- Cultural reviewer pass on all content before publish
+- Cultural reviewer pass (Digambara reviewer) on all content before publish
 
 Out of scope (Phase 1):
 - Audio recordings (architecture supports it; recording itself is Phase 1.5)
@@ -64,10 +72,10 @@ Phase 1 ships when:
 
 ## Stakeholders
 
-- **Owner / decision-maker:** Mayank Pande
+- **Owner / decision-maker:** Mayank Pande (Digambara practitioner)
 - **Builder:** Claude (full responsibility for design, content drafting, code, deployment)
-- **Cultural reviewer:** TBD (Decision #4) — required for content sign-off before any publish
-- **Test readers:** 5 people from target audience for usability validation pre-launch
+- **Cultural reviewer:** TBD (D-004) — must be a Digambara scholar/elder/pandit. Required for content sign-off before any publish.
+- **Test readers:** 5 people from target audience (Digambara community) for usability validation pre-launch
 
 ## Working agreements
 

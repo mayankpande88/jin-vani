@@ -91,19 +91,20 @@ A sprint cannot be marked done until all acceptance criteria pass and the gate i
 ## Sprint 2 — Content Pipeline & Bhaktamara MVP Content
 
 **Status:** PENDING
-**Goal:** Build the Next.js scaffold with the content pipeline, and produce verified content for Bhaktamara Stotra (44 verses, all layers).
+**Goal:** Build the Next.js scaffold with the content pipeline, and produce verified content for **Bhaktamara Stotra (48-verse Digambara version)**, all layers.
 
 ### Deliverables
 - Next.js 15 project scaffold with Tailwind, MDX, App Router
 - Content schema: MDX frontmatter spec for texts and verses
 - Build pipeline: content validation, transliteration linting, broken-link check
-- **Bhaktamara Stotra full content:**
-  - 44 verses, each with: Devanagari, IAST transliteration, Hindi translation, English translation, Hindi meaning, English meaning
-  - Author intro (Acharya Manatunga)
-  - Text intro: history, significance, traditional usage, sources
-  - Citations: every translation cites its source
+- **Bhaktamara Stotra (Digambara, 48 verses) full content:**
+  - 48 verses, each with: Devanagari, IAST transliteration, Hindi translation, English translation, Hindi meaning (*bhavarth*), English meaning
+  - Verify the canonical placement of the 4 verses unique to the Digambara recension against a Bharatiya Jnanpith or Mahavir Aradhana Kendra edition
+  - Author intro (Acharya Manatunga, traditional dating, Manatunga legend)
+  - Text intro: significance in Digambara tradition, recitation practice, the *Manatunga* legend (chains breaking on each invocation), sources used
+  - Citations: every translation cites its source (PD edition + year, or fresh translation)
   - Word-by-word breakdown for verses 1-5 (validate the format; expand to all in Sprint 3)
-- Cultural reviewer pass on Bhaktamara content — sign-off documented
+- Digambara reviewer pass on Bhaktamara content — sign-off documented
 
 ### Acceptance criteria
 - Bhaktamara MDX file passes schema validation

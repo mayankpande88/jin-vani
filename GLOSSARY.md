@@ -2,7 +2,9 @@
 
 **Purpose:** This document defines every Jain term used in product copy and content, and lists terms we explicitly will *not* use because they carry incorrect meanings in the Jain context. Religious precision is non-negotiable.
 
-**Status:** Draft by Claude — flagged terms require cultural reviewer sign-off before publish.
+**Editorial focus:** This library is **Digambara-focused** (DECISIONS.md C-015). Where Digambara and Shvetambara usage differ, the Digambara form is primary in our product copy. Shvetambara forms are noted only where comparison is genuinely useful.
+
+**Status:** Draft by Claude — flagged terms require Digambara cultural reviewer sign-off before publish.
 
 **Confidence levels:**
 - ✅ Verified — well-established usage, consistent across primary sources
@@ -36,8 +38,10 @@ A monk-teacher who teaches scripture to other monks.
 ### Sadhu / Muni ✅
 A Jain monk who has taken the five great vows (*mahavrata*).
 
-### Sadhvi ⚠️
-A Jain nun. Note: in *Digambara* tradition, the question of full female monastic ordination is contested; usage of this term and its equivalent (*aryika*) differs between traditions.
+### Aryika ✅ (Digambara)
+A female ascetic in the Digambara tradition. Aryikas wear a single white sari (unlike Digambara male monks who are unclothed). Aryikas are venerated as *upadhyaya*-level (teaching role) but according to traditional Digambara doctrine, full *moksha* in the present birth is held to require the male body and complete *digambara* state.
+
+(In Shvetambara, the term *sadhvi* is used for nuns. We use *aryika* in this library since it is the Digambara term.)
 
 ### Shravak / Shravika ✅
 A male / female lay follower of Jainism. Takes the twelve vows (*anuvrata* + *gunavrata* + *shikshavrata*) appropriate to a layperson.
@@ -122,24 +126,29 @@ Austerity, ascetic practice. Central to the Jain path of self-purification.
 
 ## Tradition names
 
-### Digambara ✅
-"Sky-clad" — the tradition where male monks practice complete nudity as part of total non-possession. Holds that women cannot attain *moksha* in the present birth and that Mahavir did not marry. Strong in Karnataka and parts of central India.
+### Digambara ✅ (this library's focus)
+"Sky-clad" — the tradition where male monks (*muni*) practice complete nudity as the visible expression of total *aparigraha*. Holds that final *moksha* in the present birth requires the *digambara* state and that Mahavir did not marry. Strong in Karnataka, Maharashtra, Madhya Pradesh, Rajasthan, and Bundelkhand.
+
+This library follows the Digambara tradition. (See DECISIONS.md C-015.)
 
 **Not:** "sect." Use "tradition" or "*sampradaya*."
 
-### Shvetambara ✅
-"White-clad" — the tradition where monks and nuns wear white robes. Holds that women can attain *moksha* and that Mahavir did marry (per the *Kalpa Sutra*). Strong in Gujarat, Rajasthan, and western India.
+### Bispanthi ✅ (Digambara sub-tradition)
+A Digambara sub-tradition that uses wet substances (water, flowers, fruit, sweets) in temple *puja*, venerates subordinate *yaksha*/*yakshini* deities alongside Tirthankaras, and accepts *Bhattaraka* administrative authority over temples. Common in older temples in Maharashtra and Karnataka.
 
-**Not:** "sect."
+### Terapanthi (Digambara) ✅
+A Digambara reform sub-tradition emphasizing strict *adhyatmika* (introspective) practice, using only dry *ashtadravya* (eight prescribed dry substances) in *puja*, not venerating subordinate deities, and rejecting *Bhattaraka* authority over monks. Foundational figures include Pt. Banarsidas (17th c.) and Pt. Daulatram (author of *Chhah Dhala*). Common in North India, especially Rajasthan and the Hindi belt.
 
-### Sthanakvasi ✅
-A sub-tradition within Shvetambara that does not perform *murti* worship; emphasis on austerity and direct scripture-based practice.
+**Note:** The Digambara Terapanthi is **unrelated** to the Shvetambara Terapanthi (founded 1760 by Acharya Bhikshu). Different traditions, same name.
 
-### Terapanthi ✅
-A reform sub-tradition within Shvetambara, founded by Acharya Bhikshu in 1760.
+### Bhattaraka ✅
+A Digambara religious-administrative figure, typically clothed in saffron, who heads a *peeth* (seat) and oversees temple administration. Bispanthi accepts Bhattaraka authority; Terapanthi (Digambara) rejects it. Notable seats include Shravanabelagola, Mudbidri, and Humbach.
 
-### Bispanthi / Terapanthi (Digambara) ⚠️
-Internal sub-traditions within Digambara on questions of temple ritual. Be careful — the Digambara Terapanthi is unrelated to the Shvetambara Terapanthi above.
+### Shvetambara
+"White-clad" — the other major Jain tradition. Monks and nuns wear white robes. Holds that women can attain *moksha* and that Mahavir did marry (per the *Kalpa Sutra*). Strong in Gujarat and Rajasthan. **This library does not present Shvetambara content as primary.**
+
+### Sthanakvasi
+A sub-tradition within Shvetambara that does not perform *murti* worship. Out of scope for this library.
 
 ---
 
@@ -164,19 +173,20 @@ Words to avoid in product copy and content, with reason:
 
 ## Names of major texts (consistent spelling we'll use)
 
-To avoid spelling drift across the corpus:
+To avoid spelling drift across the corpus. Phase 1 corpus per C-014:
 
-- **Bhaktamara Stotra** (not "Bhaktamar," "Bhaktambar")
-- **Kalyana Mandir Stotra** (not "Kalyan Mandir")
-- **Namokar Mantra** ⚠️ — also widely spelled **Navkar Mantra**, **Namaskar Mantra**. Reviewer to pick one. Working choice: **Navkar Mantra** as most common in spoken usage.
-- **Logassa Sutra** (Prakrit form; Sanskrit *Lokasya*)
-- **Tattvartha Sutra** (not "Tattvarth")
+- **Navkar Mantra** ⚠️ — also spelled *Namokar Mantra* / *Namaskar Mantra*. Working choice: **Navkar Mantra** (most common spoken usage in Digambara North India).
 - **Chattari Mangalam** ⚠️ — Prakrit. Working choice as written.
-- **Pratikraman** (not "Pratikramana" in English UI; both are correct, picking shorter)
-- **Iriyavahi Sutra** ⚠️ — Prakrit.
-- **Acharya Manatunga** (composer of Bhaktamara Stotra)
-- **Acharya Siddhasen Divakar** (composer of Kalyana Mandir Stotra)
-- **Acharya Umaswami / Umaswati** ⚠️ — both spellings authoritative in different traditions. Working: **Umaswami**.
+- **Bhaktamara Stotra** — **48-verse Digambara version** (not the 44-verse Shvetambara recension). Composer: **Acharya Manatunga**. Spelling: not "Bhaktamar," "Bhaktambar."
+- **Mangalashtak** ⚠️ — Digambara daily prayer; spelling working choice. Author: traditionally attributed to Acharya Pujyapada or anonymous.
+- **Chhah Dhala** — Hindi devotional in 6 *dhalas* (sections). Author: **Pt. Daulatram Kasliwal** (18th c., Terapanthi Digambara). Spelling: not "Chha Dhala," "Chhe Dhala."
+- **Tattvartha Sutra** — using the Digambara reading with *Sarvarthasiddhi* (Acharya Pujyapada's commentary) as authority. Composer: **Acharya Umaswami** (Digambara form; Shvetambara uses Umaswati — we use Umaswami).
+- **Dravya Sangraha** — 58 gathas. Composer: **Acharya Nemichandra Siddhantachakravarti**.
+- **Ratnakaranda Shravakachara** — Digambara lay ethics in 150 verses. Composer: **Acharya Samantabhadra** (2nd c.).
+- **Samayasara** — 415 gathas total; Phase 1 covers selected key gathas. Composer: **Acharya Kundakunda** (2nd c.).
+- **Ishtopadesh** — 51 gathas. Composer: **Acharya Pujyapada** (5th-6th c.).
+
+**On the Bhaktamara verse count:** The 4 verses present in the Digambara 48-verse recension and absent from the Shvetambara 44-verse recension are traditionally associated with the *Manatunga* legend (the chains miraculously breaking on each invocation). Verify the canonical placement of these 4 verses in Sprint 2 against a recognized Digambara edition (e.g., Bharatiya Jnanpith or Mahavir Aradhana Kendra editions).
 
 ---
 

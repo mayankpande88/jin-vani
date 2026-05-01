@@ -63,14 +63,14 @@
 | S2-02 | Set up `content/` directory structure | Claude | ⬜ | `content/texts/<slug>/index.mdx`, `verses/01.mdx`, ... |
 | S2-03 | Define MDX frontmatter schema | Claude | ⬜ | Validation via Zod |
 | S2-04 | Build content validator (CI step) | Claude | ⬜ | Required fields, citation present, IAST valid |
-| S2-05 | Source Bhaktamara Devanagari (canonical edition) | Claude | ⬜ | From archive.org / sansknet |
-| S2-06 | Source Bhaktamara IAST transliteration | Claude | ⬜ | Verify diacritics |
-| S2-07 | Source Bhaktamara English translation | Claude | ⬜ | J. L. Jaini 1923 (public domain) |
-| S2-08 | Source Bhaktamara Hindi translation | Claude | ⬜ | Public-domain edition or fresh write |
-| S2-09 | Write English meaning (bhavarth) for all 44 verses | Claude | ⬜ | Reviewer-validatable explanatory paraphrase |
-| S2-10 | Write Hindi meaning for all 44 verses | Claude | ⬜ | |
+| S2-05 | Source Bhaktamara Devanagari (Digambara 48-verse edition) | Claude | ⬜ | Bharatiya Jnanpith / Mahavir Aradhana Kendra edition; verify against archive.org Digambara sources |
+| S2-06 | Source Bhaktamara IAST transliteration (48 verses) | Claude | ⬜ | Verify diacritics; ensure 4 Digambara-only verses included |
+| S2-07 | Source Bhaktamara English translation | Claude | ⬜ | Pravin Shah / J. L. Jaini / Bharatiya Jnanpith Digambara edition; verify PD or write fresh |
+| S2-08 | Source Bhaktamara Hindi translation | Claude | ⬜ | Hindi Digambara commentaries (Pt. Phool Chand Shastri, etc.); verify rights |
+| S2-09 | Write English meaning (bhavarth) for all 48 verses | Claude | ⬜ | Reviewer-validatable explanatory paraphrase |
+| S2-10 | Write Hindi meaning for all 48 verses | Claude | ⬜ | |
 | S2-11 | Write word-by-word for verses 1-5 | Claude | ⬜ | Validate format; expand in S3 |
-| S2-12 | Write text intro: history, author, significance | Claude | ⬜ | Acharya Manatunga, traditional context, sources |
+| S2-12 | Write text intro: history, author, Manatunga legend, Digambara recitation tradition | Claude | ⬜ | Acharya Manatunga, traditional context, sources |
 | S2-13 | Compile citation footer: every translation source listed | Claude | ⬜ | |
 | S2-14 | Run content through validator; fix issues | Claude | ⬜ | |
 | S2-15 | Submit Bhaktamara content for reviewer pass | Mayank/Reviewer | ⬜ | Use checklist from RISKS.md mitigation |
@@ -97,7 +97,7 @@
 | S3-12 | Set up Pagefind search | Claude | ⬜ | Index Sanskrit + transliteration + translations |
 | S3-13 | PWA manifest, service worker | Claude | ⬜ | Workbox + custom strategy |
 | S3-14 | Offline-first content caching | Claude | ⬜ | Cache full text after first visit |
-| S3-15 | Word-by-word for all 44 Bhaktamara verses | Claude | ⬜ | Expand from S2's first 5 |
+| S3-15 | Word-by-word for all 48 Bhaktamara verses | Claude | ⬜ | Expand from S2's first 5 |
 | S3-16 | Lighthouse audit pass | Claude | ⬜ | Mobile + desktop ≥ 90 |
 | S3-17 | Recruit 5 test readers | Mayank | ⬜ | From target audience |
 | S3-18 | Test reader sessions: "read verse 5" task | Claude+Mayank | ⬜ | Document blockers |
@@ -126,19 +126,19 @@
 
 ## Sprint 5 — Library Expansion
 
-Texts are sequenced by complexity to give reviewer reasonable batches. Universal texts first (lowest tradition-friction), tradition-specific texts after.
+Phase 1 corpus per C-014 (Digambara-focused). Texts sequenced from short/foundational to long/philosophical for reviewer pacing.
 
 | ID | Task | Owner | Status | Notes |
 |---|---|---|---|---|
-| S5-01 | Navkar Mantra full content + reviewer pass | Claude+Reviewer | ⬜ | Universal; 5 lines + Pad meanings |
-| S5-02 | Chattari Mangalam full content + reviewer pass | Claude+Reviewer | ⬜ | Universal; short |
-| S5-03 | Kalyana Mandir Stotra (44 verses) + reviewer pass | Claude+Reviewer | ⬜ | Universal |
-| S5-04 | Tattvartha Sutra Ch.1 (10 sutras) + reviewer pass | Claude+Reviewer | ⬜ | Universal philosophical |
-| S5-05 | Meri Bhavna + reviewer pass | Claude+Reviewer | ⬜ | Modern universal devotional |
-| S5-06 | Jaya Tihuyana Stotra + reviewer pass | Claude+Reviewer | ⬜ | Universal |
-| S5-07 | Logassa Sutra + reviewer pass | Claude+Reviewer | ⬜ | Shvetambara liturgical |
-| S5-08 | Chhah Dhala (Pt. Daulatram) + reviewer pass | Claude+Reviewer | ⬜ | Digambara, Hindi-language; long |
-| S5-09 | Dravya Sangraha (58 gathas) + reviewer pass | Claude+Reviewer | ⬜ | Digambara philosophical |
+| S5-01 | Navkar Mantra full content + reviewer pass | Claude+Reviewer | ⬜ | 5 lines + Pad meanings |
+| S5-02 | Chattari Mangalam full content + reviewer pass | Claude+Reviewer | ⬜ | Short |
+| S5-03 | Mangalashtak full content + reviewer pass | Claude+Reviewer | ⬜ | Digambara daily prayer |
+| S5-04 | Tattvartha Sutra Ch.1 (10 sutras) + reviewer pass | Claude+Reviewer | ⬜ | With Sarvarthasiddhi (Acharya Pujyapada) reading |
+| S5-05 | Ishtopadesh (51 gathas) + reviewer pass | Claude+Reviewer | ⬜ | Acharya Pujyapada, meditative |
+| S5-06 | Dravya Sangraha (58 gathas) + reviewer pass | Claude+Reviewer | ⬜ | Acharya Nemichandra, philosophical primer |
+| S5-07 | Ratnakaranda Shravakachara + reviewer pass | Claude+Reviewer | ⬜ | Acharya Samantabhadra, lay ethics |
+| S5-08 | Chhah Dhala (Pt. Daulatram) + reviewer pass | Claude+Reviewer | ⬜ | Hindi-language Digambara primer; long |
+| S5-09 | Samayasara — selected key gathas + reviewer pass | Claude+Reviewer | ⬜ | Acharya Kundakunda; Phase 1 covers selected gathas only (full 415 → Phase 2) |
 | S5-10 | Library home page taxonomy update | Claude | ⬜ | Group by: Mantras / Stotras / Sutras / Daily / Philosophical |
 | S5-11 | Cross-text search smoke test | Claude | ⬜ | |
 
