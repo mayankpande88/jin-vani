@@ -1,0 +1,793 @@
+/* =========================================================================
+   Jain Scripture Library — Design System
+   Phase: Sprint 1 mockup
+   Philosophy: "manuscript, not app" (DECISIONS.md C-003)
+   ========================================================================= */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Light mode (default) — parchment cream, vermillion ink */
+  --bg-page: #FBF7EE;
+  --bg-card: #F5EFDF;
+  --bg-card-soft: #FAF5E6;
+  --bg-divider: #E8DDC2;
+
+  --text-primary: #1A1714;
+  --text-secondary: #534B3C;
+  --text-muted: #7D7464;
+
+  --ink-sanskrit: #7A1A1A;        /* vermillion — traditional manuscript ink */
+  --ink-sanskrit-soft: #9C2929;
+  --accent-gold: #C7891D;         /* saffron */
+  --accent-gold-soft: #D9A547;
+
+  --border-soft: #D9CFB8;
+  --border-strong: #B8A982;
+
+  /* Typography scale */
+  --type-sanskrit: 'Tiro Devanagari Sanskrit', 'Noto Serif Devanagari', serif;
+  --type-hindi: 'Noto Serif Devanagari', 'Tiro Devanagari Sanskrit', serif;
+  --type-body: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --type-display: 'Yatra One', 'Source Serif 4', serif;
+  --type-ui: 'Inter', system-ui, sans-serif;
+
+  /* Sizes */
+  --size-base: 18px;          /* user-adjustable via .text-size-* */
+  --size-verse-sk: 1.6rem;    /* Sanskrit verse */
+  --size-translit: 1.05rem;
+  --size-translation: 1.1rem;
+
+  --line-tight: 1.5;
+  --line-comfy: 1.75;
+  --line-loose: 2.0;
+
+  /* Spacing — generous, by design */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Reading column width */
+  --reading-width: 38rem;
+
+  /* Shadows — barely there */
+  --shadow-paper: 0 1px 2px rgba(122, 26, 26, 0.04), 0 0 0 1px rgba(184, 169, 130, 0.18);
+  --shadow-lift: 0 2px 8px rgba(122, 26, 26, 0.06), 0 0 0 1px rgba(184, 169, 130, 0.22);
+
+  /* Radii */
+  --radius-soft: 4px;
+  --radius-card: 8px;
+}
+
+/* Dark mode — warm black, ivory ink */
+[data-theme="dark"] {
+  --bg-page: #1A1714;
+  --bg-card: #25211C;
+  --bg-card-soft: #1F1B17;
+  --bg-divider: #2F2A23;
+
+  --text-primary: #F5F0E5;
+  --text-secondary: #C9BFA8;
+  --text-muted: #948B78;
+
+  --ink-sanskrit: #E8B26B;        /* warmer in dark mode for legibility */
+  --ink-sanskrit-soft: #C7891D;
+  --accent-gold: #D9A547;
+  --accent-gold-soft: #C7891D;
+
+  --border-soft: #2F2A23;
+  --border-strong: #4D4538;
+
+  --shadow-paper: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(77, 69, 56, 0.4);
+  --shadow-lift: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(77, 69, 56, 0.5);
+}
+
+/* Auto dark mode if user prefers, unless overridden */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page: #1A1714;
+    --bg-card: #25211C;
+    --bg-card-soft: #1F1B17;
+    --bg-divider: #2F2A23;
+    --text-primary: #F5F0E5;
+    --text-secondary: #C9BFA8;
+    --text-muted: #948B78;
+    --ink-sanskrit: #E8B26B;
+    --ink-sanskrit-soft: #C7891D;
+    --accent-gold: #D9A547;
+    --accent-gold-soft: #C7891D;
+    --border-soft: #2F2A23;
+    --border-strong: #4D4538;
+    --shadow-paper: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(77, 69, 56, 0.4);
+    --shadow-lift: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(77, 69, 56, 0.5);
+  }
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: var(--size-base); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--type-body);
+  line-height: var(--line-comfy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Subtle paper texture via radial gradient */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(199, 137, 29, 0.025) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(122, 26, 26, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+a { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+
+/* ---------- Text size adjustment (user-controlled) ---------- */
+html.text-size-s  { --size-base: 16px; }
+html.text-size-m  { --size-base: 18px; }
+html.text-size-l  { --size-base: 20px; }
+html.text-size-xl { --size-base: 22px; }
+
+/* ---------- Layout primitives ---------- */
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.reading-wrap {
+  max-width: var(--reading-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .page-wrap, .reading-wrap { padding: 0 var(--space-4); }
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--bg-page);
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.brand {
+  font-family: var(--type-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-sanskrit);
+  text-decoration: none;
+}
+.brand .brand-mark {
+  display: inline-block;
+  margin-right: var(--space-2);
+  color: var(--accent-gold);
+}
+.topbar-actions {
+  display: flex; align-items: center; gap: var(--space-3);
+  font-family: var(--type-ui); font-size: 0.875rem;
+}
+.topbar-actions a, .topbar-actions button {
+  color: var(--text-secondary);
+  text-decoration: none;
+  background: none; border: none; padding: var(--space-2) var(--space-3);
+  cursor: pointer; border-radius: var(--radius-soft);
+  font-family: inherit; font-size: inherit;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.topbar-actions a:hover, .topbar-actions button:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* ---------- Hero (home) ---------- */
+.hero {
+  text-align: center;
+  padding: var(--space-16) var(--space-6) var(--space-12);
+}
+.hero-eyebrow {
+  font-family: var(--type-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-4);
+}
+.hero-mantra {
+  font-family: var(--type-sanskrit);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--ink-sanskrit);
+  line-height: 1.6;
+  margin: 0 auto var(--space-6);
+  max-width: 30rem;
+}
+.hero-mantra-translit {
+  font-family: var(--type-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 30rem;
+  margin: 0 auto var(--space-12);
+}
+.hero-tagline {
+  font-family: var(--type-body);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 30rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- Section heading ---------- */
+.section-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin: var(--space-12) 0 var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-soft);
+}
+.section-head h2 {
+  font-family: var(--type-display);
+  font-weight: normal;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+.section-head .section-meta {
+  font-family: var(--type-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Library grid ---------- */
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.text-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  display: flex; flex-direction: column;
+  position: relative;
+}
+.text-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+}
+.text-card-category {
+  font-family: var(--type-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-3);
+}
+.text-card-title-sk {
+  font-family: var(--type-sanskrit);
+  color: var(--ink-sanskrit);
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 0 0 var(--space-1);
+}
+.text-card-title-en {
+  font-family: var(--type-display);
+  font-size: 1.05rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  margin: 0 0 var(--space-3);
+  color: var(--text-primary);
+}
+.text-card-meta {
+  font-family: var(--type-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  padding-top: var(--space-4);
+  display: flex; align-items: center; gap: var(--space-3);
+}
+.text-card-meta-dot {
+  display: inline-block; width: 3px; height: 3px;
+  border-radius: 50%; background: currentColor; opacity: 0.5;
+}
+.text-card-author {
+  font-family: var(--type-body); font-style: italic;
+  color: var(--text-secondary); font-size: 0.9rem;
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Continue reading card ---------- */
+.continue-card {
+  background: var(--bg-card-soft);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-6) var(--space-8);
+  margin-bottom: var(--space-12);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-6);
+}
+.continue-card-content { flex: 1; }
+.continue-card-eyebrow {
+  font-family: var(--type-ui); font-size: 0.7rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: var(--space-2);
+}
+.continue-card-title {
+  font-family: var(--type-display);
+  font-size: 1.1rem; margin: 0 0 var(--space-1);
+  color: var(--text-primary);
+}
+.continue-card-meta {
+  font-family: var(--type-body); color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.continue-card-cta {
+  font-family: var(--type-ui); font-size: 0.85rem;
+  color: var(--ink-sanskrit); white-space: nowrap;
+  text-decoration: none;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--ink-sanskrit);
+  border-radius: var(--radius-soft);
+  transition: background 0.15s, color 0.15s;
+}
+.continue-card-cta:hover {
+  background: var(--ink-sanskrit); color: var(--bg-page);
+}
+
+/* ---------- Text detail (Bhaktamara index) ---------- */
+.text-header {
+  text-align: center;
+  padding: var(--space-12) 0 var(--space-8);
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: var(--space-8);
+}
+.text-header-eyebrow {
+  font-family: var(--type-ui); font-size: 0.75rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: var(--space-3);
+}
+.text-header-sk {
+  font-family: var(--type-sanskrit);
+  color: var(--ink-sanskrit);
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.2;
+  margin: 0 0 var(--space-3);
+}
+.text-header-en {
+  font-family: var(--type-display);
+  font-size: 1.1rem; font-weight: normal;
+  letter-spacing: 0.04em; color: var(--text-secondary);
+  margin: 0 0 var(--space-6);
+}
+.text-header-meta {
+  font-family: var(--type-ui); font-size: 0.85rem;
+  color: var(--text-muted);
+  display: inline-flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--space-3) var(--space-4);
+}
+.text-header-meta span { display: inline-flex; align-items: center; gap: var(--space-2); }
+
+.text-intro {
+  font-family: var(--type-body);
+  font-size: 1.05rem;
+  line-height: var(--line-comfy);
+  color: var(--text-primary);
+  margin: 0 auto var(--space-8);
+  max-width: var(--reading-width);
+}
+.text-intro p { margin: 0 0 var(--space-4); }
+.text-intro p:first-child::first-letter {
+  font-family: var(--type-display);
+  color: var(--ink-sanskrit);
+  font-size: 3.2rem;
+  line-height: 0.85;
+  float: left;
+  margin: 0.2rem 0.4rem 0 0;
+}
+
+.cta-row {
+  text-align: center;
+  margin: var(--space-8) 0 var(--space-12);
+}
+.cta-primary {
+  display: inline-block;
+  font-family: var(--type-display);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--bg-page);
+  background: var(--ink-sanskrit);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-soft);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.cta-primary:hover { background: var(--ink-sanskrit-soft); }
+
+/* ---------- Verse list ---------- */
+.verse-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: var(--space-2);
+  max-width: var(--reading-width);
+  margin: 0 auto;
+}
+.verse-list a {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-soft);
+  background: var(--bg-card-soft);
+  font-family: var(--type-display);
+  color: var(--ink-sanskrit);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.15s ease;
+}
+.verse-list a:hover {
+  background: var(--ink-sanskrit);
+  color: var(--bg-page);
+  border-color: var(--ink-sanskrit);
+}
+.verse-list a.is-read {
+  background: var(--bg-card);
+  color: var(--text-muted);
+}
+.verse-list a.is-current {
+  background: var(--accent-gold);
+  color: var(--bg-page);
+  border-color: var(--accent-gold);
+}
+
+/* ---------- Verse reading ---------- */
+.mode-bar {
+  display: flex; justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: var(--space-8);
+}
+.mode-btn {
+  font-family: var(--type-ui);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: none;
+  border: 1px solid transparent;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+}
+.mode-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+.mode-btn.is-active {
+  color: var(--ink-sanskrit);
+  border-color: var(--ink-sanskrit);
+  background: var(--bg-card-soft);
+}
+.mode-btn-sk {
+  font-family: var(--type-sanskrit);
+  color: var(--ink-sanskrit);
+}
+
+.verse-block {
+  margin-bottom: var(--space-12);
+}
+.verse-num {
+  text-align: center;
+  font-family: var(--type-display);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+.verse-num::before, .verse-num::after {
+  content: '';
+  display: inline-block;
+  width: 40px; height: 1px;
+  background: var(--border-strong);
+  vertical-align: middle;
+  margin: 0 var(--space-4);
+}
+
+.verse-sk {
+  font-family: var(--type-sanskrit);
+  color: var(--ink-sanskrit);
+  font-size: var(--size-verse-sk);
+  line-height: var(--line-loose);
+  text-align: center;
+  margin: 0 0 var(--space-6);
+}
+
+.verse-translit {
+  font-family: var(--type-body);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: var(--size-translit);
+  text-align: center;
+  line-height: var(--line-comfy);
+  margin: 0 0 var(--space-8);
+}
+
+.verse-section {
+  margin-bottom: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-soft);
+}
+.verse-section-label {
+  font-family: var(--type-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-3);
+}
+.verse-section-label-hi {
+  font-family: var(--type-hindi);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  margin-left: var(--space-2);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.verse-translation {
+  font-family: var(--type-body);
+  font-size: var(--size-translation);
+  line-height: var(--line-comfy);
+  color: var(--text-primary);
+  margin: 0;
+}
+.verse-translation-hi {
+  font-family: var(--type-hindi);
+  line-height: var(--line-loose);
+}
+.verse-meaning {
+  font-family: var(--type-body);
+  font-size: 1rem;
+  line-height: var(--line-comfy);
+  color: var(--text-secondary);
+  margin: 0;
+}
+.verse-meaning-hi {
+  font-family: var(--type-hindi);
+  line-height: var(--line-loose);
+}
+
+/* Word-by-word */
+.wbw {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-4);
+  font-family: var(--type-body);
+  font-size: 0.95rem;
+}
+.wbw-word {
+  display: flex; flex-direction: column;
+  padding: var(--space-3);
+  background: var(--bg-card-soft);
+  border-radius: var(--radius-soft);
+  border-left: 2px solid var(--accent-gold-soft);
+}
+.wbw-sk {
+  font-family: var(--type-sanskrit);
+  color: var(--ink-sanskrit);
+  font-size: 1.2rem;
+}
+.wbw-translit {
+  font-style: italic; color: var(--text-muted);
+  font-size: 0.85rem; margin-top: 2px;
+}
+.wbw-gloss {
+  color: var(--text-primary);
+  font-size: 0.9rem; margin-top: var(--space-2);
+}
+@media (max-width: 640px) {
+  .wbw { grid-template-columns: 1fr; }
+}
+
+/* ---------- Pathan mode (minimal) ---------- */
+.mode-pathan .verse-translit,
+.mode-pathan .verse-section[data-section="meaning"],
+.mode-pathan .verse-section[data-section="meaning-hi"],
+.mode-pathan .verse-section[data-section="translation-en"],
+.mode-pathan .verse-section[data-section="wbw"] {
+  display: none;
+}
+
+/* ---------- Shravan mode (audio + large) ---------- */
+.mode-shravan .verse-sk { font-size: calc(var(--size-verse-sk) * 1.25); }
+.mode-shravan .verse-section[data-section="wbw"] { display: none; }
+.mode-shravan .audio-player { display: flex; }
+
+.audio-player {
+  display: none;
+  align-items: center; gap: var(--space-4);
+  background: var(--bg-card);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  margin-bottom: var(--space-8);
+  font-family: var(--type-ui); font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.audio-play-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--ink-sanskrit);
+  color: var(--bg-page);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.audio-progress {
+  flex: 1; height: 3px;
+  background: var(--border-soft);
+  border-radius: 999px; position: relative;
+}
+.audio-progress::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; height: 100%; width: 35%;
+  background: var(--accent-gold);
+  border-radius: 999px;
+}
+
+/* ---------- Verse navigation (footer of verse page) ---------- */
+.verse-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--border-soft);
+  padding: var(--space-6) 0;
+  margin-top: var(--space-12);
+  font-family: var(--type-ui);
+  font-size: 0.9rem;
+}
+.verse-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-soft);
+  transition: background 0.15s, color 0.15s;
+}
+.verse-nav a:hover {
+  background: var(--bg-card);
+  color: var(--ink-sanskrit);
+}
+.verse-nav a.is-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.verse-nav-toc {
+  font-family: var(--type-display);
+  color: var(--accent-gold);
+}
+
+/* ---------- Footer / citations ---------- */
+.citations {
+  border-top: 1px solid var(--border-soft);
+  margin-top: var(--space-16);
+  padding: var(--space-8) 0;
+  font-family: var(--type-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.citations h3 {
+  font-family: var(--type-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-3);
+}
+.citations p { margin: 0 0 var(--space-2); }
+
+/* ---------- Settings panel ---------- */
+.settings-strip {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-6);
+  background: var(--bg-card-soft);
+  border-bottom: 1px solid var(--border-soft);
+  font-family: var(--type-ui);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+.settings-strip-label {
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: var(--space-2);
+}
+.settings-group { display: inline-flex; gap: var(--space-1); }
+.settings-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-soft);
+  font-family: inherit; font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.settings-btn:hover { color: var(--text-primary); border-color: var(--border-strong); }
+.settings-btn.is-active {
+  background: var(--ink-sanskrit);
+  color: var(--bg-page);
+  border-color: var(--ink-sanskrit);
+}
+
+/* ---------- Decorative dividers (used sparingly) ---------- */
+.divider-ornament {
+  display: flex; align-items: center; justify-content: center;
+  margin: var(--space-12) auto;
+  color: var(--accent-gold); opacity: 0.6;
+}
+.divider-ornament::before, .divider-ornament::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--border-strong);
+  margin: 0 var(--space-6);
+  max-width: 80px;
+}
+.divider-ornament svg { width: 16px; height: 16px; }
+
+/* ---------- Bottom nav (mobile only) ---------- */
+.bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--bg-page);
+  border-top: 1px solid var(--border-soft);
+  padding: var(--space-2) 0;
+  font-family: var(--type-ui); font-size: 0.7rem;
+  z-index: 20;
+}
+.bottom-nav-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.bottom-nav a {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 2px; padding: var(--space-2);
+  color: var(--text-muted); text-decoration: none;
+}
+.bottom-nav a.is-active { color: var(--ink-sanskrit); }
+.bottom-nav-icon { font-size: 1.1rem; }
+
+@media (max-width: 640px) {
+  .bottom-nav { display: block; }
+  body { padding-bottom: 60px; }
+}
+
+/* ---------- Print styles (deliverable for Sprint 4) ---------- */
+@media print {
+  .topbar, .settings-strip, .bottom-nav, .verse-nav, .mode-bar { display: none; }
+  body { background: white; color: black; }
+  .verse-sk { color: black; }
+}
