@@ -61,13 +61,25 @@
     <!-- Verse number -->
     <div class="v-num">Verse One</div>
 
-    <!-- Sanskrit -->
-    <p class="v-sk">
-      भक्तामर-प्रणत-मौलि-मणि-प्रभाणा-<br>
-      मुद्योतकं दलित-पाप-तमो-वितानम्।<br>
-      सम्यक् प्रणम्य जिन-पाद-युगं युगादा-<br>
-      वालम्बनं भव-जले पततां जनानाम्॥
-    </p>
+    <!-- Sanskrit, with tappable glossed terms + pronunciation hints per line -->
+    <div class="v-sk">
+      <div class="v-sk-line">
+        <span class="v-sk-text"><span class="gloss" data-sk="भक्तामर" data-translit="bhakta-amara" data-gloss="Devout celestials (devas) — gods who are devotees of the Jina">भक्तामर</span>-<span class="gloss" data-sk="प्रणत-मौलि" data-translit="praṇata-mauli" data-gloss="Bowed crowns / heads bowed in reverence">प्रणत-मौलि</span>-<span class="gloss" data-sk="मणि-प्रभा" data-translit="maṇi-prabhā" data-gloss="Splendor / radiance of jewels">मणि-प्रभाणा</span>-</span>
+        <button class="pron-hint" aria-label="Hear pronunciation of line 1" title="Hear pronunciation (audio coming soon)">▸</button>
+      </div>
+      <div class="v-sk-line">
+        <span class="v-sk-text">मुद्योतकं <span class="gloss" data-sk="दलित" data-translit="dalita" data-gloss="Crushed, dispelled, broken">दलित</span>-<span class="gloss" data-sk="पाप-तमो-वितानम्" data-translit="pāpa-tamo-vitānam" data-gloss="The spreading darkness / canopy of sin">पाप-तमो-वितानम्</span>।</span>
+        <button class="pron-hint" aria-label="Hear pronunciation of line 2">▸</button>
+      </div>
+      <div class="v-sk-line">
+        <span class="v-sk-text">सम्यक् प्रणम्य <span class="gloss" data-sk="जिन-पाद-युगम्" data-translit="jina-pāda-yugam" data-gloss="The pair of feet of the Jina">जिन-पाद-युगं</span> <span class="gloss" data-sk="युगादौ" data-translit="yugādau" data-gloss="At the beginning of the era — an epithet of Adinath, the first Tirthankara of this time-cycle">युगादा</span>-</span>
+        <button class="pron-hint" aria-label="Hear pronunciation of line 3">▸</button>
+      </div>
+      <div class="v-sk-line">
+        <span class="v-sk-text">वालम्बनं <span class="gloss" data-sk="भव-जल" data-translit="bhava-jala" data-gloss="The ocean of worldly existence (samsara) — the cycle of rebirth">भव-जले</span> पततां जनानाम्॥</span>
+        <button class="pron-hint" aria-label="Hear pronunciation of line 4">▸</button>
+      </div>
+    </div>
 
     <!-- Transliteration -->
     <p class="v-translit">
@@ -77,16 +89,34 @@
       v ālambanaṁ bhava-jale patatāṁ janānām
     </p>
 
-    <!-- Layer tabs -->
+    <!-- Layer tabs — order optimized for learners: Simple first, Word-by-word second -->
     <div class="layer-tabs" role="tablist">
-      <button class="layer-tab is-active" data-layer="hindi" role="tab">हिन्दी</button>
-      <button class="layer-tab" data-layer="english" role="tab">English</button>
-      <button class="layer-tab" data-layer="meaning" role="tab">Meaning</button>
+      <button class="layer-tab is-active" data-layer="simple" role="tab">Simple</button>
       <button class="layer-tab" data-layer="words" role="tab">Word-by-word</button>
+      <button class="layer-tab" data-layer="hindi" role="tab">हिन्दी</button>
+      <button class="layer-tab" data-layer="english" role="tab">English</button>
+      <button class="layer-tab" data-layer="meaning" role="tab">Deeper</button>
+    </div>
+
+    <!-- Simple panel — kid-friendly, plain language -->
+    <div class="layer-panel is-active" data-panel="simple">
+      <div class="layer-content">
+        <div class="simple-eyebrow">Simple Meaning · सरल अर्थ</div>
+        <p class="simple-line simple-line-hi">
+          मैं भगवान आदिनाथ के चरणों में नमस्कार करता हूँ — जो देवों के मुकुट तक चमकते हैं, जो पाप के अंधकार को मिटा देते हैं, और जो इस दुनिया के दुःखों में डूबते लोगों के लिए एकमात्र सहारा हैं।
+        </p>
+        <div class="simple-divider"></div>
+        <p class="simple-line">
+          I bow to the feet of <strong>Bhagavan Adinath</strong>, the first Jina. His feet are so radiant that even the gods bow before him — their crowns shining brighter from his light. He is the only refuge for souls drowning in the ocean of worldly life.
+        </p>
+        <p style="font-family: var(--type-ui); font-size: 0.78rem; color: var(--text-3); margin: var(--s-4) 0 0; line-height: 1.6;">
+          <strong style="color: var(--accent);">→</strong> Tap any underlined Sanskrit word above to learn what it means.
+        </p>
+      </div>
     </div>
 
     <!-- Hindi panel -->
-    <div class="layer-panel is-active" data-panel="hindi">
+    <div class="layer-panel" data-panel="hindi">
       <div class="layer-content">
         <div class="layer-label">हिन्दी अनुवाद</div>
         <p class="layer-text layer-text-hi">
@@ -292,6 +322,70 @@
       ['s','m','l','xl'].forEach(s => root.classList.remove('text-size-' + s));
       root.classList.add('text-size-' + size);
       sizeBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+    });
+  });
+
+  // Tap-to-define popover for glossed Sanskrit terms
+  const popover = document.createElement('div');
+  popover.className = 'popover';
+  document.body.appendChild(popover);
+
+  let activeGloss = null;
+  function showPopover(el) {
+    const sk = el.dataset.sk;
+    const translit = el.dataset.translit;
+    const gloss = el.dataset.gloss;
+    popover.innerHTML = `
+      <span class="popover-sk">${sk}</span>
+      <span class="popover-translit">${translit}</span>
+      <span class="popover-gloss">${gloss}</span>
+    `;
+
+    // Position above element, with edge clamping
+    const r = el.getBoundingClientRect();
+    popover.classList.add('is-visible');
+    const pw = popover.offsetWidth;
+    const ph = popover.offsetHeight;
+    let left = r.left + (r.width / 2) - (pw / 2);
+    let top = r.top - ph - 12;
+    if (top < 12) top = r.bottom + 12;
+    left = Math.max(12, Math.min(window.innerWidth - pw - 12, left));
+    popover.style.left = left + 'px';
+    popover.style.top = top + 'px';
+
+    if (activeGloss) activeGloss.classList.remove('is-active');
+    el.classList.add('is-active');
+    activeGloss = el;
+  }
+  function hidePopover() {
+    popover.classList.remove('is-visible');
+    if (activeGloss) { activeGloss.classList.remove('is-active'); activeGloss = null; }
+  }
+
+  document.querySelectorAll('.gloss').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeGloss === el) { hidePopover(); return; }
+      showPopover(el);
+    });
+  });
+  document.addEventListener('click', () => hidePopover());
+  popover.addEventListener('click', (e) => e.stopPropagation());
+  window.addEventListener('scroll', hidePopover, { passive: true });
+  window.addEventListener('resize', hidePopover);
+
+  // Pronunciation hint — placeholder until Sprint 6 audio
+  document.querySelectorAll('.pron-hint').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const orig = btn.textContent;
+      btn.textContent = '◐';
+      btn.style.color = 'var(--accent)';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.color = '';
+      }, 600);
+      // Real audio plug-in point — Sprint 6
     });
   });
 
