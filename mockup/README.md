@@ -1,71 +1,61 @@
-# Sprint 1 — Design Mockups
+# Sprint 1 — Design Mockups (v2)
 
-Static HTML/CSS mockups demonstrating the design direction for the Jain Scripture Library.
-No build step required — open the HTML files directly in a browser.
+**v2 changes from v1** — addressing feedback that v1 was "too sepia/old" and "too much vertical scroll":
+
+- **Dark-first palette** with deeper saffron + bold gold accents (was: parchment cream + muted vermillion)
+- **Verse reader is card-based** with tab segments to switch between Hindi / English / Meaning / Word-by-word — no more 7-section vertical scroll dump
+- **Modern type stack** — Fraunces (display) + Manrope (UI), more contemporary feel
+- **Hero "Verse of the Day"** card on home — daily-engagement hook
+- **Streak tiles** (5-day streak, 12 verses read, 3 bookmarks) — habit formation
+- **Library cards with custom Devanagari covers** — each text gets a styled letter cover
+- **Continue card with circular progress ring** — visual progress
+- **Reader has a bottom action bar** — bookmark / play audio / share / prev / next, always reachable
+- **Floating-pill layer tabs** — modern segmented control feel
+- **Subtle atmospheric background glow** — premium app feel
 
 ## How to view
 
-From this directory:
-
 ```bash
-# Mac: open in default browser
-open index.html
-
-# Or serve with any static server:
-python3 -m http.server 8000
-# then visit http://localhost:8000
+open mockup/index.html
 ```
 
 ## Pages
 
-1. **`index.html`** — Library landing page (home)
-   - All 10 Phase-1 texts grouped by category (Mantras, Stotras, Daily Reading, Sutras & Philosophy)
-   - Continue-reading card
-   - Hero showing Navkar Mantra
-   - Bottom nav on mobile
+1. **`index.html`** — home / library landing
+   - Greeting → Verse of the Day → streak tiles → continue → library grouped by category
+   - Bottom tab bar on mobile
 
-2. **`bhaktamara.html`** — Bhaktamara Stotra index page
-   - Header with title, author, verse count (48 — Digambara)
-   - Intro: significance and the Manatunga legend
-   - "Begin reading" CTA
-   - Grid of all 48 verses, with read/current state markers
-   - Source citations footer
+2. **`bhaktamara.html`** — Bhaktamara Stotra index
+   - Big text cover with गल mark + stats
+   - Intro card with Manatunga legend
+   - Begin reading CTA pill button
+   - 48-verse grid with read/current state
 
-3. **`verse.html`** — Single verse reading page (Verse 1 of Bhaktamara)
-   - Three reading modes — toggle between them at the top:
-     - **Pathan (पठन / Read)** — minimal: Sanskrit + Hindi translation only
-     - **Adhyayan (अध्ययन / Study)** — all layers: Sanskrit, transliteration, both translations, both meanings, word-by-word
-     - **Shravan (श्रवण / Listen)** — large type, audio player visible (placeholder)
-   - Adjustable text size: A− / A / A+ / A++
-   - Light / dark mode toggle
-   - Verse navigation: prev / TOC / next
+3. **`verse.html`** — verse reading (the big change)
+   - Card-style screen with verse number, Sanskrit, transliteration
+   - **4 tabs to switch layer**: हिन्दी / English / Meaning / Word-by-word — tap to switch, no scrolling everything
+   - Bottom action bar: prev verse / bookmark / **play audio (big)** / share / next verse
+   - Settings strip (text size)
+   - Try **swiping horizontally** on the verse card — visual hint shown (in real app this navigates verses)
 
 ## What to evaluate
 
-When reviewing, focus on:
+- Does this feel like an app you'd open daily, not a webpage?
+- Is the dark mode atmospheric without being gimmicky?
+- Verse page: is "tap a tab to switch layer" cleaner than "scroll through everything"?
+- Mobile (Chrome DevTools → device mode → iPhone): bottom tab bar appears, layout works
+- Toggle to light mode (◐ icon top right) — design holds up in both
 
-- **Typography** — Sanskrit Devanagari should render with clean conjunct consonants (e.g., the `मणि` and `दलित` in verse 1)
-- **Color discipline** — vermillion ink for Sanskrit, saffron only for accents, restraint everywhere else
-- **Reading comfort** — try at S/M/L/XL text sizes; reading column width feels right at all of them
-- **Mode switching** — Pathan vs Adhyayan vs Shravan should feel meaningfully different, not just hidden/shown
-- **Mobile** — open Chrome DevTools, switch to mobile (iPhone 14 Pro), verify bottom nav appears, layout still works
-- **Dark mode** — toggle the topbar moon icon. The vermillion shifts to a warmer gold for legibility on dark.
+## What's still placeholder
 
-## Known issues / not in scope for Sprint 1
+- Search, audio play, bookmark, share — all dummy
+- Only Bhaktamara Verse 1 has real content
+- Other library cards link nowhere yet
+- No PWA, no offline, no real swipe nav (just visual hint)
 
-- Search box is a placeholder (Sprint 3)
-- Audio player is non-functional (Sprint 6 has the real audio)
-- Bookmark / settings buttons in bottom nav are dead-ends (Sprint 3)
-- No PWA / offline (Sprint 3)
-- Only Verse 1 has real content — others are placeholders (Sprint 2)
-- Cards on home page link to verse.html via Bhaktamara only; other texts not implemented yet
+## Tech notes
 
-## Design tokens
-
-All design values live in `styles.css` at the top under `:root` and `[data-theme="dark"]`.
-The full set will move into Tailwind CSS variables when we scaffold Next.js in Sprint 2.
-
-## Next sprint gate
-
-Sprint 1 closes when Mayank reviews these on phone + laptop and signs off (or tells me what to change).
-After approval, Sprint 2 begins: scaffolding the real Next.js app and producing Bhaktamara's actual 48-verse content.
+- Uses Google Fonts (loads on first view; cache after)
+- Pure HTML/CSS/JS, no build step
+- All design tokens in `styles.css` `:root`
+- Mobile-first; max-width 480px for reading column on phone

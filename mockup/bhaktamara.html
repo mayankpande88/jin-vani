@@ -2,162 +2,142 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bhaktamara Stotra · Digambara 48-verse · Jin-vani</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E0B08">
+<title>Bhaktamara Stotra · Jin-vani</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-tabbar">
 
-<!-- Topbar -->
 <header class="topbar">
   <a href="index.html" class="brand">
-    <span class="brand-mark">॥</span>Jin-vani
+    <span class="brand-logo">ज</span>
+    Jin-vani
   </a>
-  <nav class="topbar-actions">
-    <a href="index.html">Library</a>
-    <a href="#search" aria-label="Search">Search</a>
-    <button id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">◐</button>
-  </nav>
+  <div class="topbar-actions">
+    <a href="#bookmark" class="icon-btn" aria-label="Bookmark text">★</a>
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+  </div>
 </header>
 
-<main class="page-wrap">
+<main class="wrap">
 
-  <!-- Text header -->
-  <section class="text-header">
-    <div class="text-header-eyebrow">Stotra · Acharya Manatunga · 7th–8th century</div>
-    <h1 class="text-header-sk">भक्तामर स्तोत्र</h1>
-    <p class="text-header-en">Bhaktamara Stotra</p>
-    <div class="text-header-meta">
-      <span>📜 48 verses (Digambara)</span>
-      <span>⏱ ~15 min reading</span>
-      <span>🎵 Audio · Phase 1.5</span>
-      <span>📖 Read · Study · Listen</span>
+  <!-- Big text cover -->
+  <section class="text-cover">
+    <div class="text-cover-mark">भ</div>
+    <div class="text-cover-eyebrow">Stotra · Digambara</div>
+    <h1 class="text-cover-sk">भक्तामर स्तोत्र</h1>
+    <p class="text-cover-en">Bhaktamara Stotra</p>
+    <div class="text-cover-stats">
+      <span>48 verses</span>
+      <span>~15 min</span>
+      <span>Acharya Manatunga</span>
     </div>
   </section>
 
   <!-- Intro -->
-  <article class="text-intro">
+  <article class="text-intro-box">
     <p>
       The Bhaktamara Stotra is one of the most beloved devotional hymns in Jainism, composed in praise of <em>Bhagavan Adinath</em> — Rishabhanatha, the first Tirthankara — by Acharya Manatunga. Its 48 verses are recited daily across the Digambara tradition.
     </p>
     <p>
-      Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja of Ujjayini, who had heard Manatunga's yogic powers. With each verse, one chain miraculously broke; by the 48th, he was free. The four additional verses unique to this Digambara recension are traditionally associated with the breaking of the final four chains.
-    </p>
-    <p>
-      The stotra is rich in poetic imagery — the radiance of the Tirthankara's feet illuminates the jewels in the crowns of bowing celestials; the ocean of worldly existence finds its only refuge in the Jina. Reading it as a daily practice cultivates *bhakti* — devotion grounded in understanding rather than mere ritual.
+      Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja. With each verse, one chain miraculously broke; by the 48th, he was free. The four additional verses unique to this Digambara recension are traditionally associated with the breaking of the final chains.
     </p>
   </article>
 
   <!-- CTA -->
-  <div class="cta-row">
-    <a href="verse.html" class="cta-primary">Begin reading · Verse 1 →</a>
-  </div>
+  <a href="verse.html" class="cta-primary">
+    Begin reading · Verse 1
+    <span style="font-size:1.1em;">→</span>
+  </a>
 
-  <div class="divider-ornament">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/>
-    </svg>
-  </div>
-
-  <!-- Verse list -->
+  <!-- Verse grid -->
   <section>
-    <div class="section-head">
-      <h2>All 48 Verses</h2>
-      <span class="section-meta">Tap any verse to read</span>
+    <div class="section-h">
+      <h2>All Verses</h2>
+      <span class="section-h-link">5 of 48 read</span>
     </div>
-    <div class="verse-list">
-      <a href="verse.html" class="is-read">१</a>
-      <a href="#" class="is-read">२</a>
-      <a href="#" class="is-read">३</a>
-      <a href="#" class="is-read">४</a>
-      <a href="verse.html" class="is-current">५</a>
-      <a href="#">६</a>
-      <a href="#">७</a>
-      <a href="#">८</a>
-      <a href="#">९</a>
-      <a href="#">१०</a>
-      <a href="#">११</a>
-      <a href="#">१२</a>
-      <a href="#">१३</a>
-      <a href="#">१४</a>
-      <a href="#">१५</a>
-      <a href="#">१६</a>
-      <a href="#">१७</a>
-      <a href="#">१८</a>
-      <a href="#">१९</a>
-      <a href="#">२०</a>
-      <a href="#">२१</a>
-      <a href="#">२२</a>
-      <a href="#">२३</a>
-      <a href="#">२४</a>
-      <a href="#">२५</a>
-      <a href="#">२६</a>
-      <a href="#">२७</a>
-      <a href="#">२८</a>
-      <a href="#">२९</a>
-      <a href="#">३०</a>
-      <a href="#">३१</a>
-      <a href="#">३२</a>
-      <a href="#">३३</a>
-      <a href="#">३४</a>
-      <a href="#">३५</a>
-      <a href="#">३६</a>
-      <a href="#">३७</a>
-      <a href="#">३८</a>
-      <a href="#">३९</a>
-      <a href="#">४०</a>
-      <a href="#">४१</a>
-      <a href="#">४२</a>
-      <a href="#">४३</a>
-      <a href="#">४४</a>
-      <a href="#">४५</a>
-      <a href="#">४६</a>
-      <a href="#">४७</a>
-      <a href="#">४८</a>
+    <div class="verse-grid">
+      <a href="verse.html" class="verse-cell is-read">1</a>
+      <a href="#" class="verse-cell is-read">2</a>
+      <a href="#" class="verse-cell is-read">3</a>
+      <a href="#" class="verse-cell is-read">4</a>
+      <a href="verse.html" class="verse-cell is-current">5</a>
+      <a href="#" class="verse-cell">6</a>
+      <a href="#" class="verse-cell">7</a>
+      <a href="#" class="verse-cell">8</a>
+      <a href="#" class="verse-cell">9</a>
+      <a href="#" class="verse-cell">10</a>
+      <a href="#" class="verse-cell">11</a>
+      <a href="#" class="verse-cell">12</a>
+      <a href="#" class="verse-cell">13</a>
+      <a href="#" class="verse-cell">14</a>
+      <a href="#" class="verse-cell">15</a>
+      <a href="#" class="verse-cell">16</a>
+      <a href="#" class="verse-cell">17</a>
+      <a href="#" class="verse-cell">18</a>
+      <a href="#" class="verse-cell">19</a>
+      <a href="#" class="verse-cell">20</a>
+      <a href="#" class="verse-cell">21</a>
+      <a href="#" class="verse-cell">22</a>
+      <a href="#" class="verse-cell">23</a>
+      <a href="#" class="verse-cell">24</a>
+      <a href="#" class="verse-cell">25</a>
+      <a href="#" class="verse-cell">26</a>
+      <a href="#" class="verse-cell">27</a>
+      <a href="#" class="verse-cell">28</a>
+      <a href="#" class="verse-cell">29</a>
+      <a href="#" class="verse-cell">30</a>
+      <a href="#" class="verse-cell">31</a>
+      <a href="#" class="verse-cell">32</a>
+      <a href="#" class="verse-cell">33</a>
+      <a href="#" class="verse-cell">34</a>
+      <a href="#" class="verse-cell">35</a>
+      <a href="#" class="verse-cell">36</a>
+      <a href="#" class="verse-cell">37</a>
+      <a href="#" class="verse-cell">38</a>
+      <a href="#" class="verse-cell">39</a>
+      <a href="#" class="verse-cell">40</a>
+      <a href="#" class="verse-cell">41</a>
+      <a href="#" class="verse-cell">42</a>
+      <a href="#" class="verse-cell">43</a>
+      <a href="#" class="verse-cell">44</a>
+      <a href="#" class="verse-cell">45</a>
+      <a href="#" class="verse-cell">46</a>
+      <a href="#" class="verse-cell">47</a>
+      <a href="#" class="verse-cell">48</a>
     </div>
   </section>
 
-  <!-- Citations -->
-  <footer class="citations">
-    <h3>Sources used in this edition</h3>
-    <p>
-      <strong>Devanagari text:</strong> Bharatiya Jnanpith Digambara edition of Bhaktamara Stotra, verified against the Mahavir Aradhana Kendra (Koba) recension.
-    </p>
-    <p>
-      <strong>English translation:</strong> Pravin K. Shah (forthcoming review) · with reference to Hermann Jacobi (1884, public domain) for technical compounds.
-    </p>
-    <p>
-      <strong>Hindi translation &amp; bhavarth:</strong> Pt. Phool Chand Shastri lineage (verifying rights for Phase 1).
-    </p>
-    <p style="margin-top: 1rem;">
-      All content reviewed by the project's Digambara cultural reviewer before publish.
-    </p>
+  <footer class="foot">
+    <h3>Sources</h3>
+    <p><strong>Devanagari:</strong> Bharatiya Jnanpith Digambara edition.</p>
+    <p><strong>Translations:</strong> Project translations awaiting Digambara reviewer sign-off.</p>
   </footer>
 
 </main>
 
-<!-- Bottom nav (mobile) -->
-<nav class="bottom-nav" aria-label="Primary">
-  <div class="bottom-nav-grid">
-    <a href="index.html">
-      <span class="bottom-nav-icon">⌂</span>
+<nav class="tabbar" aria-label="Primary">
+  <div class="tabbar-grid">
+    <a href="index.html" class="tab-item">
+      <span class="tab-item-icon">⌂</span>
       <span>Library</span>
     </a>
-    <a href="#search">
-      <span class="bottom-nav-icon">⌕</span>
+    <a href="#search" class="tab-item">
+      <span class="tab-item-icon">⌕</span>
       <span>Search</span>
     </a>
-    <a href="verse.html" class="is-active">
-      <span class="bottom-nav-icon">▷</span>
+    <a href="verse.html" class="tab-item is-active">
+      <span class="tab-item-icon">▶</span>
       <span>Continue</span>
     </a>
-    <a href="#settings">
-      <span class="bottom-nav-icon">⚙</span>
-      <span>Settings</span>
+    <a href="#me" class="tab-item">
+      <span class="tab-item-icon">☰</span>
+      <span>You</span>
     </a>
   </div>
 </nav>
@@ -169,7 +149,7 @@
     if (cur === 'dark') root.setAttribute('data-theme', 'light');
     else if (cur === 'light') root.setAttribute('data-theme', 'dark');
     else {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = !window.matchMedia('(prefers-color-scheme: light)').matches;
       root.setAttribute('data-theme', isDark ? 'light' : 'dark');
     }
   });

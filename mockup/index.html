@@ -2,267 +2,279 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jain Scripture Library — Digambara texts for daily reading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E0B08">
+<title>Jin-vani · Digambara Scripture Library</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-tabbar">
 
-<!-- Topbar -->
 <header class="topbar">
   <a href="index.html" class="brand">
-    <span class="brand-mark">॥</span>Jin-vani
+    <span class="brand-logo">ज</span>
+    Jin-vani
   </a>
-  <nav class="topbar-actions">
-    <a href="#search" aria-label="Search">Search</a>
-    <a href="#about">About</a>
-    <button id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">◐</button>
-  </nav>
+  <div class="topbar-actions">
+    <a href="#search" class="icon-btn" aria-label="Search">⌕</a>
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+  </div>
 </header>
 
-<!-- Hero -->
-<main class="page-wrap">
+<main class="wrap">
 
-  <section class="hero">
-    <div class="hero-eyebrow">Digambara Scripture Library</div>
-    <p class="hero-mantra">
-      णमो अरिहंताणं<br>
-      णमो सिद्धाणं<br>
-      णमो आइरियाणं<br>
-      णमो उवज्झायाणं<br>
-      णमो लोए सव्वसाहूणं
-    </p>
-    <p class="hero-mantra-translit">
-      Namo arihantāṇaṁ · namo siddhāṇaṁ · namo āiriyāṇaṁ · namo uvajjhāyāṇaṁ · namo loe savva-sāhūṇaṁ
-    </p>
-    <p class="hero-tagline">
-      A reading library for Digambara Jain texts — Bhaktamara, Tattvartha, Samayasara, Chhah Dhala, and more — in Sanskrit, Hindi, and English. Built for daily reading, on your phone.
-    </p>
-  </section>
+  <!-- Greeting -->
+  <div class="hero-greeting">
+    Good evening<span>· Mayank</span>
+  </div>
 
-  <!-- Continue reading -->
-  <a href="verse.html" class="continue-card" style="text-decoration: none;">
-    <div class="continue-card-content">
-      <div class="continue-card-eyebrow">Continue reading</div>
-      <h3 class="continue-card-title">Bhaktamara Stotra</h3>
-      <div class="continue-card-meta">Verse 5 of 48 · Last read just now</div>
+  <!-- Verse of the Day — hero card -->
+  <a href="verse.html" class="verse-of-day">
+    <div class="vod-label">
+      Verse of the Day
     </div>
-    <span class="continue-card-cta">Resume →</span>
+    <p class="vod-sk">
+      भक्तामर-प्रणत-मौलि-मणि-प्रभाणा-<br>
+      मुद्योतकं दलित-पाप-तमो-वितानम्।
+    </p>
+    <p class="vod-translation">
+      "Having truly bowed to the pair of feet of the first Jina — feet that illumine the radiance of the jewels in the crowns of bowing devotees, that dispel the spreading darkness of sin..."
+    </p>
+    <div class="vod-source">
+      <span class="vod-source-name">Bhaktamara Stotra · Verse 1</span>
+      <span class="vod-cta">Read more →</span>
+    </div>
   </a>
 
-  <!-- Library — grouped by category -->
-  <section>
-    <div class="section-head">
-      <h2>Mantras &amp; Foundations</h2>
-      <span class="section-meta">2 texts</span>
+  <!-- Streak / habit -->
+  <div class="streak-row">
+    <div class="streak-pill">
+      <div class="streak-num">5</div>
+      <div class="streak-label">Day streak</div>
     </div>
-    <div class="library-grid">
+    <div class="streak-pill">
+      <div class="streak-num">12</div>
+      <div class="streak-label">Verses read</div>
+    </div>
+    <div class="streak-pill">
+      <div class="streak-num">3</div>
+      <div class="streak-label">Bookmarks</div>
+    </div>
+  </div>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Mantra · 5 lines</div>
-        <p class="text-card-title-sk">णमोकार मन्त्र</p>
-        <p class="text-card-title-en">Navkar Mantra</p>
-        <div class="text-card-author">— Anonymous; oldest Jain mantra</div>
-        <div class="text-card-meta">
-          <span>Read · Listen</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~2 min</span>
+  <!-- Continue reading -->
+  <a href="verse.html" class="continue-row">
+    <div class="continue-progress">
+      <span>5/48</span>
+    </div>
+    <div class="continue-text">
+      <div class="continue-eyebrow">Continue</div>
+      <h3 class="continue-title">Bhaktamara Stotra</h3>
+      <div class="continue-meta">Verse 5 · 10% complete</div>
+    </div>
+    <div class="continue-arrow">→</div>
+  </a>
+
+  <!-- Library — Stotras -->
+  <section>
+    <div class="section-h">
+      <h2>Stotras</h2>
+      <span class="section-h-link">2 texts</span>
+    </div>
+    <div class="lib-grid">
+
+      <a href="bhaktamara.html" class="lib-card">
+        <div class="lib-card-cover"><span>भ</span></div>
+        <h3 class="lib-card-title">Bhaktamara Stotra</h3>
+        <p class="lib-card-author">Acharya Manatunga</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">48 verses</span>
+          <span>·</span>
+          <span>15 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Prayer · Universal</div>
-        <p class="text-card-title-sk">चत्तारि मंगलं</p>
-        <p class="text-card-title-en">Chattari Mangalam</p>
-        <div class="text-card-author">— Traditional</div>
-        <div class="text-card-meta">
-          <span>Read · Listen</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~2 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>म</span></div>
+        <h3 class="lib-card-title">Mangalashtak</h3>
+        <p class="lib-card-author">Traditional Digambara</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">8 verses</span>
+          <span>·</span>
+          <span>5 min</span>
         </div>
       </a>
 
     </div>
   </section>
 
+  <!-- Library — Mantras -->
   <section>
-    <div class="section-head">
-      <h2>Stotras &amp; Devotional</h2>
-      <span class="section-meta">2 texts</span>
+    <div class="section-h">
+      <h2>Mantras &amp; Prayers</h2>
+      <span class="section-h-link">2 texts</span>
     </div>
-    <div class="library-grid">
+    <div class="lib-grid">
 
-      <a href="bhaktamara.html" class="text-card">
-        <div class="text-card-category">Stotra · 48 verses · Digambara</div>
-        <p class="text-card-title-sk">भक्तामर स्तोत्र</p>
-        <p class="text-card-title-en">Bhaktamara Stotra</p>
-        <div class="text-card-author">— Acharya Manatunga</div>
-        <div class="text-card-meta">
-          <span>Read · Study · Listen</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~15 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>ण</span></div>
+        <h3 class="lib-card-title">Navkar Mantra</h3>
+        <p class="lib-card-author">Foundational mantra</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">5 lines</span>
+          <span>·</span>
+          <span>2 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Stotra · 8 verses · Digambara</div>
-        <p class="text-card-title-sk">मङ्गलाष्टक</p>
-        <p class="text-card-title-en">Mangalashtak</p>
-        <div class="text-card-author">— Traditional Digambara</div>
-        <div class="text-card-meta">
-          <span>Read · Listen</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~5 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>च</span></div>
+        <h3 class="lib-card-title">Chattari Mangalam</h3>
+        <p class="lib-card-author">Traditional</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">4 lines</span>
+          <span>·</span>
+          <span>2 min</span>
         </div>
       </a>
 
     </div>
   </section>
 
+  <!-- Library — Daily reading -->
   <section>
-    <div class="section-head">
+    <div class="section-h">
       <h2>Daily Reading</h2>
-      <span class="section-meta">1 text</span>
+      <span class="section-h-link">1 text</span>
     </div>
-    <div class="library-grid">
+    <div class="lib-grid">
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Hindi devotional · 6 dhalas</div>
-        <p class="text-card-title-sk">छह ढाला</p>
-        <p class="text-card-title-en">Chhah Dhala</p>
-        <div class="text-card-author">— Pt. Daulatram Kasliwal (18th c.)</div>
-        <div class="text-card-meta">
-          <span>Read · Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~30 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>छ</span></div>
+        <h3 class="lib-card-title">Chhah Dhala</h3>
+        <p class="lib-card-author">Pt. Daulatram Kasliwal · 18th c.</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">6 dhalas</span>
+          <span>·</span>
+          <span>30 min</span>
         </div>
       </a>
 
     </div>
   </section>
 
+  <!-- Library — Sutras & Philosophy -->
   <section>
-    <div class="section-head">
+    <div class="section-h">
       <h2>Sutras &amp; Philosophy</h2>
-      <span class="section-meta">5 texts</span>
+      <span class="section-h-link">5 texts</span>
     </div>
-    <div class="library-grid">
+    <div class="lib-grid">
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Sutra · Chapter 1, 10 sutras</div>
-        <p class="text-card-title-sk">तत्त्वार्थ सूत्र</p>
-        <p class="text-card-title-en">Tattvartha Sutra</p>
-        <div class="text-card-author">— Acharya Umaswami · with Sarvarthasiddhi</div>
-        <div class="text-card-meta">
-          <span>Read · Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~10 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>त</span></div>
+        <h3 class="lib-card-title">Tattvartha Sutra</h3>
+        <p class="lib-card-author">Acharya Umaswami</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">Ch. 1</span>
+          <span>·</span>
+          <span>10 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Gathas · 58 verses</div>
-        <p class="text-card-title-sk">द्रव्यसङ्ग्रह</p>
-        <p class="text-card-title-en">Dravya Sangraha</p>
-        <div class="text-card-author">— Acharya Nemichandra</div>
-        <div class="text-card-meta">
-          <span>Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~25 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>द्र</span></div>
+        <h3 class="lib-card-title">Dravya Sangraha</h3>
+        <p class="lib-card-author">Acharya Nemichandra</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">58 gathas</span>
+          <span>·</span>
+          <span>25 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Lay ethics · 150 verses</div>
-        <p class="text-card-title-sk">रत्नकरण्ड श्रावकाचार</p>
-        <p class="text-card-title-en">Ratnakaranda Shravakachara</p>
-        <div class="text-card-author">— Acharya Samantabhadra</div>
-        <div class="text-card-meta">
-          <span>Read · Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~45 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>र</span></div>
+        <h3 class="lib-card-title">Ratnakaranda Shravakachara</h3>
+        <p class="lib-card-author">Acharya Samantabhadra</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">150 verses</span>
+          <span>·</span>
+          <span>45 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Selected gathas · Adhyatmika</div>
-        <p class="text-card-title-sk">समयसार</p>
-        <p class="text-card-title-en">Samayasara</p>
-        <div class="text-card-author">— Acharya Kundakunda</div>
-        <div class="text-card-meta">
-          <span>Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~60 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>स</span></div>
+        <h3 class="lib-card-title">Samayasara</h3>
+        <p class="lib-card-author">Acharya Kundakunda</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">Selections</span>
+          <span>·</span>
+          <span>60 min</span>
         </div>
       </a>
 
-      <a href="#" class="text-card">
-        <div class="text-card-category">Gathas · 51 verses · Meditative</div>
-        <p class="text-card-title-sk">इष्टोपदेश</p>
-        <p class="text-card-title-en">Ishtopadesh</p>
-        <div class="text-card-author">— Acharya Pujyapada</div>
-        <div class="text-card-meta">
-          <span>Read · Study</span>
-          <span class="text-card-meta-dot"></span>
-          <span>~20 min</span>
+      <a href="#" class="lib-card">
+        <div class="lib-card-cover"><span>इ</span></div>
+        <h3 class="lib-card-title">Ishtopadesh</h3>
+        <p class="lib-card-author">Acharya Pujyapada</p>
+        <div class="lib-card-meta">
+          <span class="lib-card-pill">51 gathas</span>
+          <span>·</span>
+          <span>20 min</span>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="citations">
-    <h3>About this library</h3>
+  <footer class="foot">
+    <h3>About Jin-vani</h3>
     <p>
       A Digambara Jain reading library — built by a community member for the community.
       Texts are presented in their Digambara recensions with translations and meanings in Hindi and English.
-      All translations cite their sources.
     </p>
-    <p style="margin-top: 1rem; font-size: 0.7rem;">
-      Phase 1 mockup · Sprint 1 · Bhaktamara Stotra is the flagship implementation.
+    <p style="margin-top: var(--s-4); font-size: 0.7rem; opacity: 0.6;">
+      Sprint 1 mockup v2 · Bhaktamara Stotra is the flagship implementation.
     </p>
   </footer>
 
 </main>
 
-<!-- Bottom nav (mobile) -->
-<nav class="bottom-nav" aria-label="Primary">
-  <div class="bottom-nav-grid">
-    <a href="index.html" class="is-active">
-      <span class="bottom-nav-icon">⌂</span>
+<!-- Bottom tab bar -->
+<nav class="tabbar" aria-label="Primary">
+  <div class="tabbar-grid">
+    <a href="index.html" class="tab-item is-active">
+      <span class="tab-item-icon">⌂</span>
       <span>Library</span>
     </a>
-    <a href="#search">
-      <span class="bottom-nav-icon">⌕</span>
+    <a href="#search" class="tab-item">
+      <span class="tab-item-icon">⌕</span>
       <span>Search</span>
     </a>
-    <a href="verse.html">
-      <span class="bottom-nav-icon">▷</span>
+    <a href="verse.html" class="tab-item">
+      <span class="tab-item-icon">▶</span>
       <span>Continue</span>
     </a>
-    <a href="#settings">
-      <span class="bottom-nav-icon">⚙</span>
-      <span>Settings</span>
+    <a href="#me" class="tab-item">
+      <span class="tab-item-icon">☰</span>
+      <span>You</span>
     </a>
   </div>
 </nav>
 
 <script>
-  // Theme toggle (light/dark)
   const root = document.documentElement;
-  const btn = document.getElementById('theme-toggle');
-  btn.addEventListener('click', () => {
+  document.getElementById('theme-toggle').addEventListener('click', () => {
     const cur = root.getAttribute('data-theme');
     if (cur === 'dark') root.setAttribute('data-theme', 'light');
     else if (cur === 'light') root.setAttribute('data-theme', 'dark');
     else {
-      // first toggle: pick opposite of current resolved
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = !window.matchMedia('(prefers-color-scheme: light)').matches;
       root.setAttribute('data-theme', isDark ? 'light' : 'dark');
     }
   });
