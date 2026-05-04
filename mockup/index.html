@@ -18,65 +18,79 @@
     <span class="brand-logo">ज</span>
     Jin-vani
   </a>
+  <nav class="topnav">
+    <a href="index.html" class="is-active">Library</a>
+    <a href="bhaktamara.html">Stotras</a>
+    <a href="#">Sutras</a>
+    <a href="#">Daily</a>
+  </nav>
+  <div class="topbar-search">
+    <span style="opacity:0.6;">⌕</span>
+    <input type="search" placeholder="Search verses, terms, texts…" />
+  </div>
   <div class="topbar-actions">
     <a href="#search" class="icon-btn" aria-label="Search">⌕</a>
     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap wrap-responsive">
 
   <!-- Greeting -->
   <div class="hero-greeting">
     Good evening<span>· Mayank</span>
   </div>
 
-  <!-- Verse of the Day — hero card -->
-  <a href="verse.html" class="verse-of-day">
-    <div class="vod-label">
-      Verse of the Day
-    </div>
-    <p class="vod-sk">
-      भक्तामर-प्रणत-मौलि-मणि-प्रभाणा-<br>
-      मुद्योतकं दलित-पाप-तमो-वितानम्।
-    </p>
-    <p class="vod-translation">
-      "Having truly bowed to the pair of feet of the first Jina — feet that illumine the radiance of the jewels in the crowns of bowing devotees, that dispel the spreading darkness of sin..."
-    </p>
-    <div class="vod-source">
-      <span class="vod-source-name">Bhaktamara Stotra · Verse 1</span>
-      <span class="vod-cta">Read more →</span>
-    </div>
-  </a>
+  <!-- Hero grid: VoD left, side rail (continue + streaks) right on desktop -->
+  <div class="home-hero-grid">
 
-  <!-- Streak / habit -->
-  <div class="streak-row">
-    <div class="streak-pill">
-      <div class="streak-num">5</div>
-      <div class="streak-label">Day streak</div>
+    <!-- Verse of the Day — hero card -->
+    <a href="verse.html" class="verse-of-day">
+      <div class="vod-label">Verse of the Day</div>
+      <p class="vod-sk">
+        भक्तामर-प्रणत-मौलि-मणि-प्रभाणा-<br>
+        मुद्योतकं दलित-पाप-तमो-वितानम्।
+      </p>
+      <p class="vod-translation">
+        "Having truly bowed to the pair of feet of the first Jina — feet that illumine the radiance of the jewels in the crowns of bowing devotees, that dispel the spreading darkness of sin..."
+      </p>
+      <div class="vod-source">
+        <span class="vod-source-name">Bhaktamara Stotra · Verse 1</span>
+        <span class="vod-cta">Read more →</span>
+      </div>
+    </a>
+
+    <!-- Side rail (right on desktop, below on mobile) -->
+    <div class="home-side-rail">
+      <a href="verse.html" class="continue-row">
+        <div class="continue-progress">
+          <span>5/48</span>
+        </div>
+        <div class="continue-text">
+          <div class="continue-eyebrow">Continue</div>
+          <h3 class="continue-title">Bhaktamara Stotra</h3>
+          <div class="continue-meta">Verse 5 · 10% complete</div>
+        </div>
+        <div class="continue-arrow">→</div>
+      </a>
+
+      <div class="streak-row">
+        <div class="streak-pill">
+          <div class="streak-num">5</div>
+          <div class="streak-label">Day streak</div>
+        </div>
+        <div class="streak-pill">
+          <div class="streak-num">12</div>
+          <div class="streak-label">Verses</div>
+        </div>
+        <div class="streak-pill">
+          <div class="streak-num">3</div>
+          <div class="streak-label">Saved</div>
+        </div>
+      </div>
     </div>
-    <div class="streak-pill">
-      <div class="streak-num">12</div>
-      <div class="streak-label">Verses read</div>
-    </div>
-    <div class="streak-pill">
-      <div class="streak-num">3</div>
-      <div class="streak-label">Bookmarks</div>
-    </div>
+
   </div>
-
-  <!-- Continue reading -->
-  <a href="verse.html" class="continue-row">
-    <div class="continue-progress">
-      <span>5/48</span>
-    </div>
-    <div class="continue-text">
-      <div class="continue-eyebrow">Continue</div>
-      <h3 class="continue-title">Bhaktamara Stotra</h3>
-      <div class="continue-meta">Verse 5 · 10% complete</div>
-    </div>
-    <div class="continue-arrow">→</div>
-  </a>
 
   <!-- Library — Stotras -->
   <section>

@@ -18,50 +18,65 @@
     <span class="brand-logo">ज</span>
     Jin-vani
   </a>
+  <nav class="topnav">
+    <a href="index.html">Library</a>
+    <a href="bhaktamara.html" class="is-active">Stotras</a>
+    <a href="#">Sutras</a>
+    <a href="#">Daily</a>
+  </nav>
+  <div class="topbar-search">
+    <span style="opacity:0.6;">⌕</span>
+    <input type="search" placeholder="Search verses, terms, texts…" />
+  </div>
   <div class="topbar-actions">
     <a href="#bookmark" class="icon-btn" aria-label="Bookmark text">★</a>
     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap wrap-responsive">
 
-  <!-- Big text cover -->
-  <section class="text-cover">
-    <div class="text-cover-mark">भ</div>
-    <div class="text-cover-eyebrow">Stotra · Digambara</div>
-    <h1 class="text-cover-sk">भक्तामर स्तोत्र</h1>
-    <p class="text-cover-en">Bhaktamara Stotra</p>
-    <div class="text-cover-stats">
-      <span>48 verses</span>
-      <span>~15 min</span>
-      <span>Acharya Manatunga</span>
+  <!-- Two-column layout activates at desktop -->
+  <div class="text-page-grid">
+
+    <!-- LEFT: cover + intro + CTA -->
+    <div class="text-page-main">
+
+      <section class="text-cover">
+        <div class="text-cover-mark">भ</div>
+        <div class="text-cover-eyebrow">Stotra · Digambara</div>
+        <h1 class="text-cover-sk">भक्तामर स्तोत्र</h1>
+        <p class="text-cover-en">Bhaktamara Stotra</p>
+        <div class="text-cover-stats">
+          <span>48 verses</span>
+          <span>~15 min</span>
+          <span>Acharya Manatunga</span>
+        </div>
+      </section>
+
+      <article class="text-intro-box">
+        <p>
+          The Bhaktamara Stotra is one of the most beloved devotional hymns in Jainism, composed in praise of <em>Bhagavan Adinath</em> — Rishabhanatha, the first Tirthankara — by Acharya Manatunga. Its 48 verses are recited daily across the Digambara tradition.
+        </p>
+        <p>
+          Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja. With each verse, one chain miraculously broke; by the 48th, he was free. The four additional verses unique to this Digambara recension are traditionally associated with the breaking of the final chains.
+        </p>
+      </article>
+
+      <a href="verse.html" class="cta-primary">
+        Begin reading · Verse 1
+        <span style="font-size:1.1em;">→</span>
+      </a>
+
     </div>
-  </section>
 
-  <!-- Intro -->
-  <article class="text-intro-box">
-    <p>
-      The Bhaktamara Stotra is one of the most beloved devotional hymns in Jainism, composed in praise of <em>Bhagavan Adinath</em> — Rishabhanatha, the first Tirthankara — by Acharya Manatunga. Its 48 verses are recited daily across the Digambara tradition.
-    </p>
-    <p>
-      Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja. With each verse, one chain miraculously broke; by the 48th, he was free. The four additional verses unique to this Digambara recension are traditionally associated with the breaking of the final chains.
-    </p>
-  </article>
-
-  <!-- CTA -->
-  <a href="verse.html" class="cta-primary">
-    Begin reading · Verse 1
-    <span style="font-size:1.1em;">→</span>
-  </a>
-
-  <!-- Verse grid -->
-  <section>
-    <div class="section-h">
-      <h2>All Verses</h2>
-      <span class="section-h-link">5 of 48 read</span>
-    </div>
-    <div class="verse-grid">
+    <!-- RIGHT (sticky on desktop): verse grid + reading progress -->
+    <aside class="text-page-side">
+      <div class="section-h">
+        <h2>All Verses</h2>
+        <span class="section-h-link">5 of 48</span>
+      </div>
+      <div class="verse-grid">
       <a href="verse.html" class="verse-cell is-read">1</a>
       <a href="#" class="verse-cell is-read">2</a>
       <a href="#" class="verse-cell is-read">3</a>
@@ -110,8 +125,10 @@
       <a href="#" class="verse-cell">46</a>
       <a href="#" class="verse-cell">47</a>
       <a href="#" class="verse-cell">48</a>
-    </div>
-  </section>
+      </div>
+    </aside>
+
+  </div>
 
   <footer class="foot">
     <h3>Sources</h3>
