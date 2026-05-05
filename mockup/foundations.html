@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E0B08">
+<title>Foundations · What Jainism Actually Says · Jin-vani</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .found-hero {
+    text-align: center;
+    padding: var(--s-12) 0 var(--s-8);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--s-12);
+  }
+  .found-eyebrow {
+    font-family: var(--type-ui);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--s-3);
+  }
+  .found-title {
+    font-family: var(--type-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0 0 var(--s-4);
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .found-sub {
+    font-family: var(--type-body);
+    font-size: 1.05rem;
+    color: var(--text-2);
+    line-height: 1.65;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
+  .found-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+    margin-bottom: var(--s-12);
+  }
+  @media (min-width: 700px) {
+    .found-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .found-card {
+    background: var(--bg-elev-1);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: var(--s-6);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    display: flex; flex-direction: column;
+    gap: var(--s-3);
+    position: relative;
+  }
+  .found-card.is-published:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .found-card.is-coming { opacity: 0.55; cursor: default; }
+  .found-card-num {
+    font-family: var(--type-display);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+  }
+  .found-card-q {
+    font-family: var(--type-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .found-card-summary {
+    font-family: var(--type-body);
+    font-size: 0.92rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .found-card-pill {
+    align-self: flex-start;
+    background: var(--bg-elev-3);
+    color: var(--accent);
+    font-family: var(--type-ui);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    margin-top: auto;
+  }
+  .found-card.is-coming .found-card-pill { background: var(--bg-elev-2); color: var(--text-3); }
+
+  /* Long article view */
+  .found-article {
+    max-width: 36rem;
+    margin: 0 auto var(--s-12);
+  }
+  .found-article-meta {
+    font-family: var(--type-ui);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--s-3);
+  }
+  .found-article h2 {
+    font-family: var(--type-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin: 0 0 var(--s-6);
+    line-height: 1.25;
+  }
+  .found-article p {
+    font-family: var(--type-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin: 0 0 var(--s-5);
+  }
+  .found-article p strong { color: var(--text); }
+  .found-article p em { color: var(--text-2); }
+  .found-article .lead {
+    font-family: var(--type-display);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.45;
+    color: var(--ink-sk);
+    margin: 0 0 var(--s-6);
+    letter-spacing: -0.005em;
+  }
+  .found-article .pullq {
+    font-family: var(--type-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--text);
+    border-left: 3px solid var(--accent);
+    padding: var(--s-2) 0 var(--s-2) var(--s-5);
+    margin: var(--s-6) 0;
+  }
+</style>
+</head>
+<body class="has-tabbar">
+
+<header class="topbar">
+  <a href="index.html" class="brand">
+    <span class="brand-logo">ज</span>
+    Jin-vani
+  </a>
+  <nav class="topnav">
+    <a href="index.html">Library</a>
+    <a href="#">Stotras</a>
+    <a href="#">Sutras</a>
+    <a href="foundations.html" class="is-active">Foundations</a>
+  </nav>
+  <div class="topbar-search">
+    <span style="opacity:0.6;">⌕</span>
+    <input type="search" placeholder="Search verses, terms, texts…" />
+  </div>
+  <div class="topbar-actions">
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section class="found-hero">
+    <div class="found-eyebrow">Foundations</div>
+    <h1 class="found-title">What Jainism Actually Says</h1>
+    <p class="found-sub">
+      Eight things often misunderstood — answered honestly. No apologetics. No claims that ancient texts predicted modern science. Just what the tradition holds, what it doesn't, and where the genuinely hard questions still are.
+    </p>
+  </section>
+
+  <!-- Grid of 8 entries — 1 published, 7 coming soon as scope demonstration -->
+  <section>
+    <div class="found-grid">
+
+      <!-- Published — full article -->
+      <a href="#article" class="found-card is-published">
+        <span class="found-card-num">01</span>
+        <h3 class="found-card-q">Tirthankaras are not gods</h3>
+        <p class="found-card-summary">
+          The most-misunderstood thing in Jainism. They cannot save you, grant wishes, or intervene in the world. They are exemplars — not deities.
+        </p>
+        <span class="found-card-pill">Read</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">02</span>
+        <h3 class="found-card-q">Karma is not fate — it's accountability</h3>
+        <p class="found-card-summary">
+          Why Jainism's strict-cause-and-effect karma is closer to physics than to "what goes around comes around."
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">03</span>
+        <h3 class="found-card-q">There is no creator god — and that's not a bug</h3>
+        <p class="found-card-summary">
+          Jainism has no creator. The world is eternal, governed by natural laws. What this means, and why it has been so for 2500 years.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">04</span>
+        <h3 class="found-card-q">Liberation is by your own effort</h3>
+        <p class="found-card-summary">
+          Not by grace. Not by belief. Not by ritual alone. The implication for how you live today.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">05</span>
+        <h3 class="found-card-q">Ahimsa is not just diet</h3>
+        <p class="found-card-summary">
+          Vegetarianism is the most visible part of ahimsa — but ahimsa is a complete ethic of harm reduction in thought, speech, and action.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">06</span>
+        <h3 class="found-card-q">Aparigraha is not just minimalism</h3>
+        <p class="found-card-summary">
+          Non-attachment looks like Marie Kondo on the surface. Underneath, it's a critique of how possessions distort the mind itself.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">07</span>
+        <h3 class="found-card-q">Anekantavada means you might be wrong</h3>
+        <p class="found-card-summary">
+          The doctrine of "many-sided viewpoint" — built-in epistemic humility, and arguably Jainism's most important contribution to world philosophy.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+      <a href="#" class="found-card is-coming">
+        <span class="found-card-num">08</span>
+        <h3 class="found-card-q">The tradition has hard questions</h3>
+        <p class="found-card-summary">
+          Digambara nudity, female ordination, sallekhana fasts. Real, contested, debated within the tradition itself. We don't paper over these.
+        </p>
+        <span class="found-card-pill">Coming</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Article view: Tirthankaras are not gods -->
+  <article class="found-article" id="article">
+    <div class="found-article-meta">Foundation 01 · Reading time 4 min</div>
+    <h2>Tirthankaras are not gods</h2>
+
+    <p class="lead">
+      This is the single most important thing to get right about Jainism, and the one most often misunderstood.
+    </p>
+
+    <p>
+      When non-Jains see images of Mahavir or Adinath in temples — flowers offered before them, mantras recited, devotees bowing — the natural assumption is that these are deities being worshipped.
+    </p>
+
+    <p>
+      They are not. Jain doctrine is explicit and unwavering on this point.
+    </p>
+
+    <p>
+      A Tirthankara is a <em>jina</em> — a "conqueror." Someone who, in their final birth, attained complete liberation (<em>moksha</em>) through their own effort, by destroying the karma that bound their soul. Having attained liberation, they are no longer subject to rebirth. They reside in <em>Siddhaloka</em> at the apex of the universe.
+    </p>
+
+    <p>
+      What this means in practice: <strong>a Tirthankara cannot answer your prayer. Cannot grant your wish. Cannot intervene in the world. Cannot save you.</strong> They have completely transcended the world and have no further connection to it.
+    </p>
+
+    <p class="pullq">
+      Why, then, do Jains have temples? Why bow before murtis? Why recite their names?
+    </p>
+
+    <p>
+      For the same reason a young pianist might keep a portrait of Bach over their practice room. The image is not Bach. Bach cannot help them play. But the image is a reminder of what is possible — what excellence looks like, what they are working toward.
+    </p>
+
+    <p>
+      Jain <em>puja</em> — and the recitation of stotras like the Bhaktamara — is veneration of an example, not solicitation of a deity. Acharya Manatunga's verses repeatedly clarify this. He does not ask Adinath for anything. He simply praises what Adinath represents.
+    </p>
+
+    <p>
+      This makes Jainism, in a specific technical sense, a <strong>non-theistic</strong> tradition. There is no creator god. There is no salvific god. Liberation comes from your own effort, walking the path the Tirthankaras showed.
+    </p>
+
+    <p>
+      For a young person trained to be skeptical of religion's promises — "pray and your wishes will be granted, fail to believe and be punished" — Jainism may turn out to be unexpectedly compatible with that skepticism. It does not promise what it cannot deliver. It only points the way.
+    </p>
+
+    <p>
+      So when you bow before a Tirthankara murti, or recite the Bhaktamara, you are not asking. You are acknowledging. You are saying: <em>another human being walked the path to its end. The same path is open to me.</em>
+    </p>
+
+    <div class="today-flag" style="margin-top: var(--s-8);">
+      <strong>Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. It is interpretive commentary intended to address modern misconceptions, not canonical doctrinal exposition. Reviewer may revise framing, examples, or tone.
+    </div>
+  </article>
+
+</main>
+
+<nav class="tabbar" aria-label="Primary">
+  <div class="tabbar-grid">
+    <a href="index.html" class="tab-item">
+      <span class="tab-item-icon">⌂</span>
+      <span>Library</span>
+    </a>
+    <a href="#search" class="tab-item">
+      <span class="tab-item-icon">⌕</span>
+      <span>Search</span>
+    </a>
+    <a href="foundations.html" class="tab-item is-active">
+      <span class="tab-item-icon">◈</span>
+      <span>Foundations</span>
+    </a>
+    <a href="#me" class="tab-item">
+      <span class="tab-item-icon">☰</span>
+      <span>You</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+  const root = document.documentElement;
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    if (cur === 'dark') root.setAttribute('data-theme', 'light');
+    else if (cur === 'light') root.setAttribute('data-theme', 'dark');
+    else {
+      const isDark = !window.matchMedia('(prefers-color-scheme: light)').matches;
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+  });
+</script>
+
+</body>
+</html>
