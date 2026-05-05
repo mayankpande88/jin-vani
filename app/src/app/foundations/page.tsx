@@ -30,11 +30,41 @@ const FOUNDATIONS = [
     summary: 'The most important daily Jain practice — and arguably the most misunderstood. The structural ritual of saṁvara (stopping new karma) and nirjarā (shedding old karma).',
     status: 'published',
   },
-  { num: '05', title: 'Liberation is by your own effort', summary: 'Not by grace. Not by belief. Not by ritual alone. The implication for how you live today.' },
-  { num: '06', title: 'Ahimsa is not just diet', summary: 'Vegetarianism is the most visible part of ahimsa — but ahimsa is a complete ethic of harm reduction in thought, speech, and action.' },
-  { num: '07', title: 'Aparigraha is not just minimalism', summary: 'Non-attachment looks like Marie Kondo on the surface. Underneath, it\'s a critique of how possessions distort the mind itself.' },
-  { num: '08', title: 'Anekantavada means you might be wrong', summary: 'The doctrine of "many-sided viewpoint" — built-in epistemic humility, and arguably Jainism\'s most important contribution to world philosophy.' },
-  { num: '09', title: 'The tradition has hard questions', summary: 'Digambara nudity, female ordination, sallekhana fasts. Real, contested, debated within the tradition itself. We don\'t paper over these.' },
+  {
+    num: '05',
+    slug: 'liberation-self-effort',
+    title: 'Liberation is by your own effort',
+    summary: 'Not by grace. Not by ritual. Not by belief. The most-empowering and most-demanding position any tradition has taken on the soul\'s own work.',
+    status: 'published',
+  },
+  {
+    num: '06',
+    slug: 'ahimsa',
+    title: 'Ahimsa is not just diet',
+    summary: 'The most rigorous account of non-violence ever produced by a human tradition. Vegetarianism is one consistent application; the framework is complete.',
+    status: 'published',
+  },
+  {
+    num: '07',
+    slug: 'aparigraha',
+    title: 'Aparigraha is not just minimalism',
+    summary: 'Non-attachment looks like Marie Kondo on the surface. Underneath: a complete philosophical analysis of how possessions distort the mind. Definition: mūrcchā parigrahaḥ.',
+    status: 'published',
+  },
+  {
+    num: '08',
+    slug: 'anekantavada',
+    title: 'Anekantavada — you might be wrong',
+    summary: 'The doctrine of multiple viewpoints. Built-in epistemic humility, and arguably Jainism\'s most important contribution to world philosophy. Two thousand years before Western philosophy got there.',
+    status: 'published',
+  },
+  {
+    num: '09',
+    slug: 'hard-questions',
+    title: 'The tradition has hard questions',
+    summary: 'Female ordination. Digambara nudity. Sallekhana. The role of women. The historical Tirthankaras. Real, contested, debated within the tradition itself. We don\'t paper over them.',
+    status: 'published',
+  },
 ];
 
 export default function FoundationsIndex() {

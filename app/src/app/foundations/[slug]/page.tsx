@@ -26,6 +26,36 @@ const ARTICLES: Record<string, { num: string; title: string; readingMinutes: num
     readingMinutes: 9,
     render: () => <PratikramanArticle />,
   },
+  'liberation-self-effort': {
+    num: '05',
+    title: 'Liberation is by your own effort',
+    readingMinutes: 5,
+    render: () => <LiberationArticle />,
+  },
+  'ahimsa': {
+    num: '06',
+    title: 'Ahimsa is not just diet',
+    readingMinutes: 6,
+    render: () => <AhimsaArticle />,
+  },
+  'aparigraha': {
+    num: '07',
+    title: 'Aparigraha is not just minimalism',
+    readingMinutes: 5,
+    render: () => <AparigrahaArticle />,
+  },
+  'anekantavada': {
+    num: '08',
+    title: 'Anekantavada — you might be wrong',
+    readingMinutes: 7,
+    render: () => <AnekantavadaArticle />,
+  },
+  'hard-questions': {
+    num: '09',
+    title: 'The tradition has hard questions',
+    readingMinutes: 8,
+    render: () => <HardQuestionsArticle />,
+  },
 };
 
 export function generateStaticParams() {
@@ -38,7 +68,7 @@ export default async function FoundationArticle({ params }: { params: Promise<{ 
   if (!article) notFound();
 
   return (
-    <main className="max-w-[480px] lg:max-w-[36rem] mx-auto px-5 lg:px-8 pb-24 lg:pb-12">
+    <main className="max-w-[480px] lg:max-w-[36rem] mx-auto px-5 lg:px-8 pb-24 lg:pb-12" data-pagefind-body>
       <article className="my-12">
         <div className="font-ui text-[0.72rem] tracking-[0.16em] uppercase text-accent mb-3">
           Foundation {article.num} · Reading time {article.readingMinutes} min · With citations
@@ -456,6 +486,369 @@ function PratikramanArticle() {
         <strong className="text-accent">Draft note:</strong> This article gives the doctrinal and structural overview of pratikramaṇa. The full liturgical text of Digambara pratikramaṇa is a Phase 2 addition. Reviewer should verify specific liturgical sequences and Digambara/Shvetambara differences described here.
       </div>
     </>
+  );
+}
+
+function LiberationArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        In Jainism, no one liberates you. Not a creator god. Not a Tirthankara. Not a guru. Not a ritual. The path is yours to walk; the result is yours to attain.
+      </p>
+
+      <H3>What the texts say</H3>
+      <P>
+        The Tattvartha Sutra opens with: <em>samyag-darśana-jnāna-cāritrāṇi mokṣa-mārgaḥ</em> — &ldquo;right faith, right knowledge, right conduct: the path to liberation.&rdquo;<CiteMark id="cite1" label="1" /> Three components, one path. Notice what is not in the sentence: no agent other than the practitioner. No deity. No grace. The path is constituted entirely by the practitioner&apos;s own faith, knowledge, and conduct.
+      </P>
+      <P>
+        Acharya Kundakunda&apos;s <em>Samayasara</em> makes the same point in stronger terms. The soul (<em>jīva</em>) is its own doer (<em>kartā</em>) and its own enjoyer (<em>bhoktā</em>) of the fruits of its actions.<CiteMark id="cite2" label="2" /> Liberation comes when the soul recognizes its true nature and ceases to act under the influence of passions; nothing external accomplishes this.
+      </P>
+      <P>
+        The Tirthankaras themselves cannot liberate anyone. (See <Link href="/foundations/tirthankaras-and-gods" className="text-accent">Foundation 01</Link>.) They are the <em>avalambana</em> — the example, the support — not the agent. They show the path; they cannot walk it for you.
+      </P>
+
+      <H3>Why this is harder than it sounds</H3>
+      <P>
+        In traditions where liberation is granted by a deity or earned through grace, the practitioner&apos;s primary work is to qualify for that grace — through faith, devotion, ritual, obedience. If liberation depends on someone else&apos;s decision, your effort is necessary but not sufficient.
+      </P>
+      <P>
+        In Jainism, your effort is necessary <em>and</em> sufficient. There is no further variable. Every meditation, every act of restraint, every moment of equanimity, every refusal to react in anger — these <em>are</em> the work. Karma is shed by specific spiritual practices: <em>saṁvara</em> (stopping new karmic inflow) and <em>nirjarā</em> (shedding accumulated karma).<CiteMark id="cite3" label="3" /> No prayer. No ritual. No deity. The mechanism is causal.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Whatever you accumulate, you accumulated. Whatever you shed, you shed. The system has no exception clause.
+      </blockquote>
+
+      <H3>Why this is also liberating</H3>
+      <P>
+        Read another way, this is a remarkably empowering position. Your liberation does not depend on whether you were born into the right family, whether you said the right prayer, whether you happened to be loved by the right deity. It depends on what <em>you</em> do.
+      </P>
+      <P>
+        For a modern reader trained to be skeptical of religion&apos;s arbitrary mechanisms — chosen people, predestination, salvation only through specific rituals — Jainism&apos;s position is unusually clean. The path is open to anyone, regardless of birth, gender, or community. The work is the same. The result is the same.
+      </P>
+
+      <H3>The catch</H3>
+      <P>
+        The catch is that the work is real and continuous. You cannot delegate it. You cannot defer it. You cannot expect a future grace to compensate for present neglect. Every day&apos;s actions actually determine the soul&apos;s trajectory; every day&apos;s practices — pratikramaṇa, sāmāyika, restraint — actually accomplish karma-shedding. (See <Link href="/foundations/pratikraman" className="text-accent">Foundation 04</Link> for the daily mechanism.)
+      </P>
+      <P>
+        Self-effort sounds inspiring until you realize it means there are no shortcuts. Every soul that ever attained mokṣa did so by walking the same path you are currently on. They did not have a magic helper. Neither do you. Neither does anyone.
+      </P>
+
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 1.1">
+            The path to liberation as right faith, knowledge, and conduct — entirely constituted by the practitioner.
+          </Cite>
+          <Cite id="cite2" n="2." source="Samayasara — gathas on kartṛtva">
+            Acharya Kundakunda — the soul as its own doer and enjoyer; liberation by self-purification.
+          </Cite>
+          <Cite id="cite3" n="3." source="Tattvartha Sutra 9.1–9.3">
+            On saṁvara and nirjarā as the practical mechanisms of karmic shedding.
+          </Cite>
+        </ul>
+      </div>
+      <DraftNote />
+    </>
+  );
+}
+
+function AhimsaArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        Most people who know one thing about Jainism know that Jains are vegetarian. That is true, but it&apos;s the visible tip of a much larger ethic. <em>Ahimsa</em> in Jain philosophy is the most rigorous account of non-violence ever produced by a human tradition.
+      </p>
+
+      <H3>The fivefold extension</H3>
+      <P>
+        <em>Ahimsa</em> means non-harm — but the Jain tradition extends &ldquo;harm&rdquo; in five dimensions:
+      </P>
+      <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
+        <li><strong>By action, speech, or thought</strong> — harm in any of the three.</li>
+        <li><strong>Done by oneself, caused by another, or approved of</strong> — three modes of complicity.</li>
+        <li><strong>Toward all life forms, not just humans</strong> — including the smallest microscopic souls.</li>
+        <li><strong>To one-sensed beings (plants, water, fire, earth, air) as well as multi-sensed</strong> — though the Jain ethic recognizes degrees, the principle extends to all.</li>
+        <li><strong>Even &ldquo;intentional&rdquo; harm and &ldquo;incidental&rdquo; harm both bind karma</strong> — though differently.</li>
+      </ul>
+      <P>
+        The result: ahimsa is not a single rule. It is a complete framework for evaluating any action — what it harms, who, intentionally or not, in what way, and whether it could have been avoided.<CiteMark id="cite1" label="1" />
+      </P>
+
+      <H3>Why vegetarianism is necessary but insufficient</H3>
+      <P>
+        Killing animals for food directly violates ahimsa toward multi-sensed beings. So Jains are vegetarian — and traditionally also avoid root vegetables (whose harvest kills countless tiny soul-bearing organisms in the soil).
+      </P>
+      <P>
+        But ahimsa demands much more. A traditional Jain monk sweeps the ground before sitting, filters water before drinking, walks only in daylight (to avoid stepping on insects invisible at night), wears a mouth-cover (to avoid inhaling tiny life). The visible practices look extreme until you understand the logic: the practitioner is taking ahimsa to its consistent conclusion.
+      </P>
+
+      <H3>Ahimsa in speech and thought</H3>
+      <P>
+        Modern moral philosophy mostly addresses physical harm. Jain ahimsa is older and broader: harsh speech is <em>himsā</em>; deceptive speech is <em>himsā</em>; cruel thought, even unspoken, is <em>himsā</em>. Each binds karma. Each is something to confess in pratikramaṇa.
+      </P>
+      <P>
+        For a modern reader, this maps surprisingly well to current debates: psychological harm, structural harm, harms-by-omission, the moral weight of speech that incites violence. Jainism was working through these questions in the form of <em>vāñ-māna-kāya-yoga</em> — the threefold yoga of speech, thought, and body — for over two millennia.
+      </P>
+
+      <H3>Why this matters now</H3>
+      <P>
+        The world is now urgently revisiting questions of ecological harm, animal welfare, factory farming, climate change. Jain ahimsa was 2500 years ahead on these. The framework — every life matters; harm is to be minimized in thought, speech, and action; the small acts add up — provides one of the few worked-out ethical traditions actually equipped for the moment.
+      </P>
+      <P>
+        For someone who arrives at vegetarianism, animal-rights activism, environmentalism, or careful consumption from secular reasoning, Jainism is in some ways the older tradition that already worked through these questions in a religious-philosophical register. The practical conclusions converge.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Jain ahimsa is not vegetarianism plus extras. It is a complete moral framework, of which vegetarianism is one consistent application.
+      </blockquote>
+
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 7.8 — definition of himsā">
+            <em>&ldquo;Pramatta-yogāt prāṇa-vyaparopaṇaṁ hiṁsā&rdquo;</em> — Severance of life-energies through careless activity is <em>hiṁsā</em>. The definition is technical: harm caused even by carelessness counts.
+          </Cite>
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.1, 7.4">
+            On <em>vrata</em> (vows), with ahimsa as the first and foundational. The five great vows of monks (mahāvrata) and the lesser vows of laity (anuvrata) both begin with ahimsa.
+          </Cite>
+          <Cite id="cite3" n="3." source="Acharanga Sutra (Shvetambara canonical)">
+            One of the most extensive early treatments of ahimsa, with detailed analysis of injury to one-sensed and multi-sensed beings.
+          </Cite>
+        </ul>
+      </div>
+      <DraftNote />
+    </>
+  );
+}
+
+function AparigrahaArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        Marie Kondo, on the surface. Underneath: a complete philosophical analysis of how possessions distort the mind.
+      </p>
+
+      <H3>What aparigraha actually is</H3>
+      <P>
+        <em>Parigraha</em> means &ldquo;grasping&rdquo; — taking hold of, claiming as one&apos;s own. <em>Aparigraha</em> is its negation: non-grasping, non-attachment, non-possessiveness. It is the fifth and final great vow of Jain monastic life.<CiteMark id="cite1" label="1" />
+      </P>
+      <P>
+        For Jain monks, this is taken to its logical conclusion: a Digambara monk owns literally nothing — no clothes, no money, no property. Even shelter is borrowed; even food is consumed only as it is given. The practice is austere because the principle is uncompromising.
+      </P>
+
+      <H3>Why possessions matter</H3>
+      <P>
+        The Jain analysis is more interesting than &ldquo;possessions are bad.&rdquo; The argument is structural: possessions, when held with attachment, distort the mind&apos;s relationship with reality. They produce <em>moha</em> (delusion) — the false sense that the soul is identified with what it owns.<CiteMark id="cite2" label="2" />
+      </P>
+      <P>
+        A person attached to wealth fears its loss; the fear shapes their decisions. Attached to status, they pursue it; the pursuit shapes their character. The possessions are not the problem; the <em>attachment</em> is. <em>Aparigraha</em> targets the attachment, not the possessions per se.
+      </P>
+
+      <H3>Two kinds of parigraha</H3>
+      <P>
+        Jain analysis distinguishes <em>bāhya parigraha</em> (external possessions — money, property, clothes, relationships) and <em>antaraṅga parigraha</em> (internal possessions — attachments, aversions, false views, deluded passions). Both bind karma.
+      </P>
+      <P>
+        For lay practitioners, the limit on external possessions is <em>parigraha-parimāṇa-vrata</em> — voluntarily setting an upper limit on how much one will own. Beyond that limit, the surplus is given away. The principle: you choose what you need, not what you can accumulate.<CiteMark id="cite3" label="3" />
+      </P>
+
+      <H3>Why this is more than minimalism</H3>
+      <P>
+        Modern minimalism is largely aesthetic and psychological — fewer possessions for clarity, calm, focus. Useful, but not the same.
+      </P>
+      <P>
+        Jain aparigraha is metaphysical: possessions actually obscure the soul&apos;s perception of reality. The minimalist asks: <em>does this spark joy?</em> The Jain practitioner asks: <em>does this attach my soul to the conditions of samsāra?</em> Different question, different stakes.
+      </P>
+      <P>
+        For a modern reader, the deeper insight is this: every possession comes with a corresponding mental state of holding-it. The Jain tradition was working out the cognitive cost of ownership for over two millennia.
+      </P>
+
+      <H3>Aparigraha as economic critique</H3>
+      <P>
+        For a society organized around consumption, aparigraha is a serious challenge. The Jain principle applied at scale would be incompatible with consumer capitalism in roughly its current form. It is no accident that traditional Jain communities have produced unusually high concentrations of careful, restrained, philanthropic wealth — the principle works as a brake on accumulation, not a prohibition on it.
+      </P>
+
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 7.1 — five vows">
+            Aparigraha as the fifth of the five great vows (mahāvrata) for monks; with anuvrata version for lay practitioners.
+          </Cite>
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.12 — definition">
+            <em>&ldquo;Mūrcchā parigrahaḥ&rdquo;</em> — &ldquo;Parigraha is delusion (mūrcchā).&rdquo; The most precise Jain analysis: it is not the object but the mental state that constitutes parigraha.
+          </Cite>
+          <Cite id="cite3" n="3." source="Ratnakaranda Shravakachara">
+            On <em>parigraha-parimāṇa-vrata</em> — the lay vow of voluntarily setting limits on possessions.
+          </Cite>
+        </ul>
+      </div>
+      <DraftNote />
+    </>
+  );
+}
+
+function AnekantavadaArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        The doctrine of multiple viewpoints. Reality has many sides; any single perspective gives only a partial view. Built-in epistemic humility — and arguably Jainism&apos;s most important contribution to world philosophy.
+      </p>
+
+      <H3>What anekantavada says</H3>
+      <P>
+        <em>Aneka-anta-vāda</em> = &ldquo;the doctrine of not-one-sided.&rdquo; In Jain epistemology, no statement about reality is fully true on its own; every statement captures only one perspective among many. The reality of any complex thing is multi-aspected.<CiteMark id="cite1" label="1" />
+      </P>
+      <P>
+        The classical example: a clay pot. From the standpoint of substance (<em>dravya-naya</em>), it is clay — the substance never changes; only the form changes. From the standpoint of mode (<em>paryāya-naya</em>), it is a pot — the clay is currently in pot-form, having previously been lump-form, and may later be shard-form. Both views are correct. Neither is complete.
+      </P>
+
+      <H3>The seven nayas</H3>
+      <P>
+        Classical Jain logic developed seven standpoints (<em>nayas</em>) from which any thing can be examined. Together with <em>pramāṇa</em> (full means of valid knowledge), they form the Jain epistemological apparatus.<CiteMark id="cite2" label="2" />
+      </P>
+      <P>
+        The point is not that all views are equally true — that would be relativism. The point is that all true views are perspectival, and the wise mind holds the perspectival nature of its own knowing in awareness. Truth is not the absence of perspective; truth is the careful navigation of multiple perspectives.
+      </P>
+
+      <H3>Syādvāda — the language of qualified statements</H3>
+      <P>
+        Syādvāda (the doctrine of conditional predication) is the linguistic counterpart of anekantavāda. Every assertion is to be qualified with <em>syāt</em> — &ldquo;in some respect,&rdquo; &ldquo;from a certain standpoint.&rdquo; <em>The pot exists</em> becomes <em>in some respect, the pot exists</em>; <em>the pot does not exist</em> becomes <em>in some respect, the pot does not exist</em>. Both can be true — they refer to different aspects.<CiteMark id="cite3" label="3" />
+      </P>
+      <P>
+        This is not equivocation. It is precision. Jain logicians worked out a sevenfold predication — the <em>saptabhaṅgī</em> — that handles assertion, negation, both, neither, and the inexpressible across multiple standpoints simultaneously.
+      </P>
+
+      <H3>Why this matters historically</H3>
+      <P>
+        Anekantavāda gave Jainism a built-in protection against the kind of dogmatism that produces violent religious conflict. If your own doctrine assures you that every statement is perspectival, you cannot easily claim absolute certainty against another tradition.
+      </P>
+      <P>
+        The historical record bears this out. Jainism, alone among major traditions, has essentially no history of religious warfare against other faiths. Internal disagreements (Digambara/Shvetambara, Bispanthi/Terapanthi) exist; missionary aggression and sectarian violence largely do not. Anekantavāda is part of the reason.
+      </P>
+
+      <H3>Why this matters now</H3>
+      <P>
+        We live in a time of unprecedented epistemic polarization. Algorithms reward certainty; social media incentivizes the loudest position; political life is conducted as if every issue admits one correct answer.
+      </P>
+      <P>
+        Anekantavāda is, in this context, almost subversive. It says: <em>even when you are right, you are not telling the whole story</em>. It says: <em>the perspective from which you see is real, but it is one among many</em>. It says: <em>the wise mind cultivates the discipline of holding multiple views at once, not the discipline of defeating opponents</em>.
+      </P>
+      <P>
+        For a modern reader, this is one of the most important contributions any religious tradition has ever made to the question of <em>how to think about thinking</em>. The fact that Jain thinkers worked out the formal logic of perspectival truth two thousand years before Western philosophy got there is, frankly, remarkable.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Anekantavāda is not the claim that you are wrong. It is the claim that even when you are right, you are not entirely right.
+      </blockquote>
+
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 1.6 — pramāṇa and naya">
+            Knowledge of categories is achieved through both pramāṇa (full means of valid knowledge) and naya (perspectival standpoints). This sutra is the seed from which anekantavāda develops.
+          </Cite>
+          <Cite id="cite2" n="2." source="Pramāṇa-naya-tattvāloka (Vādideva Sūri)">
+            Classical Jain epistemological text systematizing the seven-naya analysis. Jain logic developed extensively through the medieval period as a counter-tradition to Buddhist and Hindu logical schools.
+          </Cite>
+          <Cite id="cite3" n="3." source="Aapta-mīmāṁsā (Acharya Samantabhadra)">
+            The classical defense of syādvāda and the saptabhaṅgī (sevenfold predication). Samantabhadra&apos;s argument that any consistent ontology requires perspectival language.
+          </Cite>
+        </ul>
+      </div>
+      <DraftNote />
+    </>
+  );
+}
+
+function HardQuestionsArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        Some traditions paper over their hard questions. This one does not. Here are the genuinely difficult positions in Jain doctrine — the ones that get debated within the tradition itself.
+      </p>
+
+      <H3>Why this article exists</H3>
+      <P>
+        A library that only presents the appealing parts of a tradition is doing apologetics, not scholarship. The Jain tradition is rigorous and ancient; it also includes positions that modern readers — and many practitioners — find genuinely difficult. We address them here directly.
+      </P>
+
+      <H3>1. Female ordination and the Mallinath question</H3>
+      <P>
+        Digambara doctrine traditionally holds that final mokṣa in the present birth requires the male body and the complete <em>digambara</em> (sky-clad) state. Women, in the Digambara view, can advance very far on the path but must take a male body in the next birth to attain final liberation.
+      </P>
+      <P>
+        Shvetambara tradition rejects this position and holds that women can attain mokṣa directly. The most famous illustration of the difference is <strong>Mallinath</strong>, the 19th Tirthankara — male in Digambara tradition, female in Shvetambara. (See <Link href="/tirthankaras" className="text-accent">the Tirthankaras page</Link>.)
+      </P>
+      <P>
+        For a modern reader, the Digambara position is genuinely hard to receive — and is debated even within the broader Jain community. We do not paper over the difference. The library follows Digambara tradition while acknowledging that this is the most-contested doctrinal position between the two traditions.
+      </P>
+
+      <H3>2. Digambara monastic nudity</H3>
+      <P>
+        Digambara male monks practice complete nudity as the visible expression of total <em>aparigraha</em> (non-possession). They own no clothes, no shelter, no money. They eat only what is given, only once a day, only with bare hands.
+      </P>
+      <P>
+        For a modern reader, this is challenging — a practice that is illegal in many countries, considered indecent by mainstream culture, and difficult to comprehend without a sympathetic understanding of the underlying logic.
+      </P>
+      <P>
+        The logic: if aparigraha means non-possession, then any clothing is a possession; any concealment is a form of social attachment. The Digambara monk takes the principle to its consistent conclusion. It is austere because the principle, fully applied, demands austerity. The community treats the practice with utmost reverence; it is not exhibitionism in any sense recognizable to modern Western categories.
+      </P>
+
+      <H3>3. Sallekhana — the contested practice of fasting unto death</H3>
+      <P>
+        <em>Sallekhana</em> (also <em>santhārā</em>) is the traditional Jain practice in which a person who recognizes that death is near voluntarily undertakes a final fast — gradually withdrawing food, then water, while in deep meditation — until the body releases naturally.
+      </P>
+      <P>
+        For modern readers and modern legal systems, this is genuinely difficult. Is it suicide? Is it euthanasia? Is it religious freedom? An Indian high court briefly criminalized it in 2015; the Supreme Court stayed that ruling. The community itself debates its proper application.
+      </P>
+      <P>
+        The traditional position: sallekhana is performed only by those whose physical condition is already terminal or whose old age is irreversible, only with the consent of family and the community, only under the supervision of an acharya, and only as the culmination of a lifetime of spiritual practice. It is held to be entirely different from suicide (which arises from despair) and from euthanasia (which is administered to another). In its proper form, it is the final act of <em>nirjarā</em> — releasing the body without attachment.
+      </P>
+      <P>
+        Whether modern frameworks of medical ethics can accommodate this is a live question. We do not resolve it here; we name it.
+      </P>
+
+      <H3>4. Treatment of one-sensed beings</H3>
+      <P>
+        Jain ahimsa extends to all life, including one-sensed beings (plants, water, fire, earth, air organisms). Traditional practice avoids root vegetables, filters water, restricts fire use. For a modern reader concerned about ecological coherence, this can look impractical — but it is the consistent application of the principle that <em>all</em> life matters.
+      </P>
+      <P>
+        The hard question: where exactly is the line drawn? Different Jain communities draw it differently. Strict ascetics avoid even certain fruits and grains; ordinary lay practitioners eat them. The doctrine demands a distinction the doctrine does not fully resolve.
+      </P>
+
+      <H3>5. The role of women in Digambara ritual practice</H3>
+      <P>
+        Beyond the question of mokṣa, Digambara temple practice traditionally has different roles for women — for example, certain inner-sanctum approaches that are restricted. Shvetambara practice has different (and itself contested) restrictions.
+      </P>
+      <P>
+        Modern Digambara communities are renegotiating these practices. The library acknowledges the traditional positions; the community works through what they look like in contemporary practice.
+      </P>
+
+      <H3>6. The historical reality of the 24 Tirthankaras</H3>
+      <P>
+        Of the 24 Tirthankaras, modern historical evidence supports the existence of Mahavir (24th, 6th c. BCE) and likely Parshvanath (23rd, ~9-8th c. BCE). The earlier 22 are not corroborated by external historical evidence; the traditional dates (Adinath at the dawn of the present time-cycle, billions of years ago) do not align with modern cosmology.
+      </P>
+      <P>
+        For a modern reader: how to take these accounts? Different practitioners take different positions. Some hold them as literal history; others as sacred narrative whose function is doctrinal rather than historical; others as a layered text of multiple kinds of truth. The library does not adjudicate; it presents what the tradition holds.
+      </P>
+
+      <H3>Why this matters</H3>
+      <P>
+        Engaging seriously with a tradition means engaging with the parts that are hard. The Jain community has been working through these questions for centuries; modern readers come to them with new frameworks but the same questions.
+      </P>
+      <P>
+        Honest naming is the first step. This page is the start of a longer conversation, not the end.
+      </P>
+
+      <DraftNote />
+    </>
+  );
+}
+
+function DraftNote() {
+  return (
+    <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
+      <strong className="text-accent">Draft note:</strong> This article is a project draft pending Digambara cultural reviewer. Citations to primary texts are real; the modern English framing is project work and may be revised.
+    </div>
   );
 }
 
