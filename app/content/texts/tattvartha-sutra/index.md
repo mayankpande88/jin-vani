@@ -4,8 +4,8 @@ title_sk: तत्त्वार्थ सूत्र
 category: sutra
 author: Acharya Umaswami
 era: c. 2nd–4th century CE
-verseCount: 10
-estReadingMinutes: 15
+verseCount: 33
+estReadingMinutes: 40
 tradition: digambara
 authorCard: |
   Acharya Umaswami (sometimes called *Umaswati* in Shvetambara tradition) composed the *Tattvartha Sutra* — the foundational philosophical text of Jainism. It is the rare Jain scripture accepted as authoritative by both Digambara and Shvetambara traditions, though each reads it with its own commentarial lineage.
