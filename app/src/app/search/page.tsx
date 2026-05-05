@@ -10,6 +10,15 @@ declare global {
 
 type Result = { url: string; title: string; excerpt: string };
 
+// Pagefind result URLs may or may not include basePath depending on what
+// was indexed. This helper ensures we end up with exactly one basePath prefix.
+function normalizeSearchUrl(url: string): string {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  if (!base) return url;
+  if (url === base || url.startsWith(base + '/')) return url; // already has basePath
+  return base + url;
+}
+
 export default function SearchPage() {
   const [q, setQ] = useState('');
   const [results, setResults] = useState<Result[]>([]);
@@ -93,7 +102,7 @@ export default function SearchPage() {
           {results.map((r, i) => (
             <li key={i}>
               <a
-                href={(process.env.NEXT_PUBLIC_BASE_PATH ?? '') + r.url}
+                href={normalizeSearchUrl(r.url)}
                 className="block rounded-lg p-5 no-underline transition-all hover:-translate-y-0.5"
                 style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)' }}
               >

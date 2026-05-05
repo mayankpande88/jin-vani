@@ -99,8 +99,9 @@ export default function HomePage() {
       {[
         ['stotra', 'Stotras'],
         ['mantra', 'Mantras & Prayers'],
+        ['sutra', 'Sutras'],
+        ['philosophy', 'Philosophy'],
         ['daily', 'Daily Reading'],
-        ['sutra', 'Sutras & Philosophy'],
       ].map(([cat, title]) => {
         const texts = byCategory[cat] || [];
         if (texts.length === 0) return null;
