@@ -535,6 +535,114 @@ export function getEntry(id: string): GlossaryEntry | undefined {
   return GLOSSARY.find((e) => e.id === id);
 }
 
+// =============================================================================
+// Auto-link: turns first occurrence of curated glossary terms into links
+// to the glossary anchor. Used in prose contexts only (foundations,
+// today reflections, deeper-meaning paragraphs).
+// =============================================================================
+
+const AUTOLINK_PATTERNS: Array<{ id: string; patterns: string[] }> = [
+  { id: 'tirthankara', patterns: ['Tirthankaras', 'Tirthankara'] },
+  { id: 'jiva', patterns: ['jīvas', 'jivas', 'jīva', 'jiva'] },
+  { id: 'ajiva', patterns: ['ajīva', 'ajiva'] },
+  { id: 'pudgala', patterns: ['pudgala'] },
+  { id: 'paramanu', patterns: ['paramāṇu', 'paramanu'] },
+  { id: 'karma', patterns: ['karma'] },
+  { id: 'asrava', patterns: ['āsrava'] },
+  { id: 'bandha', patterns: ['bandha'] },
+  { id: 'samvara', patterns: ['saṁvara', 'samvara'] },
+  { id: 'nirjara', patterns: ['nirjarā', 'nirjara'] },
+  { id: 'moksha', patterns: ['mokṣa', 'moksha'] },
+  { id: 'kevala-jnana', patterns: ['kevala-jnāna', 'kevala-jnana'] },
+  { id: 'kevali', patterns: ['Kevalīs', 'kevalis', 'Kevalī', 'kevali'] },
+  { id: 'samsara', patterns: ['samsāra', 'samsara', 'saṁsāra'] },
+  { id: 'siddha', patterns: ['Siddhas', 'Siddha'] },
+  { id: 'siddhaloka', patterns: ['Siddhaloka', 'Siddha-loka'] },
+  { id: 'arihant', patterns: ['Arihants', 'Arihant'] },
+  { id: 'jina', patterns: ['Jinas', 'Jina'] },
+  { id: 'acharya', patterns: ['Acharyas', 'Acharya'] },
+  { id: 'muni', patterns: ['munis', 'Muni', 'muni'] },
+  { id: 'shravak', patterns: ['shravak', 'śrāvaka'] },
+  { id: 'ahimsa', patterns: ['ahiṁsā', 'ahimsa'] },
+  { id: 'aparigraha', patterns: ['aparigraha'] },
+  { id: 'mahavrata', patterns: ['mahāvratas', 'mahāvrata'] },
+  { id: 'tapas', patterns: ['tapasyā', 'tapasya', 'tapas'] },
+  { id: 'pratikraman', patterns: ['pratikramaṇa', 'pratikraman'] },
+  { id: 'avasyaka', patterns: ['āvaśyaka', 'ṣaṭ-āvaśyaka'] },
+  { id: 'samayika', patterns: ['sāmāyika', 'samayika'] },
+  { id: 'kayotsarga', patterns: ['kāyotsarga', 'kayotsarga'] },
+  { id: 'puja', patterns: ['pūjā'] },
+  { id: 'murti', patterns: ['mūrtis', 'mūrti', 'murti'] },
+  { id: 'bhakti', patterns: ['bhakti'] },
+  { id: 'naya', patterns: ['nayas', 'naya'] },
+  { id: 'pramana', patterns: ['pramāṇa'] },
+  { id: 'anekantavada', patterns: ['anekāntavāda', 'anekantavada'] },
+  { id: 'syadvada', patterns: ['syādvāda', 'syadvada'] },
+  { id: 'samavasarana', patterns: ['samavasaraṇa', 'samavasarana'] },
+  { id: 'lanchhana', patterns: ['lāñchana', 'lanchhana'] },
+  { id: 'sangha', patterns: ['saṅgha', 'sangha'] },
+  { id: 'digambara', patterns: ['Digambara'] },
+  { id: 'shvetambara', patterns: ['Shvetambara', 'Śvetāmbara'] },
+];
+
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+type AutolinkMatch = { id: string; pattern: string };
+const ALL_PATTERNS: AutolinkMatch[] = AUTOLINK_PATTERNS.flatMap((g) =>
+  g.patterns.map((p) => ({ id: g.id, pattern: p }))
+).sort((a, b) => b.pattern.length - a.pattern.length);
+
+const COMBINED_REGEX = new RegExp(
+  '(?<![\\p{L}\\p{M}])(' +
+    ALL_PATTERNS.map((p) => escapeRegex(p.pattern)).join('|') +
+    ')(?![\\p{L}\\p{M}])',
+  'gu'
+);
+
+const PATTERN_TO_ID = new Map<string, string>();
+ALL_PATTERNS.forEach((p) => PATTERN_TO_ID.set(p.pattern.toLowerCase(), p.id));
+
+/**
+ * Walks a string, replacing the FIRST occurrence of each curated glossary
+ * term with a link to the glossary entry. Subsequent occurrences are
+ * untouched. The `linked` set is mutated; pass the same set across multiple
+ * calls on the same page to enforce per-page first-occurrence-only.
+ */
+export function autolinkText(
+  text: string,
+  basePath: string,
+  linked: Set<string>
+): Array<string | { type: 'link'; href: string; text: string; key: string }> {
+  const out: Array<string | { type: 'link'; href: string; text: string; key: string }> = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  // Reset regex (it's stateful with /g flag)
+  const re = new RegExp(COMBINED_REGEX.source, COMBINED_REGEX.flags);
+  while ((match = re.exec(text)) !== null) {
+    const matched = match[1];
+    const id = PATTERN_TO_ID.get(matched.toLowerCase());
+    if (!id || linked.has(id)) continue; // Skip if already linked on this page
+    if (match.index > lastIndex) {
+      out.push(text.slice(lastIndex, match.index));
+    }
+    out.push({
+      type: 'link',
+      href: `${basePath}/glossary#${id}`,
+      text: matched,
+      key: `gl-${id}-${key++}`,
+    });
+    linked.add(id);
+    lastIndex = match.index + matched.length;
+  }
+  if (lastIndex < text.length) {
+    out.push(text.slice(lastIndex));
+  }
+  return out.length === 0 ? [text] : out;
+}
+
 export function getCategoryEntries(category: GlossaryEntry['category']): GlossaryEntry[] {
   return GLOSSARY.filter((e) => e.category === category);
 }

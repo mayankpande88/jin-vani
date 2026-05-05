@@ -47,6 +47,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Elephant', lanchhanaSk: 'गज', complexion: 'Golden',
     fatherSk: 'राजा जितशत्रु', motherSk: 'महारानी विजया',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Ajitanatha — &ldquo;the Unconquered&rdquo; — is the second Tirthankara, born in Ayodhya to King Jitashatru and Queen Vijaya. Tradition holds that during his mother&apos;s pregnancy she was so concentrated and serene that no one could defeat her, even at games of chance — hence the epithet *Ajita* (unconquered) given to her son.
+
+He inherited the kingdom of Ayodhya before renouncing it. He attained kevala-jnana under a *saptaparna* tree, and reached mokṣa at Mount Sammed Shikhar — the destination of nearly all subsequent Tirthankaras.`,
   },
   {
     num: 3, slug: 'sambhavanatha',
@@ -54,6 +57,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Horse', lanchhanaSk: 'अश्व', complexion: 'Golden',
     fatherSk: 'राजा जितारि', motherSk: 'महारानी सेना',
     birthplace: 'Sravasti', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Sambhavanatha — &ldquo;the originator&rdquo; — is the third Tirthankara, born in the city of Sravasti to King Jitari and Queen Sena. Tradition holds that his birth coincided with relief from a long-standing famine in the region; the people credited his arrival with the return of abundance.
+
+He renounced the throne after a period of kingship. He attained kevala-jnana under a *sala* tree and reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 4, slug: 'abhinandananatha',
@@ -61,6 +67,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Monkey', lanchhanaSk: 'कपि', complexion: 'Golden',
     fatherSk: 'राजा संवर', motherSk: 'महारानी सिद्धार्था',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Abhinandananatha — &ldquo;the joy-giver&rdquo; — is the fourth Tirthankara, born in Ayodhya to King Samvara and Queen Siddhartha. Tradition holds that his birth was attended with celebrations of unusual joy, even by celestial standards — hence the name.
+
+His distinguishing iconographic feature is the monkey *(kapi)* lañchana — drawn from a story in his pre-Tirthankara births. He attained kevala-jnana under a *priyangu* tree; reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 5, slug: 'sumatinatha',
@@ -68,6 +77,7 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Curlew (krauñca)', lanchhanaSk: 'क्रौञ्च', complexion: 'Golden',
     fatherSk: 'राजा मेघप्रभ', motherSk: 'महारानी मङ्गला',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Sumatinatha — &ldquo;Lord of right intellect&rdquo; — is the fifth Tirthankara, born in Ayodhya to King Meghaprabha and Queen Mangalā. The name *sumati* (good intellect) was given to him because, even as a child, he displayed remarkable wisdom in resolving disputes; one famous traditional story has him resolving a maternity dispute as a young prince. He renounced his kingdom; reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 6, slug: 'padmaprabha',
@@ -75,6 +85,7 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Red lotus', lanchhanaSk: 'रक्त-कमल', complexion: 'Red',
     fatherSk: 'राजा धरण', motherSk: 'महारानी सुसीमा',
     birthplace: 'Kausambi', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Padmaprabha — &ldquo;the lotus-radiant&rdquo; — is the sixth Tirthankara, born in Kausambi to King Dharaṇa and Queen Susīmā. Distinguished from the golden-complexioned Tirthankaras, his complexion is traditionally described as *red* — like the petal of a red lotus, hence the name. The lotus-iconography on his pedestal extends this. He attained kevala-jnana under a *chatraka* tree; reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 7, slug: 'suparshvanatha',
@@ -82,6 +93,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Swastika', lanchhanaSk: 'स्वस्तिक', complexion: 'Golden',
     fatherSk: 'राजा सुप्रतिष्ठ', motherSk: 'महारानी पृथ्वी',
     birthplace: 'Varanasi', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Suparshvanatha — &ldquo;Lord of beautiful sides&rdquo; — is the seventh Tirthankara, born in Varanasi (Banaras) — the same sacred city that would later be the birthplace of Parshvanatha (the 23rd Tirthankara) and the Buddha.
+
+His lañchana is the *svastika* (an ancient auspicious symbol used in Jain, Hindu, and Buddhist iconography across Asia, predating its 20th-century appropriations by more than two millennia). He reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 8, slug: 'chandraprabha',
@@ -89,6 +103,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Crescent moon', lanchhanaSk: 'चन्द्र', complexion: 'White',
     fatherSk: 'राजा महासेन', motherSk: 'महारानी लक्ष्मणा',
     birthplace: 'Chandrapuri', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Chandraprabha — &ldquo;the moon-radiant&rdquo; — is the eighth Tirthankara, born in *Chandrapuri* (the &ldquo;city of the moon&rdquo;) to King Mahasena and Queen Lakshmana. His complexion is traditionally described as *white* — like the moon&apos;s light — and his lañchana is the *crescent moon*. The whole iconography aligns: city, name, complexion, symbol all point to *chandra*.
+
+He attained kevala-jnana under a *naga* tree; reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 9, slug: 'pushpadanta',
@@ -96,6 +113,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Crocodile (makara)', lanchhanaSk: 'मकर', complexion: 'White',
     fatherSk: 'राजा सुग्रीव', motherSk: 'महारानी रामा',
     birthplace: 'Kakandi', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Pushpadanta — also called *Suvidhinatha* (&ldquo;Lord of right conduct&rdquo;) — is the ninth Tirthankara, born in Kākandī to King Sugrīva and Queen Rāmā. The name *pushpadanta* (&ldquo;flower-toothed&rdquo;) refers to a tradition that his teeth were as beautiful as flowers. The alternative name *Suvidhinatha* highlights his role in clarifying conduct.
+
+White-complexioned. Lañchana is the *makara* (a mythological crocodile-like creature). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 10, slug: 'shitalanatha',
@@ -103,6 +123,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Śrīvatsa', lanchhanaSk: 'श्रीवत्स', complexion: 'Golden',
     fatherSk: 'राजा दृढरथ', motherSk: 'महारानी सुनन्दा',
     birthplace: 'Bhaddilapura', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Shitalanatha — &ldquo;the cool one&rdquo; — is the tenth Tirthankara, born in Bhaddilapura to King Dṛḍharatha and Queen Sunandā. Tradition holds that his presence cooled fevers and calmed agitated minds — both his name and several stories about him reflect this. *Shitala* (cool, calm) carries connotations of relief from suffering.
+
+His lañchana is the *śrīvatsa* — an auspicious mark also seen on the chest of Vishnu in Hindu iconography. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 11, slug: 'shreyamsanatha',
@@ -110,6 +133,7 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Rhinoceros (gaṇḍa)', lanchhanaSk: 'गण्डक', complexion: 'Golden',
     fatherSk: 'राजा विष्णु', motherSk: 'महारानी विष्णुश्री',
     birthplace: 'Simhapuri', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Shreyamsanatha — &ldquo;Lord of the auspicious-bodied&rdquo; — is the eleventh Tirthankara, born in Simhapuri to King Vishnu and Queen Vishnushri. His name *śreyāṁsa* connotes both auspiciousness and excellence. He reached mokṣa at Mt. Sammed Shikhar; his lañchana is the rhinoceros (*gaṇḍa*).`,
   },
   {
     num: 12, slug: 'vasupujya',
@@ -117,6 +141,11 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Buffalo (mahiṣa)', lanchhanaSk: 'महिष', complexion: 'Red',
     fatherSk: 'राजा वसुपूज्य', motherSk: 'महारानी जयावती',
     birthplace: 'Champapuri', mokshaPlace: 'Champapuri',
+    bio: `Vasupujya — &ldquo;honored by Vasus&rdquo; (the celestial Vasu deities of Indian tradition) — is the twelfth Tirthankara, and the only one in the present cycle who **attained mokṣa at his own birthplace**: Champapuri (modern Champapur in Bihar).
+
+He renounced as a young prince, never married. Red-complexioned (like Padmaprabha and Vasupujya, exception to the predominantly golden coloring of Tirthankaras). Lañchana is the *mahiṣa* (buffalo).
+
+Champapuri, his birthplace and place of liberation, is one of the few Jain pilgrimage sites that is *not* Mt. Sammed Shikhar.`,
   },
   {
     num: 13, slug: 'vimalanatha',
@@ -124,6 +153,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Boar (varāha)', lanchhanaSk: 'वराह', complexion: 'Golden',
     fatherSk: 'राजा कृतवर्मा', motherSk: 'महारानी सुरमा / श्यामा',
     birthplace: 'Kampilya', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Vimalanatha — &ldquo;the stainless lord&rdquo; — is the thirteenth Tirthankara, born in Kampilya to King Kritavarma and Queen Suramā (Shyāmā in some accounts). His name *vimala* (stainless, pure) reflects the central Jain idea of the soul&apos;s pure nature being uncovered, not added.
+
+Lañchana is the *varāha* (boar). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 14, slug: 'anantanatha',
@@ -131,6 +163,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Falcon (śyena)', lanchhanaSk: 'श्येन', complexion: 'Golden',
     fatherSk: 'राजा सिंहसेन', motherSk: 'महारानी सर्वयशा',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Anantanatha — &ldquo;the infinite lord&rdquo; — is the fourteenth Tirthankara, born in Ayodhya to King Simhasena and Queen Sarvayasā. The name *ananta* (infinite, unending) points to the soul&apos;s infinite knowledge, perception, bliss, and energy — which a kevali manifests fully.
+
+Lañchana is the *śyena* (falcon). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 15, slug: 'dharmanatha',
@@ -138,6 +173,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     lanchhana: 'Vajra', lanchhanaSk: 'वज्र', complexion: 'Golden',
     fatherSk: 'राजा भानु', motherSk: 'महारानी सुव्रता',
     birthplace: 'Ratnapuri', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Dharmanatha — &ldquo;the lord of dharma&rdquo; — is the fifteenth Tirthankara, born in Ratnapuri to King Bhānu and Queen Suvratā. The name *dharma* — the path, the right teaching, the way things are — is foundational in Jain (and broader Indian) thought.
+
+His lañchana is the *vajra* — the diamond-thunderbolt — an ancient symbol of indestructibility shared with several Indian iconographic traditions. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 16, slug: 'shantinatha',
@@ -164,6 +202,9 @@ He attained mokṣa at Mt. Sammed Shikhar.`,
     fatherSk: 'राजा सूर्य', motherSk: 'महारानी श्री',
     birthplace: 'Hastinapur', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'Also a Chakravartin emperor.',
+    bio: `Kunthunatha is the seventeenth Tirthankara, born in Hastinapur to King Sūrya and Queen Śrī. Like his predecessor Shantinatha (#16) and his successor Aranatha (#18), Kunthunatha is one of the small group of figures who held both the position of *Chakravartin* (universal monarch) and *Tirthankara* — exceptional even among Tirthankaras.
+
+The name *kunthu* refers to a tiny insect (the smallest soul-bearing creature recognizable in Jain biology), expressing his concern for even the smallest forms of life. Lañchana is the goat. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 18, slug: 'aranatha',
@@ -172,6 +213,9 @@ He attained mokṣa at Mt. Sammed Shikhar.`,
     fatherSk: 'राजा सुदर्शन', motherSk: 'महारानी मित्रसेना',
     birthplace: 'Hastinapur', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'Also a Chakravartin emperor.',
+    bio: `Aranatha is the eighteenth Tirthankara, also born in Hastinapur — the third Chakravartin-Tirthankara in succession (after Shantinatha and Kunthunatha). His parents were King Sudarśana and Queen Mitrasenā.
+
+His lañchana is the *nandyāvarta* — an auspicious geometric figure, a complex pattern resembling a four-pointed śrīvatsa, found across Indian iconographic traditions. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 19, slug: 'mallinatha',
@@ -199,6 +243,9 @@ Both traditions agree on the lanchhana (pitcher / *kalaśa*), the parentage, and
     lanchhana: 'Tortoise (kūrma)', lanchhanaSk: 'कूर्म', complexion: 'Black / Dark',
     fatherSk: 'राजा सुमित्र', motherSk: 'महारानी पद्मावती',
     birthplace: 'Rajagriha', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Munisuvrata — &ldquo;the one of good monastic vows&rdquo; — is the twentieth Tirthankara, born in Rajagriha (the capital of Magadha — later associated with both the Jain and Buddhist traditions) to King Sumitra and Queen Padmāvatī. He is one of two Tirthankaras (with Neminatha) whose complexion is described as *black/dark* rather than golden.
+
+His lañchana is the tortoise (*kūrma*), a symbol of endurance and slow steady progress. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 21, slug: 'naminatha',
@@ -206,6 +253,9 @@ Both traditions agree on the lanchhana (pitcher / *kalaśa*), the parentage, and
     lanchhana: 'Blue lotus (nīlotpala)', lanchhanaSk: 'नीलोत्पल', complexion: 'Golden',
     fatherSk: 'राजा विजय', motherSk: 'महारानी वप्रा',
     birthplace: 'Mithila', mokshaPlace: 'Mt. Sammed Shikhar',
+    bio: `Naminatha — &ldquo;the bowing lord&rdquo; — is the twenty-first Tirthankara, born in Mithila (an ancient capital of the Videha kingdom, also the birthplace of Mallinatha) to King Vijaya and Queen Vaprā.
+
+The name *nami* (he who bows) is sometimes connected to a tradition that even kings of opposing armies bowed before him in his pre-renunciation kingship. Lañchana is the blue lotus (*nīlotpala*). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 22, slug: 'neminatha',
