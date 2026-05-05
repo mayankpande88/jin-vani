@@ -39,21 +39,29 @@ export function VerseReader({
     localStorage.setItem('jinvani.progress', JSON.stringify({ slug: text.slug, verse: verse.number, texts: total }));
   }, [text.slug, verse.number, total]);
 
-  // Dismiss popover on outside click / scroll / resize
+  // Dismiss popover on outside click / scroll / resize.
+  // Guard against dismissing when the click landed on a gloss span (which
+  // is what triggered showing the popover) or inside the popover itself.
   useEffect(() => {
-    function dismiss() { setPopover(null); }
+    function dismiss(e: Event) {
+      const target = e.target as HTMLElement | null;
+      if (!target) { setPopover(null); return; }
+      if (target.closest?.('[data-gloss="true"]')) return;
+      if (target.closest?.('[data-popover="true"]')) return;
+      setPopover(null);
+    }
+    function dismissNoTarget() { setPopover(null); }
     document.addEventListener('click', dismiss);
-    window.addEventListener('scroll', dismiss, { passive: true });
-    window.addEventListener('resize', dismiss);
+    window.addEventListener('scroll', dismissNoTarget, { passive: true });
+    window.addEventListener('resize', dismissNoTarget);
     return () => {
       document.removeEventListener('click', dismiss);
-      window.removeEventListener('scroll', dismiss);
-      window.removeEventListener('resize', dismiss);
+      window.removeEventListener('scroll', dismissNoTarget);
+      window.removeEventListener('resize', dismissNoTarget);
     };
   }, []);
 
   const showGloss = useCallback((e: React.MouseEvent, sk: string, translit: string, gloss: string) => {
-    e.stopPropagation();
     const el = e.currentTarget as HTMLElement;
     const r = el.getBoundingClientRect();
     setPopover({
@@ -297,25 +305,11 @@ export function VerseReader({
 
       {/* Popover for tap-to-define */}
       {popover && (
-        <div
-          ref={popoverRef}
-          className="fixed z-[100] rounded-md py-3 px-4 font-body text-[0.9rem] text-text leading-relaxed pointer-events-none"
-          style={{
-            left: clamp(popover.x - 140, 12, window.innerWidth - 280 - 12),
-            top: popover.y - 80,
-            maxWidth: 280,
-            background: 'var(--bg-elev-2)',
-            border: '1px solid var(--border-2)',
-            boxShadow: 'var(--shadow-lg)',
-            opacity: 1,
-            transform: 'translateY(0)',
-            transition: 'opacity 0.15s ease, transform 0.15s ease',
-          }}
-        >
-          <span className="font-sk text-ink text-[1.1rem] block mb-1">{popover.sk}</span>
-          <span className="font-body italic text-text-3 text-[0.78rem] block mb-2">{popover.translit}</span>
-          <span className="text-text text-[0.88rem]">{popover.gloss}</span>
-        </div>
+        <PopoverPositioned
+          popoverRef={popoverRef}
+          popover={popover}
+          onClose={() => setPopover(null)}
+        />
       )}
 
       {/* Memorize overlay */}
@@ -528,6 +522,57 @@ function clamp(n: number, lo: number, hi: number) {
 }
 
 // Render Sanskrit with glossable spans for known terms.
+function PopoverPositioned({
+  popoverRef,
+  popover,
+  onClose,
+}: {
+  popoverRef: React.RefObject<HTMLDivElement | null>;
+  popover: { x: number; y: number; sk: string; translit: string; gloss: string };
+  onClose: () => void;
+}) {
+  // Position smartly: prefer above, but flip below if too close to top
+  const [pos, setPos] = useState<{ left: number; top: number; arrow: 'up' | 'down' }>({ left: popover.x - 140, top: popover.y - 80, arrow: 'down' });
+
+  useEffect(() => {
+    if (!popoverRef.current) return;
+    const w = popoverRef.current.offsetWidth || 280;
+    const h = popoverRef.current.offsetHeight || 80;
+    let left = popover.x - w / 2;
+    left = Math.max(12, Math.min(window.innerWidth - w - 12, left));
+    let top = popover.y - h - 12;
+    let arrow: 'up' | 'down' = 'down';
+    if (top < 16) {
+      top = popover.y + 32; // flip below
+      arrow = 'up';
+    }
+    setPos({ left, top, arrow });
+  }, [popover.x, popover.y, popoverRef]);
+
+  return (
+    <div
+      ref={popoverRef}
+      data-popover="true"
+      role="tooltip"
+      onClick={(e) => { e.stopPropagation(); onClose(); }}
+      className="fixed z-[100] rounded-md py-3 px-4 font-body text-[0.9rem] text-text leading-relaxed cursor-pointer"
+      style={{
+        left: pos.left,
+        top: pos.top,
+        maxWidth: 280,
+        minWidth: 200,
+        background: 'var(--bg-elev-2)',
+        border: '1px solid var(--border-2)',
+        boxShadow: 'var(--shadow-lg)',
+      }}
+    >
+      <span className="font-sk text-ink text-[1.1rem] block mb-1">{popover.sk}</span>
+      <span className="font-body italic text-text-3 text-[0.78rem] block mb-2">{popover.translit}</span>
+      <span className="text-text text-[0.88rem]">{popover.gloss}</span>
+    </div>
+  );
+}
+
 function renderGlossedSanskrit(
   sanskrit: string,
   glosses: { sk: string; translit: string; gloss: string }[],
@@ -552,8 +597,17 @@ function renderGlossedSanskrit(
           tokens.push(
             <span
               key={`${lineIdx}-${key++}`}
+              data-gloss="true"
+              role="button"
+              tabIndex={0}
               onClick={(e) => showGloss(e, g.sk, g.translit, g.gloss)}
-              className="cursor-pointer transition-colors hover:text-accent"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  showGloss(e as unknown as React.MouseEvent, g.sk, g.translit, g.gloss);
+                }
+              }}
+              className="cursor-pointer transition-colors hover:text-accent focus:text-accent focus:outline-none"
               style={{ borderBottom: '1px dashed var(--border-2)' }}
             >
               {g.sk}
