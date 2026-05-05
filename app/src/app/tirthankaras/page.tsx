@@ -24,9 +24,10 @@ export default function TirthankarasPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {TIRTHANKARAS.map((t) => (
-          <article
+          <Link
             key={t.num}
-            className="rounded-lg p-5 flex flex-col"
+            href={`/tirthankaras/${t.slug}`}
+            className="rounded-lg p-5 flex flex-col no-underline text-text transition-all hover:-translate-y-0.5 hover:border-accent"
             style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)' }}
           >
             <div className="flex items-baseline justify-between mb-2">
@@ -65,7 +66,8 @@ export default function TirthankarasPage() {
                 {t.note}
               </p>
             )}
-          </article>
+            <div className="font-ui text-[0.78rem] text-accent mt-3">Read more →</div>
+          </Link>
         ))}
       </div>
 

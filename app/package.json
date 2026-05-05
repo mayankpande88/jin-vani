@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && pagefind --site out",
     "build:gh": "GITHUB_ACTIONS=true GITHUB_REPOSITORY=mayankpande88/jin-vani next build && pagefind --site out && touch out/.nojekyll",
-    "deploy:gh": "npm run build:gh && gh-pages -d out -b gh-pages -t -m \"Deploy\"",
+    "deploy:gh": "npm run build:gh && npx --yes gh-pages@6 -d out -b gh-pages -t -m \"Deploy\"",
     "start": "next start",
     "lint": "next lint",
     "pagefind": "pagefind --site out"
