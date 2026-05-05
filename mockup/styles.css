@@ -1745,6 +1745,71 @@ html.text-size-xl { --size-base: 22px; }
 }
 .today-flag strong { color: var(--accent); }
 
+/* ---------- Citation block — used in Foundations + Today panels ---------- */
+.citations-block {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-md);
+  padding: var(--s-5);
+  margin: var(--s-8) 0 var(--s-4);
+  font-family: var(--type-ui);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+.citations-block h4 {
+  font-family: var(--type-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 var(--s-3);
+}
+.citations-block ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.citations-block li {
+  margin-bottom: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+}
+.citations-block li:last-child { border: 0; padding-bottom: 0; margin-bottom: 0; }
+.cite-ref {
+  display: inline-block;
+  font-family: var(--type-display);
+  font-weight: 600;
+  color: var(--ink-sk);
+  margin-right: var(--s-2);
+}
+.cite-text { color: var(--text-2); }
+.cite-q {
+  display: block;
+  margin-top: var(--s-2);
+  font-family: var(--type-body);
+  font-style: italic;
+  color: var(--text-3);
+  font-size: 0.85rem;
+}
+
+/* ---------- Inline citation marker ---------- */
+.cite-mark {
+  display: inline-block;
+  font-family: var(--type-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg-elev-3);
+  padding: 1px 6px;
+  border-radius: var(--r-pill);
+  vertical-align: super;
+  margin-left: 2px;
+  text-decoration: none;
+  line-height: 1;
+}
+.cite-mark:hover { background: var(--accent); color: var(--bg); }
+
 /* ---------- Author context card ---------- */
 .author-card {
   background: var(--bg-elev-1);
