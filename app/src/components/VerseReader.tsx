@@ -134,12 +134,8 @@ export function VerseReader({
             className="rounded-lg p-6 text-center"
             style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}
           >
-            <div className="font-ui text-[0.7rem] font-bold tracking-[0.18em] uppercase text-accent mb-3">In production</div>
-            <p className="font-body text-text-2 m-0 mb-4">
-              Verse {verse.number} of the Bhaktamara Stotra is being prepared by the project — Sanskrit text from a verified Digambara edition, full translations, *bhavarth*, and word-by-word with proper citations.
-            </p>
-            <p className="font-ui text-[0.78rem] text-text-3 m-0">
-              Verse 1 is fully implemented as the flagship demo. Verses 2–48 are scheduled in subsequent content production sprints.
+            <p className="font-body text-text-2 m-0">
+              This verse is being prepared. Sanskrit text and translations will be added in a future content batch.
             </p>
           </div>
         ) : (
@@ -294,8 +290,6 @@ export function VerseReader({
             <button className="action-btn-circle is-disabled" aria-label="No previous verse" disabled>‹</button>
           )}
           <BookmarkBtn slug={text.slug} verse={verse.number} />
-          <div className="flex-1" />
-          <button className="action-btn-circle action-play" aria-label="Play audio (coming soon)" title="Audio coming in Phase 1.5">▶</button>
           <div className="flex-1" />
           <ShareBtn text={text} verse={verse} />
           {nextNum ? (

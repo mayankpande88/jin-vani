@@ -36,10 +36,14 @@ export function Topbar() {
         <NavLink href="/what-is-jainism" active={is('/what-is-jainism')}>About</NavLink>
       </nav>
 
-      <div className="hidden xl:flex items-center gap-2 px-4 py-2 rounded-pill flex-shrink-0" style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', minWidth: '240px' }}>
+      <Link
+        href="/search"
+        className="hidden xl:flex items-center gap-2 px-4 py-2 rounded-pill flex-shrink-0 no-underline transition-colors hover:border-accent"
+        style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', minWidth: '240px', color: 'var(--text-3)' }}
+      >
         <span className="opacity-60 text-sm">⌕</span>
-        <input type="search" placeholder="Search verses, terms, texts…" className="bg-transparent border-none outline-none text-text font-ui text-[0.85rem] flex-1 min-w-0 placeholder:text-text-3" />
-      </div>
+        <span className="font-ui text-[0.85rem]">Search verses, terms, texts…</span>
+      </Link>
 
       <div className="flex items-center gap-2">
         <Link href="/search" className="icon-btn xl:hidden" aria-label="Search">⌕</Link>

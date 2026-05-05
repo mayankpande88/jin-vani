@@ -30,11 +30,11 @@ export default function SearchPage() {
       try {
         if (typeof window !== 'undefined' && !window.pagefind) {
           setStatus('loading');
-          // dynamic import via path — works after `pagefind --site out`
-          // path served at /pagefind/pagefind.js in production
-          // @ts-expect-error dynamic import of generated asset
-          const pf = await import(/* webpackIgnore: true */ '/pagefind/pagefind.js');
-          window.pagefind = pf;
+          // Pagefind is bundled at <basePath>/pagefind/pagefind.js after `pagefind --site out`.
+          // GitHub Pages serves the project under /jin-vani/, so we must include basePath.
+          const base = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+          const pf = await (Function('p', 'return import(p)')(`${base}/pagefind/pagefind.js`) as Promise<unknown>);
+          window.pagefind = pf as Window['pagefind'];
         }
         if (!window.pagefind) {
           setStatus('unavailable');
@@ -84,7 +84,7 @@ export default function SearchPage() {
           className="rounded-md p-4 mb-6 font-body text-text-2 text-[0.9rem]"
           style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}
         >
-          Search index will be available after the next build (`npm run build`). The Pagefind index is generated as part of the build pipeline.
+          Search is currently unavailable. Try refreshing the page, or use the topbar nav to browse Library, Foundations, Glossary, and Tirthankaras directly.
         </div>
       )}
 
@@ -93,7 +93,7 @@ export default function SearchPage() {
           {results.map((r, i) => (
             <li key={i}>
               <a
-                href={r.url}
+                href={(process.env.NEXT_PUBLIC_BASE_PATH ?? '') + r.url}
                 className="block rounded-lg p-5 no-underline transition-all hover:-translate-y-0.5"
                 style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)' }}
               >
