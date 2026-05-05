@@ -26,12 +26,14 @@ export default async function VersePage({ params }: { params: Promise<{ slug: st
   const nextNum = verseNum < total ? verseNum + 1 : null;
 
   return (
-    <VerseReader
-      text={text}
-      verse={verse}
-      total={total}
-      prevNum={prevNum}
-      nextNum={nextNum}
-    />
+    <div data-pagefind-body data-pagefind-meta={`title:${text.title_en} · Verse ${verse.number}`}>
+      <VerseReader
+        text={text}
+        verse={verse}
+        total={total}
+        prevNum={prevNum}
+        nextNum={nextNum}
+      />
+    </div>
   );
 }

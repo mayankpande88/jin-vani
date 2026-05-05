@@ -4,6 +4,7 @@ import { ThemeScript } from '@/components/ThemeScript';
 import { Topbar } from '@/components/Topbar';
 import { Tabbar } from '@/components/Tabbar';
 import { OnboardingModal } from '@/components/OnboardingModal';
+import { ServiceWorker } from '@/components/ServiceWorker';
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,7 @@ export default function RootLayout({
         {children}
         <Tabbar />
         <OnboardingModal />
+        <ServiceWorker />
       </body>
     </html>
   );

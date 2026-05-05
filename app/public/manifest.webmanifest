@@ -1,0 +1,20 @@
+{
+  "name": "Jin-vani · Digambara Scripture Library",
+  "short_name": "Jin-vani",
+  "description": "A reading library for Digambara Jain texts — Bhaktamara, Tattvartha, Samayasara, Chhah Dhala, and more — in Sanskrit, Hindi, and English.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0E0B08",
+  "theme_color": "#0E0B08",
+  "categories": ["education", "books", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
