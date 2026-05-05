@@ -271,6 +271,10 @@
       <button class="size-btn" data-size="l">+</button>
       <button class="size-btn" data-size="xl">++</button>
     </div>
+    <button class="memorize-toggle" id="memorize-toggle">
+      <span class="memorize-toggle-icon">◇</span>
+      <span>Memorize</span>
+    </button>
     <span style="margin-left:auto; font-family:var(--type-ui); font-size:0.7rem; color:var(--text-3); letter-spacing:0.1em; text-transform:uppercase;">Bhaktamara · 1/48</span>
   </div>
 
@@ -287,6 +291,34 @@
     </div>
   </div>
 
+</div>
+
+<!-- Memorize mode overlay — full-screen hide-and-test -->
+<div class="memorize-overlay" id="memorize-overlay">
+  <div class="memorize-overlay-top">
+    <span>Memorize Mode · Verse 1 of 48</span>
+    <button class="memorize-close" id="memorize-close" aria-label="Close memorize mode">✕</button>
+  </div>
+  <div class="memorize-content">
+    <div>
+      <h2 class="memorize-title">Recite Verse 1</h2>
+      <p class="memorize-sub">Try to recite the verse from memory. Reveal the words progressively if you need help.</p>
+    </div>
+    <div class="memorize-blanks" id="memorize-blanks">
+      <span class="blank">भक्तामर-प्रणत-मौलि-मणि-प्रभाणा-</span><br>
+      <span class="blank">मुद्योतकं दलित-पाप-तमो-वितानम्।</span><br>
+      <span class="blank">सम्यक् प्रणम्य जिन-पाद-युगं युगादा-</span><br>
+      <span class="blank">वालम्बनं भव-जले पततां जनानाम्॥</span>
+    </div>
+    <div class="memorize-actions">
+      <button class="memorize-btn" id="memorize-reveal-1">Reveal first line</button>
+      <button class="memorize-btn" id="memorize-reveal-all">Reveal all</button>
+      <button class="memorize-btn is-primary" id="memorize-mark">I know this verse ✓</button>
+    </div>
+    <p style="font-family: var(--type-ui); font-size: 0.78rem; color: var(--text-3); text-align: center; margin: 0; max-width: 400px;">
+      Marking a verse as memorized adds a saffron ring around it on the verse list.
+    </p>
+  </div>
 </div>
 
 <script>
@@ -373,6 +405,48 @@
   popover.addEventListener('click', (e) => e.stopPropagation());
   window.addEventListener('scroll', hidePopover, { passive: true });
   window.addEventListener('resize', hidePopover);
+
+  // Memorize mode
+  const memOverlay = document.getElementById('memorize-overlay');
+  const memToggle = document.getElementById('memorize-toggle');
+  const memClose = document.getElementById('memorize-close');
+  const memBlanks = document.getElementById('memorize-blanks');
+  const memReveal1 = document.getElementById('memorize-reveal-1');
+  const memRevealAll = document.getElementById('memorize-reveal-all');
+  const memMark = document.getElementById('memorize-mark');
+
+  function resetMemorize() {
+    memBlanks.querySelectorAll('.blank').forEach(b => b.classList.remove('is-revealed'));
+  }
+  memToggle.addEventListener('click', () => {
+    resetMemorize();
+    memOverlay.classList.add('is-visible');
+    memToggle.classList.add('is-active');
+  });
+  memClose.addEventListener('click', () => {
+    memOverlay.classList.remove('is-visible');
+    memToggle.classList.remove('is-active');
+  });
+  memReveal1.addEventListener('click', () => {
+    const blanks = memBlanks.querySelectorAll('.blank');
+    for (const b of blanks) { if (!b.classList.contains('is-revealed')) { b.classList.add('is-revealed'); break; } }
+  });
+  memRevealAll.addEventListener('click', () => {
+    memBlanks.querySelectorAll('.blank').forEach(b => b.classList.add('is-revealed'));
+  });
+  memMark.addEventListener('click', () => {
+    memMark.textContent = '✓ Memorized';
+    memMark.style.background = 'var(--ink-sk)';
+    memMark.style.borderColor = 'var(--ink-sk)';
+    setTimeout(() => {
+      memOverlay.classList.remove('is-visible');
+      memToggle.classList.remove('is-active');
+      memMark.textContent = 'I know this verse ✓';
+      memMark.style.background = '';
+      memMark.style.borderColor = '';
+    }, 900);
+    // Real implementation: localStorage.setItem('jinvani.bhaktamara.1.memorized', '1');
+  });
 
   // Pronunciation hint — placeholder until Sprint 6 audio
   document.querySelectorAll('.pron-hint').forEach(btn => {

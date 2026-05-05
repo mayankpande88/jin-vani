@@ -81,11 +81,11 @@
         </div>
         <div class="streak-pill">
           <div class="streak-num">12</div>
-          <div class="streak-label">Verses</div>
+          <div class="streak-label">Verses read</div>
         </div>
         <div class="streak-pill">
-          <div class="streak-num">3</div>
-          <div class="streak-label">Saved</div>
+          <div class="streak-num">2</div>
+          <div class="streak-label">Memorized</div>
         </div>
       </div>
     </div>
@@ -260,6 +260,33 @@
 </main>
 
 <!-- Bottom tab bar -->
+<!-- Onboarding modal (shows on first visit; dismiss writes to localStorage) -->
+<div class="onboard-overlay" id="onboard-overlay" role="dialog" aria-modal="true" aria-labelledby="onboard-title">
+  <div class="onboard-card">
+    <div class="onboard-emblem">ज</div>
+    <div class="onboard-greeting">॥ णमो अरिहंताणं ॥</div>
+    <h2 class="onboard-title" id="onboard-title">Welcome to Jin-vani</h2>
+    <p class="onboard-sub">
+      A reading library for Digambara Jain texts. Pick the level that fits — we'll set up your reading view to match. You can change this anytime.
+    </p>
+    <div class="onboard-options">
+      <button class="onboard-option" data-level="new">
+        <span class="onboard-option-title">I'm new to Jain texts</span>
+        <span class="onboard-option-desc">Start with the story behind Bhaktamara, then read with simple meanings and tap-to-define help.</span>
+      </button>
+      <button class="onboard-option" data-level="learning">
+        <span class="onboard-option-title">I know some, learning more</span>
+        <span class="onboard-option-desc">Default to word-by-word and Hindi meanings. Skip the introductions; jump into reading.</span>
+      </button>
+      <button class="onboard-option" data-level="experienced">
+        <span class="onboard-option-title">I read these regularly</span>
+        <span class="onboard-option-desc">Default to Sanskrit + Hindi translation. Minimal scaffolding. Audio when available.</span>
+      </button>
+    </div>
+    <button class="onboard-skip" id="onboard-skip">Skip — I'll explore on my own</button>
+  </div>
+</div>
+
 <nav class="tabbar" aria-label="Primary">
   <div class="tabbar-grid">
     <a href="index.html" class="tab-item is-active">
@@ -290,6 +317,31 @@
     else {
       const isDark = !window.matchMedia('(prefers-color-scheme: light)').matches;
       root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+  });
+
+  // Onboarding modal — shows on first visit
+  const overlay = document.getElementById('onboard-overlay');
+  const onboarded = localStorage.getItem('jinvani.onboarded');
+  if (!onboarded) {
+    setTimeout(() => overlay.classList.add('is-visible'), 600);
+  }
+  function closeOnboard(level) {
+    overlay.classList.remove('is-visible');
+    localStorage.setItem('jinvani.onboarded', 'true');
+    if (level) localStorage.setItem('jinvani.level', level);
+  }
+  document.querySelectorAll('.onboard-option').forEach(btn => {
+    btn.addEventListener('click', () => closeOnboard(btn.dataset.level));
+  });
+  document.getElementById('onboard-skip').addEventListener('click', () => closeOnboard(null));
+
+  // Demo helper: clear onboarding state on Shift+R for re-testing the modal
+  window.addEventListener('keydown', (e) => {
+    if (e.shiftKey && e.key === 'R') {
+      localStorage.removeItem('jinvani.onboarded');
+      localStorage.removeItem('jinvani.level');
+      location.reload();
     }
   });
 </script>
