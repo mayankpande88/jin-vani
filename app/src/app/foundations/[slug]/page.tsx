@@ -7,6 +7,12 @@ const ARTICLES: Record<string, { num: string; title: string; readingMinutes: num
     readingMinutes: 6,
     render: () => <TirthankarasArticle />,
   },
+  'karma-is-not-fate': {
+    num: '02',
+    title: 'Karma is not fate — it\'s accountability',
+    readingMinutes: 7,
+    render: () => <KarmaArticle />,
+  },
 };
 
 export function generateStaticParams() {
@@ -147,6 +153,94 @@ function TirthankarasArticle() {
 
       <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
         <strong className="text-accent">Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. It cites primary Jain texts (Tattvartha, Samayasara, Sarvarthasiddhi, Ratnakaranda Shravakachara, Bhaktamara) but the framing and English presentation are project work. Specific verse numbers in citations to be verified against authoritative Digambara editions.
+      </div>
+    </>
+  );
+}
+
+function KarmaArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        For most modern readers, &ldquo;karma&rdquo; means roughly: <em>what goes around comes around</em>. The Jain doctrine is much more specific — and, in a way, much more demanding.
+      </p>
+
+      <H3>Karma is a substance, not a metaphor</H3>
+      <P>
+        In Jain philosophy, <em>karma</em> is not a moral force or a cosmic law of fairness. It is a substance — extremely subtle particles of matter (<em>pudgala</em>) that exist throughout the universe and become attached to the soul (<em>jīva</em>) when the soul acts under the influence of passions.<CiteMark id="cite1" label="1" />
+      </P>
+      <P>
+        These particles, once bound to the soul, alter what the soul can perceive, what it can know, what it can do, what it can become. Different kinds of karma produce different kinds of obscuration. There are eight major karma-types in Jain theory, each affecting a specific capacity of the soul.<CiteMark id="cite2" label="2" />
+      </P>
+      <P>
+        This is not metaphor. The Tattvartha and its commentaries treat karma as literally substantial, with measurable properties: its quantity, its intensity, its duration, the kinds of effects it produces. <strong>Karma is a physics, not a poetry.</strong>
+      </P>
+
+      <H3>Karma is not fate</H3>
+      <P>
+        This is the part that most often gets misunderstood. Because karma binds to the soul through past actions, people often conclude that &ldquo;everything that happens to you is karma&rdquo; — meaning, you deserved it; meaning, accept it; meaning, change is impossible.
+      </P>
+      <P>
+        That is fatalism, and Jain philosophy explicitly rejects it.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Karma is not what happens to you. Karma is what you accumulate from how you respond to what happens.
+      </blockquote>
+      <P>
+        Acharya Kundakunda&apos;s <em>Samayasara</em> is unambiguous: the soul, in its true nature, is the doer (<em>kartā</em>) of its own karma. External circumstances do not bind karma; <em>your relation to circumstances</em> binds karma.<CiteMark id="cite3" label="3" /> A person facing pain who responds with rage accumulates one kind of karma. A person facing the same pain who responds with equanimity accumulates almost none. The pain is not the karma. The response is.
+      </P>
+
+      <H3>What karma is for</H3>
+      <P>
+        Karma in Jain philosophy serves a specific function: it accounts for why the soul, which is intrinsically pure and omniscient, is currently impure and limited. Without karma as the explanation, the soul&apos;s present state would be inexplicable — either by chance, or by an external designer (a creator god). Jainism has neither; karma is the alternative.<CiteMark id="cite4" label="4" />
+      </P>
+      <P>
+        This makes karma a <em>theodicy without a God</em>. The pain in the world is not the will of a deity. It is also not random. It is the lawful consequence of soul-action across countless lifetimes. The system is impartial — there is no judge, no grace, no exception. Just cause and effect, working at the level of the soul.
+      </P>
+
+      <H3>Why this is harder than it looks</H3>
+      <P>
+        The Jain karma doctrine is theologically demanding in a specific way: <strong>nobody is going to fix this for you</strong>. There is no creator god to forgive. There is no Tirthankara who can intervene. The Tirthankaras, as Foundation 01 noted, can only show the path; they cannot walk it for you.
+      </P>
+      <P>
+        This means the entire weight of one&apos;s liberation rests on one&apos;s own actions. Every meditation, every act of restraint, every moment of equanimity, every refusal to react to provocation — these are the actual work of liberation. Not metaphors. Not gestures. Karma is reduced or shed only through specific spiritual practices: <em>saṁvara</em> (stoppage of new karmic inflow) and <em>nirjarā</em> (shedding of accumulated karma).<CiteMark id="cite5" label="5" />
+      </P>
+
+      <H3>Karma and modern responsibility</H3>
+      <P>
+        For a modern reader trained to be wary of religious claims about cosmic justice, the Jain doctrine has an unexpected angle. It is closer to a strict accountability framework than to a blame-the-victim system.
+      </P>
+      <P>
+        <em>You</em> accumulate karma. <em>You</em> shed it. <em>You</em> are responsible for your own state. The framework is rigorous about cause-and-effect at a scale that includes lifetimes, but the underlying ethic is the same as one any secular person can recognize: take responsibility for your actions; their consequences come back to you.
+      </P>
+      <P>
+        Where it differs sharply from the casual &ldquo;what goes around comes around&rdquo; is that Jain karma is <strong>indefatigable</strong>. There is no escape clause. No god grants forgiveness. No ritual washes karma off. The only way out is the slow, patient work of changing how you act, what you accumulate, what you shed. <strong>The path that the Tattvartha&apos;s first sutra named — right faith, right knowledge, right conduct — is also the only mechanism that can actually undo karmic bondage.</strong>
+      </P>
+
+      {/* Citations */}
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 6.1–6.5">
+            On the nature of <em>āsrava</em> (influx) — karma as <em>pudgala</em> particles binding to the soul through the soul&apos;s own activity. The technical mechanism by which karma becomes substantial.
+          </Cite>
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 8.4–8.14">
+            The eight types of karma (<em>jnāna-āvaraṇīya</em>, <em>darśana-āvaraṇīya</em>, <em>vedanīya</em>, <em>mohanīya</em>, <em>āyu</em>, <em>nāma</em>, <em>gotra</em>, <em>antarāya</em>) and their specific obscurations.
+          </Cite>
+          <Cite id="cite3" n="3." source="Samayasara — gathas on kartṛtva">
+            Acharya Kundakunda — the soul as <em>kartā</em> (doer) of its own karma; the inner relation, not the external circumstance, is what binds.
+          </Cite>
+          <Cite id="cite4" n="4." source="Tattvartha Sutra 6.1, Sarvarthasiddhi commentary">
+            The mechanism of <em>āsrava</em> functions as the Jain alternative to a divine creator: it explains the soul&apos;s present state through its own causal history, not external design.
+          </Cite>
+          <Cite id="cite5" n="5." source="Tattvartha Sutra 9.1–9.3">
+            On <em>saṁvara</em> (stoppage of new karmic influx) and <em>nirjarā</em> (shedding of accumulated karma) as the two practices that break karmic bondage.
+          </Cite>
+        </ul>
+      </div>
+
+      <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
+        <strong className="text-accent">Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. It cites Tattvartha Sutra and Samayasara; the technical karma doctrine summarized here has many further details (subdivisions, durations, intensities) treated in classical texts that this article does not cover.
       </div>
     </>
   );
