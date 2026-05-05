@@ -7,7 +7,7 @@ import { Markdown } from './Markdown';
 
 type Layer = 'simple' | 'today' | 'words' | 'hindi' | 'english' | 'meaning';
 
-const LAYERS: { id: Layer; label: string }[] = [
+const ALL_LAYERS: { id: Layer; label: string }[] = [
   { id: 'simple', label: 'Simple' },
   { id: 'today', label: 'Today' },
   { id: 'words', label: 'Word-by-word' },
@@ -15,6 +15,19 @@ const LAYERS: { id: Layer; label: string }[] = [
   { id: 'english', label: 'English' },
   { id: 'meaning', label: 'Deeper' },
 ];
+
+// Build the visible-tabs list dynamically from what the verse actually has.
+function getAvailableLayers(verse: VerseContent): { id: Layer; label: string }[] {
+  const has: Record<Layer, boolean> = {
+    simple: !!(verse.simple_hi || verse.simple_en),
+    today: !!verse.today_md,
+    words: !!(verse.word_by_word && verse.word_by_word.length > 0),
+    hindi: !!(verse.translation_hi || verse.bhavarth_hi),
+    english: !!verse.translation_en,
+    meaning: !!verse.meaning_en,
+  };
+  return ALL_LAYERS.filter((l) => has[l.id]);
+}
 
 export function VerseReader({
   text,
@@ -29,7 +42,9 @@ export function VerseReader({
   prevNum: number | null;
   nextNum: number | null;
 }) {
-  const [layer, setLayer] = useState<Layer>('simple');
+  const layers = getAvailableLayers(verse);
+  const defaultLayer = layers[0]?.id ?? 'simple';
+  const [layer, setLayer] = useState<Layer>(defaultLayer);
   const [memorizing, setMemorizing] = useState(false);
   const [popover, setPopover] = useState<{ x: number; y: number; sk: string; translit: string; gloss: string } | null>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
@@ -131,7 +146,7 @@ export function VerseReader({
           <>
             {/* Layer tabs */}
             <div className="flex gap-1 rounded-pill p-1 mb-6 overflow-x-auto" style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', scrollbarWidth: 'none' }}>
-              {LAYERS.map((l) => (
+              {layers.map((l) => (
                 <button
                   key={l.id}
                   onClick={() => setLayer(l.id)}
@@ -157,34 +172,28 @@ export function VerseReader({
               </Panel>
             )}
 
-            {layer === 'today' && (
-              verse.today_md ? (
-                <div
-                  className="rounded-lg p-6 mb-6"
-                  style={{
-                    background: 'linear-gradient(155deg, var(--bg-elev-2), var(--bg-elev-1))',
-                    border: '1px solid var(--border-2)',
-                    borderLeft: '3px solid var(--accent)',
-                  }}
-                >
-                  <div className="font-ui text-[0.65rem] font-bold tracking-[0.18em] uppercase text-accent mb-3 flex items-center gap-2">
-                    <span className="w-4 h-px bg-accent" />
-                    Today · Why this matters now
-                  </div>
-                  {verse.today_title && (
-                    <h3 className="font-display font-semibold text-[1.2rem] tracking-tight text-text mb-4 leading-tight">
-                      {verse.today_title}
-                    </h3>
-                  )}
-                  <div className="font-body text-base leading-[1.75] text-text">
-                    <Markdown>{verse.today_md}</Markdown>
-                  </div>
+            {layer === 'today' && verse.today_md && (
+              <div
+                className="rounded-lg p-6 mb-6"
+                style={{
+                  background: 'linear-gradient(155deg, var(--bg-elev-2), var(--bg-elev-1))',
+                  border: '1px solid var(--border-2)',
+                  borderLeft: '3px solid var(--accent)',
+                }}
+              >
+                <div className="font-ui text-[0.65rem] font-bold tracking-[0.18em] uppercase text-accent mb-3 flex items-center gap-2">
+                  <span className="w-4 h-px bg-accent" />
+                  Today · Why this matters now
                 </div>
-              ) : (
-                <Panel label="Today">
-                  <p className="font-body text-text-2">A modern reflection for this verse will be added in the next content production sprint.</p>
-                </Panel>
-              )
+                {verse.today_title && (
+                  <h3 className="font-display font-semibold text-[1.2rem] tracking-tight text-text mb-4 leading-tight">
+                    {verse.today_title}
+                  </h3>
+                )}
+                <div className="font-body text-base leading-[1.75] text-text">
+                  <Markdown>{verse.today_md}</Markdown>
+                </div>
+              </div>
             )}
 
             {layer === 'words' && (
@@ -226,16 +235,10 @@ export function VerseReader({
               </Panel>
             )}
 
-            {layer === 'meaning' && (
-              verse.meaning_en ? (
-                <Panel label="Deeper Meaning &amp; Context">
-                  <div className="font-body leading-relaxed text-text-2"><Markdown>{verse.meaning_en}</Markdown></div>
-                </Panel>
-              ) : (
-                <Panel label="Deeper">
-                  <p className="font-body text-text-2">Extended meaning and context will be added in the next content production sprint.</p>
-                </Panel>
-              )
+            {layer === 'meaning' && verse.meaning_en && (
+              <Panel label="Deeper Meaning &amp; Context">
+                <div className="font-body leading-relaxed text-text-2"><Markdown>{verse.meaning_en}</Markdown></div>
+              </Panel>
             )}
 
             {/* Citations */}
