@@ -27,10 +27,13 @@ export function Topbar() {
         Jin-vani
       </Link>
 
-      <nav className="hidden lg:flex items-center gap-2 font-ui text-sm font-medium flex-1 justify-center">
+      <nav className="hidden lg:flex items-center gap-1 font-ui text-[0.85rem] font-medium flex-1 justify-center">
         <NavLink href="/" active={is('/') && pathname === '/'}>Library</NavLink>
         <NavLink href="/foundations" active={is('/foundations')}>Foundations</NavLink>
-        <NavLink href="/what-is-jainism" active={is('/what-is-jainism')}>What is Jainism?</NavLink>
+        <NavLink href="/tirthankaras" active={is('/tirthankaras')}>Tirthankaras</NavLink>
+        <NavLink href="/authors" active={is('/authors')}>Authors</NavLink>
+        <NavLink href="/glossary" active={is('/glossary')}>Glossary</NavLink>
+        <NavLink href="/what-is-jainism" active={is('/what-is-jainism')}>About</NavLink>
       </nav>
 
       <div className="hidden xl:flex items-center gap-2 px-4 py-2 rounded-pill flex-shrink-0" style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', minWidth: '240px' }}>

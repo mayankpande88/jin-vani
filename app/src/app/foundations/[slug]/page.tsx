@@ -20,6 +20,12 @@ const ARTICLES: Record<string, { num: string; title: string; readingMinutes: num
     readingMinutes: 6,
     render: () => <NoCreatorArticle />,
   },
+  'pratikraman': {
+    num: '04',
+    title: 'Pratikraman — the daily practice of "turning back"',
+    readingMinutes: 9,
+    render: () => <PratikramanArticle />,
+  },
 };
 
 export function generateStaticParams() {
@@ -331,6 +337,123 @@ function NoCreatorArticle() {
 
       <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
         <strong className="text-accent">Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. The non-theistic position summarized here is well-attested across Digambara and Shvetambara traditions; the framing for modern readers is interpretive and may be revised.
+      </div>
+    </>
+  );
+}
+
+function PratikramanArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        Of all daily Jain practices, <em>pratikramaṇa</em> may be the most important — and the most misunderstood. Literally &ldquo;turning back,&rdquo; it is the daily ritual of moral self-examination, confession, and renewal of vows. It is not optional decoration. It is the practical mechanism by which the Jain path actually works.
+      </p>
+
+      <H3>What pratikramaṇa is, etymologically</H3>
+      <P>
+        <em>Prati-kram</em> = "to step back" or "to turn back." The full word means: a return — a turning back from wrong action, wrong speech, wrong thought — to the soul&apos;s right state. In a single word, the Jain understanding of how transgressions are addressed: not by external forgiveness, but by internal turning.
+      </P>
+      <P>
+        Pratikramaṇa is one of the <strong>six daily essential duties</strong> (<em>ṣaṭ-āvaśyaka</em>) of a serious Jain practitioner.<CiteMark id="cite1" label="1" /> Together with <em>sāmāyika</em> (equanimity), <em>caturviṁśati-stava</em> (praise of the 24 Tirthankaras), <em>vandanā</em> (veneration of acharyas), <em>kāyotsarga</em> (standing meditation), and <em>pratyākhyāna</em> (renunciation), it forms the structural framework of Jain spiritual life.
+      </P>
+
+      <H3>Why it matters: saṁvara and nirjarā</H3>
+      <P>
+        Foundation 02 (<Link href="/foundations/karma-is-not-fate" className="text-accent">Karma is not fate</Link>) explained that liberation in Jainism happens through two mechanisms: <em>saṁvara</em> (stopping new karmic inflow) and <em>nirjarā</em> (shedding accumulated karma).<CiteMark id="cite2" label="2" /> The question that immediately follows: <em>how, concretely, are these accomplished?</em>
+      </P>
+      <P>
+        Pratikramaṇa is the answer. It is one of the most direct practical mechanisms for both saṁvara and nirjarā. Through daily review, the practitioner identifies actions, speech, and thoughts that bound new karma — and by recognizing, confessing, and committing not to repeat them, both halts new inflow and works on shedding what was newly bound.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Pratikramaṇa is what makes the Jain path operational. Without it, the path is theory. With it, the path is daily practice.
+      </blockquote>
+
+      <H3>The structure of daily pratikramaṇa</H3>
+      <P>
+        A traditional pratikramaṇa is not a quick prayer. It is a structured sequence — typically 30 to 60 minutes — that includes:
+      </P>
+      <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
+        <li><strong>Sāmāyika</strong> — first, establish equanimity. The mind quiets; attachments are temporarily set aside.</li>
+        <li><strong>Iriyāvahī</strong> — confession of harm done while moving (a Jain monastic / serious lay form acknowledges the impossibility of moving through the world without inadvertently harming any tiny life).</li>
+        <li><strong>Logassa / Caturviṁśati-stava</strong> — recitation honoring the 24 Tirthankaras.</li>
+        <li><strong>Vandanā</strong> — veneration of one&apos;s acharya.</li>
+        <li><strong>The pratikramaṇa proper</strong> — systematic review of conduct over the period (day, fortnight, year): violations of each of the five vows, the twelve lay vows, the daily duties. Each is named and confessed.</li>
+        <li><strong>Kāyotsarga</strong> — extended standing meditation, often timed to specific verse-counts.</li>
+        <li><strong>Pratyākhyāna</strong> — renunciation; recommitment to specific forms of restraint for the next day.</li>
+      </ul>
+
+      <H3>Three timeframes</H3>
+      <P>
+        Pratikramaṇa is performed in three different intensities:
+      </P>
+      <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
+        <li><strong>Daily</strong> (<em>devasika</em> in the morning, <em>raika</em> in the evening) — review of the past day or night.</li>
+        <li><strong>Fortnightly</strong> (<em>pakṣika</em>) — every two weeks, on the new-moon and full-moon days. More extensive.</li>
+        <li><strong>Annual</strong> (<em>sāṁvatsarika</em>) — once a year, on the last day of <em>Paryuṣaṇa</em> (or <em>Daśalakṣaṇa</em> for Digambara). The most thorough, year-long review. This is when Jains traditionally seek forgiveness from those they have wronged across the year (the <em>kṣamāpana</em> tradition: &ldquo;<em>micchami dukkaḍaṁ</em>&rdquo; — &ldquo;may my wrongdoings be forgiven&rdquo;).</li>
+      </ul>
+
+      <H3>Digambara and Shvetambara variations</H3>
+      <P>
+        Both traditions practice pratikramaṇa, but the specific liturgical texts differ. Shvetambara pratikramaṇa uses certain Prakrit sutras (Vandittu, Iriyāvahī, etc.) that are more elaborate; Digambara pratikramaṇa is somewhat shorter and uses different specific verses, though the structure (review → confession → renewal) is the same.<CiteMark id="cite3" label="3" />
+      </P>
+      <P>
+        Within Digambara, the Bispanthi and Terapanthi sub-traditions also have minor variations in liturgy. The library&apos;s focus, when we add the full pratikramaṇa text, will be the Digambara form.
+      </P>
+
+      <H3>Why pratikramaṇa is harder than it sounds</H3>
+      <P>
+        The structure of pratikramaṇa <em>looks</em> like confession in other religions: identify wrongdoing, name it, ask for forgiveness, resolve to do better. But the underlying mechanism is different in three important ways.
+      </P>
+      <P>
+        <strong>First, there is no one to forgive you.</strong> In Jainism, no creator god, no Tirthankara, no priest can absolve karma. The confession is to oneself — and the &ldquo;forgiveness,&rdquo; if we can use that word, comes from the karmic inflow stopping and the karmic accumulation shedding. The relief is real, but it is causal, not granted.
+      </P>
+      <P>
+        <strong>Second, the bar is unusually high.</strong> Pratikramaṇa includes not just deeds but <em>speech and thought</em>. Not just intentional harms but <em>incidental</em> ones (the souls inadvertently harmed while walking, drinking water, breathing). Not just gross violations but the subtlest passions (a momentary flash of irritation, a fleeting attachment).
+      </P>
+      <P>
+        <strong>Third, it is not a license to repeat.</strong> Unlike rituals where confession allows the cycle of wrongdoing-and-forgiveness to continue, pratikramaṇa demands actual change. The <em>pratyākhyāna</em> at the end — concrete renunciation for the future — makes this explicit. You don&apos;t just confess; you actually commit.
+      </P>
+
+      <H3>Why kṣamāpana matters even more</H3>
+      <P>
+        The annual <em>sāṁvatsarika pratikramaṇa</em>, performed on the closing day of Paryuṣaṇa (in Shvetambara) or Daśalakṣaṇa (in Digambara), includes the most beautiful Jain practice: <em>kṣamāpana</em>. The practitioner sends — by message, in person, in writing — to every person they may have wronged in the past year, the words: <em>micchami dukkaḍaṁ</em> (Prakrit) or <em>uttam kṣamā</em> (Sanskrit).
+      </P>
+      <P>
+        &ldquo;May my wrongdoings be forgiven.&rdquo; &ldquo;Forgive me; I forgive you.&rdquo;
+      </P>
+      <P>
+        This is unique in world religious practice. Once a year, an entire community spends a day asking forgiveness — actively, individually, by name — from anyone they may have hurt. No deity mediates. No priest absolves. The practitioner does the work directly, and then the relationship is renewed.
+      </P>
+
+      <H3>For a modern reader</H3>
+      <P>
+        Pratikramaṇa is, in many ways, what makes Jainism a living practice rather than a philosophy. The Tattvartha Sutra describes the path; pratikramaṇa walks it. Without it, the soul cannot effectively work on its own karma; with it, the soul has a daily, fortnightly, and yearly mechanism for the only work that actually liberates: the careful, patient, internal turning toward what one ought to be.
+      </P>
+      <P>
+        For someone trained in modern psychology, pratikramaṇa has obvious analogues — daily reflection, the practice of self-honesty, behavior change through repeated awareness. The Jain version is older by 2500 years and operates in a richer ontological context (souls and karma, not just minds and habits) — but the practical structure is the same. Notice. Confess. Commit. Repeat.
+      </P>
+      <P>
+        <strong>The full pratikramaṇa liturgy will be added to this library in a future expansion</strong>, with the Digambara texts in Sanskrit/Prakrit, transliteration, and translation. For now, this article is a doctrinal introduction; the actual practice deserves and requires careful textual production.
+      </P>
+
+      {/* Citations */}
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 9.20 — six āvaśyakas">
+            On the six daily essential duties of a Jain practitioner: sāmāyika, caturviṁśati-stava, vandanā, pratikramaṇa, kāyotsarga, pratyākhyāna.
+          </Cite>
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 9.1–9.3 — saṁvara and nirjarā">
+            On the two mechanisms of liberation: stopping new karmic inflow (saṁvara) and shedding accumulated karma (nirjarā). Pratikramaṇa is a primary practice for both.
+          </Cite>
+          <Cite id="cite3" n="3." source="Mūlācāra (Acharya Vattakera) — Digambara monastic conduct">
+            Foundational Digambara monastic text describing the form of daily and periodic pratikramaṇa for monks. Lay forms are derived from this.
+          </Cite>
+        </ul>
+      </div>
+
+      <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
+        <strong className="text-accent">Draft note:</strong> This article gives the doctrinal and structural overview of pratikramaṇa. The full liturgical text of Digambara pratikramaṇa is a Phase 2 addition. Reviewer should verify specific liturgical sequences and Digambara/Shvetambara differences described here.
       </div>
     </>
   );

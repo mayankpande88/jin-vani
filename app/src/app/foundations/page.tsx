@@ -23,11 +23,18 @@ const FOUNDATIONS = [
     summary: 'Jainism has no creator. The world is eternal, governed by natural laws. With citations from Tattvartha 5.1-5.4 and 4.1-4.42.',
     status: 'published',
   },
-  { num: '04', title: 'Liberation is by your own effort', summary: 'Not by grace. Not by belief. Not by ritual alone. The implication for how you live today.' },
-  { num: '05', title: 'Ahimsa is not just diet', summary: 'Vegetarianism is the most visible part of ahimsa — but ahimsa is a complete ethic of harm reduction in thought, speech, and action.' },
-  { num: '06', title: 'Aparigraha is not just minimalism', summary: 'Non-attachment looks like Marie Kondo on the surface. Underneath, it\'s a critique of how possessions distort the mind itself.' },
-  { num: '07', title: 'Anekantavada means you might be wrong', summary: 'The doctrine of "many-sided viewpoint" — built-in epistemic humility, and arguably Jainism\'s most important contribution to world philosophy.' },
-  { num: '08', title: 'The tradition has hard questions', summary: 'Digambara nudity, female ordination, sallekhana fasts. Real, contested, debated within the tradition itself. We don\'t paper over these.' },
+  {
+    num: '04',
+    slug: 'pratikraman',
+    title: 'Pratikraman — the daily practice of "turning back"',
+    summary: 'The most important daily Jain practice — and arguably the most misunderstood. The structural ritual of saṁvara (stopping new karma) and nirjarā (shedding old karma).',
+    status: 'published',
+  },
+  { num: '05', title: 'Liberation is by your own effort', summary: 'Not by grace. Not by belief. Not by ritual alone. The implication for how you live today.' },
+  { num: '06', title: 'Ahimsa is not just diet', summary: 'Vegetarianism is the most visible part of ahimsa — but ahimsa is a complete ethic of harm reduction in thought, speech, and action.' },
+  { num: '07', title: 'Aparigraha is not just minimalism', summary: 'Non-attachment looks like Marie Kondo on the surface. Underneath, it\'s a critique of how possessions distort the mind itself.' },
+  { num: '08', title: 'Anekantavada means you might be wrong', summary: 'The doctrine of "many-sided viewpoint" — built-in epistemic humility, and arguably Jainism\'s most important contribution to world philosophy.' },
+  { num: '09', title: 'The tradition has hard questions', summary: 'Digambara nudity, female ordination, sallekhana fasts. Real, contested, debated within the tradition itself. We don\'t paper over these.' },
 ];
 
 export default function FoundationsIndex() {
