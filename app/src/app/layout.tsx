@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     'A reading library for Digambara Jain texts — Bhaktamara, Tattvartha, Samayasara, Chhah Dhala, and more — in Sanskrit, Hindi, and English.',
-  manifest: '/manifest.webmanifest',
+  manifest: (process.env.NEXT_PUBLIC_BASE_PATH ?? '') + '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
