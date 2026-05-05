@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 const ARTICLES: Record<string, { num: string; title: string; readingMinutes: number; render: () => React.ReactNode }> = {
@@ -12,6 +13,12 @@ const ARTICLES: Record<string, { num: string; title: string; readingMinutes: num
     title: 'Karma is not fate — it\'s accountability',
     readingMinutes: 7,
     render: () => <KarmaArticle />,
+  },
+  'no-creator-god': {
+    num: '03',
+    title: 'There is no creator god — and that\'s not a bug',
+    readingMinutes: 6,
+    render: () => <NoCreatorArticle />,
   },
 };
 
@@ -241,6 +248,89 @@ function KarmaArticle() {
 
       <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
         <strong className="text-accent">Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. It cites Tattvartha Sutra and Samayasara; the technical karma doctrine summarized here has many further details (subdivisions, durations, intensities) treated in classical texts that this article does not cover.
+      </div>
+    </>
+  );
+}
+
+function NoCreatorArticle() {
+  return (
+    <>
+      <p className="font-display font-medium text-[1.4rem] leading-snug text-ink m-0 mb-6 -tracking-[0.005em]">
+        Jainism has no creator god. The world was not made; it has always been. This is not a hedge or an evolution — it is the position the tradition has held for at least 2500 years.
+      </p>
+
+      <H3>What the texts say</H3>
+      <P>
+        The universe in Jain cosmology consists of six eternal substances (<em>dravyas</em>): souls (<em>jīva</em>), matter (<em>pudgala</em>), the medium of motion (<em>dharma</em>), the medium of rest (<em>adharma</em>), space (<em>ākāśa</em>), and time (<em>kāla</em>).<CiteMark id="cite1" label="1" /> Each is uncreated, indestructible, and eternal. None of them was made by anything else.
+      </P>
+      <P>
+        There is no first cause. There is no creator. There is no being outside the system that designed it. The Tattvartha Sutra simply lists the substances and proceeds — the question of who made them does not arise, because the answer is: nobody, they always were.
+      </P>
+
+      <H3>Why this is not a bug</H3>
+      <P>
+        Most religious traditions handle the question &ldquo;why is there something rather than nothing?&rdquo; by introducing a creator. Jainism handles it by rejecting the question. The world has always existed; what needs explanation is not its <em>existence</em> but its <em>structure</em>.
+      </P>
+      <P>
+        And the structure has an explanation: souls, bound by karma, transmigrate through countless lifetimes; the patterns of their bondage and liberation produce the world we see. The cosmos doesn&apos;t need a designer because it isn&apos;t designed; it functions according to inherent laws — natural laws of substance, motion, time, and karma — that have always been there.
+      </P>
+      <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
+        Where other traditions need a god to explain the world, Jainism needs only the world.
+      </blockquote>
+
+      <H3>The advantages of having no creator</H3>
+      <P>
+        The position is unusually clean. Three things become unnecessary that bedevil other religious philosophies:
+      </P>
+      <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
+        <li><strong>The problem of evil disappears.</strong> No omnibenevolent creator means no contradiction between divine goodness and worldly suffering. Suffering exists because karma exists; karma exists because souls have always acted; that&apos;s the whole story.</li>
+        <li><strong>No divine command morality.</strong> What is right is not right because a god commanded it. It is right because of its actual effects on souls and on the world. The basis of ethics is causal and observable, not decreed.</li>
+        <li><strong>No salvation through grace.</strong> No deity hands out forgiveness or punishment. The path is entirely your own work; the consequences are entirely your own karma. Justice is not external; it is internal to the system.</li>
+      </ul>
+
+      <H3>Three traditions, one answer</H3>
+      <P>
+        Both major Jain traditions — Digambara and Shvetambara — agree on the no-creator position. So do all sub-traditions. Across 2500 years of disagreement on dozens of doctrinal points, this is one of the few points of complete unity in Jain philosophy. The Tattvartha Sutra, accepted by both, contains no creator — anywhere.<CiteMark id="cite2" label="2" />
+      </P>
+
+      <H3>What about the &ldquo;gods&rdquo; that do appear in Jainism?</H3>
+      <P>
+        Jain cosmology does include <em>devas</em> — celestial beings who live in heavenly realms. These are not creators. They are jīvas like us — souls that have accumulated good karma and now enjoy a celestial existence. They have powers, long lifespans, beautiful bodies, but they are still subject to rebirth and still on the spiritual path. They cannot grant liberation; some of them eventually become Tirthankaras themselves.<CiteMark id="cite3" label="3" />
+      </P>
+      <P>
+        See <Link href="/foundations/tirthankaras-and-gods" className="text-accent">Foundation 01</Link> for the full distinction between cosmological devas and the Tirthankaras as <em>apta-deva</em>.
+      </P>
+
+      <H3>What this means for a modern reader</H3>
+      <P>
+        For someone who has been pushed away from religion by the standard creator-god framing — by the problem of evil, by the question of how a good god allows suffering, by the apparent arbitrariness of revelation — Jainism is unusually compatible.
+      </P>
+      <P>
+        The world is here. It has always been here. Souls in it do good or bad and the consequences come back through karma. The path of liberation is open to anyone who walks it. There is no special grace, no chosen people, no required ritual. There is only what is, and what you do with what is.
+      </P>
+      <P>
+        This is, theologically, what philosophy of religion sometimes calls a <strong>non-theistic</strong> tradition — and the Jain version is one of the most rigorous expressions of that position the world has produced.
+      </P>
+
+      {/* Citations */}
+      <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
+        <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
+        <ul className="list-none m-0 p-0">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 5.1–5.4">
+            On the six eternal <em>dravyas</em> (substances): the foundational ontology of Jainism. Each is anādi (without beginning) and ananta (without end).
+          </Cite>
+          <Cite id="cite2" n="2." source="Tattvartha Sutra (entire text)">
+            The Tattvartha&apos;s 357 sutras describe the categories of reality, the path of liberation, the structure of the cosmos. There is no sutra invoking or assuming a creator. The omission is not an oversight; it is the position.
+          </Cite>
+          <Cite id="cite3" n="3." source="Tattvartha Sutra 4.1–4.42">
+            On the four orders of devas, their hierarchies, lifespans, powers. Devas are jīvas in celestial births — not creators, and ultimately still subject to the cycle of rebirth.
+          </Cite>
+        </ul>
+      </div>
+
+      <div className="font-ui text-[0.72rem] text-text-3 leading-relaxed py-3 px-4 rounded-md mt-6" style={{ background: 'var(--bg-elev-1)', border: '1px dashed var(--border-2)' }}>
+        <strong className="text-accent">Draft note:</strong> This page is a project draft pending Digambara cultural reviewer. The non-theistic position summarized here is well-attested across Digambara and Shvetambara traditions; the framing for modern readers is interpretive and may be revised.
       </div>
     </>
   );

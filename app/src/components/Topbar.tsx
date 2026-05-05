@@ -29,9 +29,8 @@ export function Topbar() {
 
       <nav className="hidden lg:flex items-center gap-2 font-ui text-sm font-medium flex-1 justify-center">
         <NavLink href="/" active={is('/') && pathname === '/'}>Library</NavLink>
-        <NavLink href="/bhaktamara-stotra" active={is('/bhaktamara')}>Stotras</NavLink>
-        <NavLink href="/sutras" active={is('/sutras')}>Sutras</NavLink>
         <NavLink href="/foundations" active={is('/foundations')}>Foundations</NavLink>
+        <NavLink href="/what-is-jainism" active={is('/what-is-jainism')}>What is Jainism?</NavLink>
       </nav>
 
       <div className="hidden xl:flex items-center gap-2 px-4 py-2 rounded-pill flex-shrink-0" style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', minWidth: '240px' }}>

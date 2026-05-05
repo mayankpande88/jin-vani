@@ -55,6 +55,26 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* What is Jainism — newcomer entry */}
+      <Link
+        href="/what-is-jainism"
+        className="flex items-center gap-4 rounded-lg p-5 mb-3 no-underline text-text transition-all hover:-translate-y-0.5"
+        style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}
+      >
+        <div
+          className="w-12 h-12 rounded-full grid place-items-center flex-shrink-0 font-display font-semibold text-lg"
+          style={{ background: 'linear-gradient(135deg, var(--ink-sk), var(--accent))', color: 'var(--bg)' }}
+        >
+          ?
+        </div>
+        <div className="flex-1">
+          <div className="font-ui text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent mb-1">New here?</div>
+          <h3 className="font-display font-semibold text-base m-0 text-text">What is Jainism?</h3>
+          <div className="font-ui text-[0.78rem] text-text-3 mt-0.5">A clear 5-minute introduction · honest, not promotional</div>
+        </div>
+        <div className="text-accent text-xl flex-shrink-0">→</div>
+      </Link>
+
       {/* Foundations entry */}
       <Link
         href="/foundations"
