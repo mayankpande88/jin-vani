@@ -5,6 +5,7 @@ import { Topbar } from '@/components/Topbar';
 import { Tabbar } from '@/components/Tabbar';
 import { OnboardingModal } from '@/components/OnboardingModal';
 import { ServiceWorker } from '@/components/ServiceWorker';
+import { SiteFooter } from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className="has-tabbar">
         <Topbar />
         {children}
+        <SiteFooter />
         <Tabbar />
         <OnboardingModal />
         <ServiceWorker />

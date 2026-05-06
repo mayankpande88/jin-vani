@@ -139,18 +139,26 @@ export default function WhatIsJainism() {
 
       <H2>What this library is, and isn&apos;t</H2>
       <P>
-        This library is a draft. Every page of content carries a clear note that it is awaiting review by a Digambara cultural reviewer. The Sanskrit and Prakrit texts come from canonical Digambara editions; the English and Hindi translations and modern reflections are project work.
+        <strong>This library is a working draft.</strong> Every translation, every modern reflection, every framing decision was written by one Digambara practitioner — me. I am not an Acharya. I have not had this content reviewed by a single qualified cultural reviewer yet. Use this resource, but verify it against your trusted sources.
       </P>
       <P>
-        It is not a wiki. It is not crowdsourced. It is a single curated voice — a community member building, slowly, the digital scripture library that the Digambara tradition deserves but has not yet had. If you find errors, please let us know.
+        Why publish it as a draft? Because the alternative is waiting indefinitely for ideal review while no resource of this kind exists at all. The community-feedback period is, in effect, the review. Found a translation that&apos;s wrong, a Sanskrit text that&apos;s misquoted, a doctrinal claim that misframes the tradition? <strong className="text-accent">Please flag it</strong> via the GitHub link in the footer below. That feedback is what makes this resource better.
       </P>
       <P>
-        Welcome.
+        It is not a wiki. It is not crowdsourced in the editing sense. It is a single curated voice with public corrections. The voice will become more accurate as the corrections come in.
+      </P>
+      <P>
+        Welcome — and please correct me where I&apos;m wrong.
       </P>
 
-      <div className="font-ui text-[0.78rem] text-text-3 leading-relaxed py-4 px-5 rounded-md mt-12" style={{ background: 'var(--bg-elev-1)', borderLeft: '3px solid var(--accent)' }}>
-        <strong className="text-text-2 block mb-1 font-semibold">Note</strong>
-        This page is a project draft. The summary of Jain doctrine here is intentionally compressed and accessible for a newcomer; many subtleties are not addressed. For each claim made on this page, the underlying texts (cited above) provide the authoritative treatment. <strong className="text-accent">Awaiting review by the project&apos;s Digambara cultural reviewer.</strong>
+      <div className="font-ui text-[0.82rem] text-text-2 leading-relaxed py-5 px-6 rounded-md mt-12" style={{ background: 'var(--bg-elev-2)', borderLeft: '3px solid var(--vermillion)' }}>
+        <strong className="text-vermillion block mb-2 font-semibold uppercase tracking-wide text-[0.72rem]">⚠ Draft notice — please read</strong>
+        <p className="m-0 mb-3">
+          This page, like every page on this site, is a draft awaiting community review. The summary of Jain doctrine here is intentionally compressed and accessible for a newcomer; many subtleties are not addressed. For each claim made on this page, the underlying texts (cited above) provide the authoritative treatment.
+        </p>
+        <p className="m-0">
+          If anything here misrepresents the tradition or contains errors, <strong>please report it</strong> using the GitHub link in the footer. Corrections from people who know the texts are exactly what this project needs.
+        </p>
       </div>
     </main>
   );
