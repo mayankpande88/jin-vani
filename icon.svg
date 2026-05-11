@@ -1,11 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Jin-vani">
   <defs>
-    <radialGradient id="g" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#FFB454"/>
-      <stop offset="100%" stop-color="#E8893A"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A130C"/>
+      <stop offset="100%" stop-color="#0A0805"/>
+    </linearGradient>
+    <linearGradient id="ja" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC773"/>
+      <stop offset="55%" stop-color="#E8893A"/>
+      <stop offset="100%" stop-color="#A85D27"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#E8893A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#E8893A" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="512" height="512" rx="96" fill="#0E0B08"/>
-  <circle cx="256" cy="256" r="180" fill="url(#g)"/>
-  <text x="256" y="320" font-family="Tiro Devanagari Sanskrit, serif" font-size="220" font-weight="500" text-anchor="middle" fill="#0E0B08">ज</text>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#halo)"/>
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#2A2520" stroke-width="2" opacity="0.8"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#E8893A" stroke-width="3" opacity="0.22"/>
+
+  <text x="256" y="352"
+        font-family="'Tiro Devanagari Sanskrit','Noto Sans Devanagari','Noto Serif Devanagari','Devanagari Sangam MN','Mangal','Nirmala UI',serif"
+        font-size="320"
+        font-weight="500"
+        text-anchor="middle"
+        fill="url(#ja)">ज</text>
 </svg>
