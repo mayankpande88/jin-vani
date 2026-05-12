@@ -6,10 +6,11 @@
     </svg>`;return n.default.divIcon({html:r,className:"tirtha-marker",iconSize:[22,30],iconAnchor:[11,30],popupAnchor:[0,-26]})}(a.type,a.approximate)}).addTo(i),h=`
         <div style="font-family: -apple-system, 'Inter', sans-serif; max-width: 220px;">
           <div style="font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#A85D27; font-weight:700; margin-bottom:4px;">
-            ${o[a.type]}${a.approximate?" · approx":""}
+            ${o[a.type]}
           </div>
           <div style="font-weight:600; font-size:14px; color:#1A130C; margin-bottom:4px;">${a.name}</div>
           <div style="font-size:11px; color:#6A6354; margin-bottom:6px;">${a.state}${a.district?" · "+a.district:""}</div>
           <div style="font-size:12px; color:#3a2f22; line-height:1.4;">${a.significance.length>140?a.significance.slice(0,137)+"…":a.significance}</div>
+          ${a.approximate?'<div style="font-size:10px; color:#A85D27; margin-top:6px; font-style:italic;">📍 Approximate location — verify the exact temple address before visiting</div>':""}
           <a href="${c}/pilgrimages/${a.slug}" style="display:inline-block; margin-top:8px; font-size:12px; font-weight:600; color:#A85D27; text-decoration:none;">Read more →</a>
         </div>`;t.bindPopup(h,{closeButton:!0,maxWidth:260}),t.on("click",()=>r(a)),u.current.set(a.slug,t),e.push(a.coordinates)}if(1===e.length)i.setView(e[0],8,{animate:!1});else{let t=n.default.latLngBounds(e);i.fitBounds(t,{padding:[40,40],maxZoom:7})}},[t,r,c]),(0,e.useEffect)(()=>{if(!a)return;let t=l.current,i=u.current.get(a);t&&i&&(t.setView(i.getLatLng(),9,{animate:!0}),i.openPopup())},[a]),(0,i.jsx)("div",{ref:h,style:{width:"100%",height:"100%",minHeight:"480px",borderRadius:"12px",overflow:"hidden",border:"1px solid var(--border)"}})}],45135)},80349,t=>{t.n(t.i(45135))}]);
