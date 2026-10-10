@@ -46,4 +46,3 @@ Open questions from the October 2026 content audit. Each one needs a Digambara r
 - Bookmarks and the continue card saved before 2026-10-10 point at the old Bhaktamara numbering (old 32–44 are now 36–48; old 45–48 are now 32–35). There is no clean migration.
 - "Verse of the Day" is always verse 1, and every text page shows the same hardcoded Sources footer.
 - `npm run lint` is broken: `next lint` was removed in Next 16, and there is no eslint config.
-- `.github/workflows/deploy.yml` has never run since May, because of an account billing lock. The real deploy is `npm run deploy:gh`. Either delete the workflow, or fix billing and switch Pages to Actions.
