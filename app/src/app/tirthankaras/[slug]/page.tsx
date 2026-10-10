@@ -9,7 +9,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const t = getTirthankara(slug);
-  return { title: `${t?.name ?? 'Tirthankara'} · Jin-vani` };
+  return { title: t?.name ?? 'Tirthankara' };
 }
 
 export default async function TirthankaraPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -37,7 +37,7 @@ export default async function TirthankaraPage({ params }: { params: Promise<{ sl
           style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', borderLeft: '3px solid var(--ink-sk)' }}
         >
           <div className="font-ui text-[0.65rem] font-bold tracking-[0.18em] uppercase text-ink mb-4">Tradition data (Digambara)</div>
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 font-body text-[0.95rem]">
+          <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-2 font-body text-[0.95rem]">
             <Datum label="Lāñchana" value={<>{t.lanchhana}{t.lanchhanaSk && <span className="font-sk text-ink ml-2">({t.lanchhanaSk})</span>}</>} />
             <Datum label="Complexion" value={t.complexion} />
             <Datum label="Father" value={<span className="font-sk text-ink">{t.fatherSk}</span>} />
@@ -129,7 +129,7 @@ function Datum({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <>
       <dt className="text-text-3 font-ui text-[0.72rem] uppercase tracking-wide self-center">{label}</dt>
-      <dd className="text-text m-0">{value}</dd>
+      <dd className="text-text m-0 break-words">{value}</dd>
     </>
   );
 }

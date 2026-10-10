@@ -8,9 +8,9 @@ verseCount: 1
 estReadingMinutes: 2
 tradition: digambara
 authorCard: |
-  The *Mangala Path* — &ldquo;the path of auspiciousness&rdquo; — is one of the most-recited short prayers in Digambara daily practice. It honors the four sources of auspiciousness in the Jain tradition: Bhagavan Mahavir (the 24th Tirthankara), Gautama Ganadhara (his foremost disciple), Acharya Kundakunda (the most influential Digambara philosopher), and the Jain Dharma itself.
+  The *Mangala Path* — “the path of auspiciousness” — is one of the most-recited short prayers in Digambara daily practice. It honors the four sources of auspiciousness in the Jain tradition: Bhagavan Mahavir (the 24th Tirthankara), Gautama Ganadhara (his foremost disciple), Acharya Kundakunda (the most influential Digambara philosopher), and the Jain Dharma itself.
 
-  The form here is the four-line *Mangala Path* commonly recited at the start of religious gatherings, before scripture study, and in daily worship. Longer compositions called *Mangalashtak* (literally &ldquo;eight-verse mangala&rdquo;) exist in various editions; this short form is the most universally recited.
+  The form here is the four-line *Mangala Path* commonly recited at the start of religious gatherings, before scripture study, and in daily worship. Longer compositions called *Mangalashtak* (literally “eight-verse mangala”) exist in various editions; this short form is the most universally recited.
 
   **Note:** Reviewer should advise whether the library should later expand to a specific 8-verse Mangalashtak composition (e.g., the version associated with particular acharyas). The 4-line form is honest and universally accepted; longer versions vary across editions.
 ---

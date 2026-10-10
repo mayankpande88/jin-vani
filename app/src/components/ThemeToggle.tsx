@@ -18,7 +18,7 @@ export function ThemeToggle() {
     else if (cur === 'light') next = 'dark';
     else next = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light';
     root.setAttribute('data-theme', next);
-    localStorage.setItem('jinvani.theme', next);
+    try { localStorage.setItem('jinvani.theme', next); } catch {}
     setTheme(next);
   }
 

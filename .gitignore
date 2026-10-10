@@ -16,3 +16,4 @@ coverage/
 .vscode/
 *.swp
 *.swo
+*.tsbuildinfo

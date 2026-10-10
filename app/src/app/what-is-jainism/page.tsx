@@ -82,7 +82,7 @@ export default function WhatIsJainism() {
         Built into Jain epistemology from the start: <em>anekāntavāda</em>, the doctrine that reality has many sides, and any statement you make about it captures only one of them. Truth is perspectival. Even when you are right, you are not telling the whole story.
       </P>
       <P>
-        This is why Jain philosophical texts so often qualify themselves: <em>from this standpoint, X; from that standpoint, Y</em>. It is also why Jainism has, historically, been less aggressive toward other traditions than most religions — the doctrine itself counsels against the certainty that produces aggression.
+        This is why Jain philosophical texts so often qualify themselves: <em>from this standpoint, X; from that standpoint, Y</em>. Many Jains also see it as the reason Jainism has historically been less aggressive toward other traditions than most religions — the doctrine counsels against the certainty that produces aggression — though scholars note that this tolerance reading is largely modern.
       </P>
 
       <H3>7. The path is rigorous, accessible, and within reach</H3>
@@ -95,7 +95,7 @@ export default function WhatIsJainism() {
 
       <H2>Who are the Tirthankaras?</H2>
       <P>
-        Tirthankaras are souls who, in their final birth, attained complete liberation through their own effort and then established the four-fold community (monks, nuns, laymen, laywomen) before passing into <em>moksha</em>. There are 24 Tirthankaras in each great time-cycle. The 24 of our era include figures whose names you may have heard: <strong>Rishabhanatha</strong> (the first), <strong>Parshvanatha</strong> (the 23rd), and <strong>Mahavir</strong> (the 24th, ~6th century BCE — sometimes wrongly called &ldquo;the founder,&rdquo; but actually the last in a long line).
+        Tirthankaras are souls who, in their final birth, attained omniscience (<em>kevala-jñāna</em>) through their own effort and then established the four-fold community (monks, nuns, laymen, laywomen) before passing into <em>moksha</em>. There are 24 Tirthankaras in each half of the cosmic time-cycle. The 24 of our era include figures whose names you may have heard: <strong>Rishabhanatha</strong> (the first), <strong>Parshvanatha</strong> (the 23rd), and <strong>Mahavir</strong> (the 24th, ~6th century BCE — sometimes wrongly called &ldquo;the founder,&rdquo; but actually the last in a long line).
       </P>
       <P>
         Tirthankaras are not gods. They cannot intervene in your life. What they can do — what their living presence in the tradition does — is keep visible the path that they walked. The Bhaktamara Stotra is one of the most beloved meditations on this idea: praising the Jina&apos;s qualities, acknowledging that those qualities are achievable.
@@ -103,7 +103,7 @@ export default function WhatIsJainism() {
 
       <H2>The two main traditions</H2>
       <P>
-        Around the 2nd century CE, the Jain community split into two major traditions: <strong>Digambara</strong> (sky-clad — male monks practice complete nudity as the visible expression of total non-possession) and <strong>Shvetambara</strong> (white-clad — monks and nuns wear white robes). They differ on some details — whether women can attain liberation in their present birth, whether Mahavir married, the canon of scriptures — but they share the foundational philosophy.
+        Over time — the two traditions give different accounts of when and why — the Jain community split into two major traditions: <strong>Digambara</strong> (sky-clad — male monks practice complete nudity as the visible expression of total non-possession) and <strong>Shvetambara</strong> (white-clad — monks and nuns wear white robes). They differ on some details — whether women can attain liberation in their present birth, whether Mahavir married, the canon of scriptures — but they share the foundational philosophy.
       </P>
       <P>
         <em>This library is Digambara-focused.</em> The texts and translations follow the Digambara tradition. Readers from any background are welcome to use it; we are honest about which lineage we read from.
@@ -122,7 +122,7 @@ export default function WhatIsJainism() {
         <li><strong>Aapta-mīmāṁsā</strong> (Acharya Samantabhadra) — philosophical defense of the trustworthy guide.</li>
         <li><strong>Ratnakaranda Shravakachara</strong> — what a Jain householder actually does.</li>
         <li><strong>Mahapurana</strong> (Adipurana + Uttarapurana) — biographies of all 24 Tirthankaras.</li>
-        <li><strong>Chhah Dhala</strong> (Pt. Daulatram, 18th c.) — the comprehensive Hindi summary modern Digambaras read daily.</li>
+        <li><strong>Chhah Dhala</strong> (Pt. Daulatram, 19th c.) — the comprehensive Hindi summary modern Digambaras read daily.</li>
       </ul>
 
       <H2>Where to start</H2>

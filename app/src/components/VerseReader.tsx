@@ -51,7 +51,9 @@ export function VerseReader({
 
   // Persist progress
   useEffect(() => {
-    localStorage.setItem('jinvani.progress', JSON.stringify({ slug: text.slug, verse: verse.number, texts: total }));
+    try {
+      localStorage.setItem('jinvani.progress', JSON.stringify({ slug: text.slug, verse: verse.number, texts: total }));
+    } catch {}
   }, [text.slug, verse.number, total]);
 
   // Dismiss popover on outside click / scroll / resize.
@@ -88,7 +90,7 @@ export function VerseReader({
     });
   }, []);
 
-  const progressPct = (verse.number / total) * 100;
+  const progressPct = Math.min(100, (verse.number / total) * 100);
 
   return (
     <div className="min-h-[100dvh] flex flex-col relative" style={{ minHeight: 'calc(100dvh - 60px)' }}>
@@ -114,7 +116,7 @@ export function VerseReader({
         </div>
 
         {/* Sanskrit, with tappable glossed words */}
-        <div className="font-sk text-ink text-center leading-[1.95] mb-5" style={{ fontSize: 'clamp(1.4rem, 4.6vw, 1.85rem)' }}>
+        <div className="font-sk text-ink text-center leading-[1.95] mb-5 break-words" style={{ fontSize: 'clamp(1.4rem, 4.6vw, 1.85rem)' }}>
           {renderGlossedSanskrit(verse.sanskrit, verse.glosses || [], showGloss)}
         </div>
 
@@ -295,7 +297,7 @@ export function VerseReader({
           {nextNum ? (
             <Link href={`/${text.slug}/${nextNum}`} className="action-btn-circle" aria-label="Next verse">›</Link>
           ) : (
-            <button className="action-btn-circle is-disabled" disabled>›</button>
+            <button className="action-btn-circle is-disabled" aria-label="No next verse" disabled>›</button>
           )}
         </div>
       </div>
@@ -314,7 +316,8 @@ export function VerseReader({
         <MemorizeOverlay verse={verse} onClose={() => setMemorizing(false)} slug={text.slug} />
       )}
 
-      <style jsx>{`
+      {/* global: the prev/next buttons are <Link>s, which styled-jsx scoping doesn't reach */}
+      <style jsx global>{`
         .action-btn-circle {
           width: 44px; height: 44px;
           border-radius: 50%;
@@ -360,7 +363,10 @@ function SizeSelector() {
   const [size, setSize] = useState<'s' | 'm' | 'l' | 'xl'>('m');
 
   useEffect(() => {
-    const stored = (localStorage.getItem('jinvani.textSize') as typeof size) || 'm';
+    let stored: typeof size = 'm';
+    try {
+      stored = (localStorage.getItem('jinvani.textSize') as typeof size) || 'm';
+    } catch {}
     setSize(stored);
     document.documentElement.classList.remove('text-size-s', 'text-size-m', 'text-size-l', 'text-size-xl');
     document.documentElement.classList.add('text-size-' + stored);
@@ -369,7 +375,7 @@ function SizeSelector() {
   const set = (s: typeof size) => {
     document.documentElement.classList.remove('text-size-s', 'text-size-m', 'text-size-l', 'text-size-xl');
     document.documentElement.classList.add('text-size-' + s);
-    localStorage.setItem('jinvani.textSize', s);
+    try { localStorage.setItem('jinvani.textSize', s); } catch {}
     setSize(s);
   };
 
@@ -379,6 +385,8 @@ function SizeSelector() {
         <button
           key={s}
           onClick={() => set(s)}
+          aria-label={`Text size: ${s === 's' ? 'small' : s === 'm' ? 'medium' : s === 'l' ? 'large' : 'extra large'}`}
+          aria-pressed={size === s}
           className="border-none w-[30px] h-[26px] rounded-pill font-display font-semibold text-[0.82rem] cursor-pointer transition-all"
           style={size === s ? { background: 'var(--accent)', color: 'var(--bg)' } : { background: 'transparent', color: 'var(--text-3)' }}
         >
@@ -394,13 +402,17 @@ function BookmarkBtn({ slug, verse }: { slug: string; verse: number }) {
   const key = `jinvani.${slug}.${verse}.bookmark`;
 
   useEffect(() => {
-    setBookmarked(localStorage.getItem(key) === '1');
+    try {
+      setBookmarked(localStorage.getItem(key) === '1');
+    } catch {}
   }, [key]);
 
   const toggle = () => {
     const next = !bookmarked;
-    if (next) localStorage.setItem(key, '1');
-    else localStorage.removeItem(key);
+    try {
+      if (next) localStorage.setItem(key, '1');
+      else localStorage.removeItem(key);
+    } catch {}
     setBookmarked(next);
   };
 
@@ -471,7 +483,7 @@ function MemorizeOverlay({ verse, onClose, slug }: { verse: VerseContent; onClos
   const revealAll = () => setRevealed(lines.map((_, i) => i));
 
   const markMemorized = () => {
-    localStorage.setItem(`jinvani.${slug}.${verse.number}.memorized`, '1');
+    try { localStorage.setItem(`jinvani.${slug}.${verse.number}.memorized`, '1'); } catch {}
     onClose();
   };
 
@@ -489,7 +501,7 @@ function MemorizeOverlay({ verse, onClose, slug }: { verse: VerseContent; onClos
           <p className="font-body text-text-2 text-[0.95rem] m-0">Try to recite from memory. Reveal lines if you need help.</p>
         </div>
         <div
-          className="font-sk text-ink text-[1.5rem] leading-[2] text-center px-6 py-8 rounded-lg w-full"
+          className="font-sk text-ink text-[1.5rem] leading-[2] text-center px-6 py-8 rounded-lg w-full break-words"
           style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)', letterSpacing: '0.04em' }}
         >
           {lines.map((line, i) => (

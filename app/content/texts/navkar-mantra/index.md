@@ -3,7 +3,7 @@ title_en: Navkar Mantra
 title_sk: णमोकार मन्त्र
 category: mantra
 author: Anonymous · oldest Jain mantra
-era: Pre-Mahavir; refined in agamic period
+era: 'Traditionally beginningless (anādi); first two lines inscribed at Hathigumpha, c. 2nd c. BCE – 1st c. CE'
 verseCount: 5
 estReadingMinutes: 2
 tradition: digambara

@@ -218,7 +218,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     short: 'Liberation. Complete freedom from all karma. The soul, freed, attains its pure nature and goes to Siddhaloka. Seventh and final tattva.',
     notUse: '"Salvation" — Christian theological baggage that doesn\'t apply.',
     seeAlso: ['siddha', 'siddhaloka', 'samvara', 'nirjara'],
-    citedIn: [{ source: 'Tattvartha Sutra 10.1, 10.7' }],
+    citedIn: [{ source: 'Tattvartha Sutra 10.2' }],
   },
   {
     id: 'kevala-jnana',
@@ -227,7 +227,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'philosophy',
     short: 'Omniscient knowledge. Direct, complete, simultaneous knowledge of all substances in all their modes across all three times. The fifth and highest type of knowledge.',
     seeAlso: ['kevali', 'jnana', 'arihant'],
-    citedIn: [{ source: 'Tattvartha Sutra 1.9, 10.1' }],
+    citedIn: [{ source: 'Tattvartha Sutra 1.9, 1.29, 10.1' }],
   },
   {
     id: 'jnana',
@@ -245,7 +245,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'philosophy',
     short: 'Means of valid knowledge. Two categories in Jain epistemology: parokṣa (indirect — sensory and scriptural) and pratyakṣa (direct — clairvoyant, mind-reading, omniscient).',
     seeAlso: ['naya', 'jnana'],
-    citedIn: [{ source: 'Tattvartha Sutra 1.6, 1.10' }],
+    citedIn: [{ source: 'Tattvartha Sutra 1.6, 1.10–1.12' }],
   },
   {
     id: 'naya',
@@ -254,7 +254,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'philosophy',
     short: 'Perspectival standpoint — partial but valid view of a thing. Distinct from pramāṇa, which is full means of knowledge. Foundation of anekāntavāda.',
     seeAlso: ['anekantavada', 'syadvada', 'pramana'],
-    citedIn: [{ source: 'Tattvartha Sutra 1.6' }, { source: 'Samayasara — niścaya/vyavahāra' }],
+    citedIn: [{ source: 'Tattvartha Sutra 1.6, 1.33' }, { source: 'Samayasara — niścaya/vyavahāra' }],
   },
   {
     id: 'anekantavada',
@@ -314,7 +314,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Samavasaraṇa',
     termSk: 'समवसरण',
     category: 'cosmology',
-    short: 'The divine assembly hall manifested for a Tirthankara\'s first sermon after attaining kevala-jnana. The eight prātihāryas surround the Tirthankara during the assembly.',
+    short: 'The divine assembly hall, erected by the devas, in which a Tirthankara preaches after attaining kevala-jnana. The eight prātihāryas surround the Tirthankara during the assembly.',
     seeAlso: ['tirthankara', 'pratiharya', 'divya-dhvani'],
   },
   {
@@ -339,7 +339,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Divya-dhvani',
     termSk: 'दिव्यध्वनि',
     category: 'cosmology',
-    short: 'The "divine voice" of a Tirthankara during the samavasarana — speech that arises spontaneously and is heard by every being in their own language. A unique attribute in Digambara doctrine.',
+    short: 'The "divine voice" of a Tirthankara during the samavasarana — speech that arises spontaneously and is heard by every being in their own language. Both traditions count it among the eight prātihāryas; Digambara texts describe it as an oṁ-like sound issuing from the Tirthankara\'s whole body, without intent.',
     seeAlso: ['samavasarana', 'tirthankara'],
     citedIn: [{ source: 'Bhaktamara Stotra v.35' }],
   },
@@ -393,14 +393,14 @@ export const GLOSSARY: GlossaryEntry[] = [
     short: 'The introspective ritual of "turning back" — review of conduct, confession of transgressions, renewal of vows. One of the six daily duties (ṣaṭ-āvaśyaka). Performed daily, fortnightly, and annually.',
     long: 'Combines self-examination, formal confession in canonical verses, and recommitment to ethical practice. Central to Jain spiritual life — the practical mechanism for stopping new karmic inflow (saṁvara) and shedding old karma (nirjarā).',
     seeAlso: ['samvara', 'nirjara', 'avasyaka'],
-    citedIn: [{ source: 'Tattvartha Sutra 9.20 (six āvaśyakas)' }],
+    citedIn: [{ source: 'Tattvartha Sutra 9.22 (pratikramaṇa as a form of prāyaścitta)' }],
   },
   {
     id: 'avasyaka',
     term: 'Ṣaṭ-āvaśyaka',
     termSk: 'षडावश्यक',
     category: 'practice',
-    short: 'The six essential daily duties of a serious Jain practitioner: sāmāyika (equanimity), caturviṁśati-stava (praise of the 24 Tirthankaras), vandanā (veneration of acharyas), pratikramaṇa (introspection), kāyotsarga (standing meditation), pratyākhyāna (renunciation/vows).',
+    short: 'The six essential daily duties of a Digambara muni (Mūlācāra): sāmāyika (equanimity), caturviṁśati-stava (praise of the 24 Tirthankaras), vandanā (veneration of acharyas), pratikramaṇa (introspection), pratyākhyāna (renunciation/vows), kāyotsarga (standing meditation). The Digambara householder\'s six daily duties are a different list: deva-pūjā, guru-upāsti, svādhyāya, saṁyama, tapa, dāna.',
     seeAlso: ['pratikraman', 'kayotsarga', 'samayika'],
   },
   {
@@ -526,7 +526,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Bispanthi / Terapanthi (Digambara)',
     termSk: 'बीसपंथी / तेरापंथी',
     category: 'tradition',
-    short: 'Two sub-traditions within Digambara. Bispanthi uses wet substances in pūjā and accepts Bhaṭṭāraka authority; Terapanthi (Digambara) uses only dry aṣṭadravya, rejects subordinate-deity worship and Bhaṭṭāraka authority over monks. Note: unrelated to the Shvetambara Terapanthi.',
+    short: 'Two sub-traditions within Digambara. Bispanthi accepts Bhaṭṭāraka authority and uses flowers, lamps and pañcāmṛta abhiṣeka in pūjā; Terapanthi (Digambara), a 17th-century reform movement, rejects these practices, the worship of subordinate deities (e.g. Padmāvatī, Kṣetrapāla) and Bhaṭṭāraka authority. Note: unrelated to the Shvetambara Terapanthi.',
     seeAlso: ['digambara', 'bhattaraka'],
   },
 ];

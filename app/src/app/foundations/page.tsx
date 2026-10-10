@@ -76,7 +76,7 @@ export default function FoundationsIndex() {
           What Jainism Actually Says
         </h1>
         <p className="font-body text-[1.05rem] text-text-2 leading-relaxed max-w-[32rem] mx-auto m-0">
-          Eight things often misunderstood — answered honestly. No apologetics. No claims that ancient texts predicted modern science. Just what the tradition holds, what it doesn&apos;t, and where the genuinely hard questions still are.
+          Nine things often misunderstood — answered honestly. No apologetics. No claims that ancient texts predicted modern science. Just what the tradition holds, what it doesn&apos;t, and where the genuinely hard questions still are.
         </p>
       </section>
 

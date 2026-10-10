@@ -81,6 +81,7 @@ export default function SearchPage() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search…"
+          aria-label="Search the library"
           className="bg-transparent border-none outline-none flex-1 font-body text-base text-text placeholder:text-text-3"
         />
         {q && (

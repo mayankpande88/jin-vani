@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { TIRTHANKARAS } from '@/lib/tirthankaras';
 
 export const metadata = {
-  title: 'The 24 Tirthankaras · Jin-vani',
+  title: 'The 24 Tirthankaras',
   description: 'The 24 Tirthankaras of this time-cycle, with their lañchana (identifying symbol), complexion, parents, birthplace, and place of mokṣa. Digambara tradition.',
 };
 

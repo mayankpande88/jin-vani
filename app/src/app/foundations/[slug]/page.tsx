@@ -133,10 +133,10 @@ function TirthankarasArticle() {
 
       <H3>What the Tirthankara cannot do for you</H3>
       <P>
-        Acharya Kundakunda&apos;s <em>Samayasara</em> — one of the most influential philosophical texts in the Digambara tradition — is unambiguous: liberation is by the soul&apos;s own effort. The soul is its own doer (<em>karta</em>) and its own enjoyer (<em>bhokta</em>) of the fruits of its actions.<CiteMark id="cite4" label="4" />
+        Acharya Kundakunda&apos;s <em>Samayasara</em> — one of the most influential philosophical texts in the Digambara tradition — is unambiguous: liberation is by the soul&apos;s own effort. The soul is its own doer (<em>karta</em>) and its own enjoyer (<em>bhokta</em>): in reality it does and experiences only its own states.<CiteMark id="cite4" label="4" />
       </P>
       <P>
-        Acharya Pujyapada&apos;s <em>Sarvarthasiddhi</em>, the foundational Digambara commentary on Tattvartha, makes the same point: the Tirthankara is the <em>avalambana</em> — the support, the example — not the agent who liberates the seeker.
+        The invocation verse of the Tattvartha Sutra, which Acharya Pujyapada&apos;s <em>Sarvarthasiddhi</em> (the foundational Digambara commentary) opens by explaining, makes the same point. It bows to the Lord, &ldquo;the promulgator of the path to liberation … so that I may realize these qualities&rdquo; (<em>vande tad-guṇa-labdhaye</em>). The Tirthankara is the <em>avalambana</em> — the support, the example — not the agent who liberates the seeker.
       </P>
       <blockquote className="my-6 pl-5 italic text-[1.15rem] leading-[1.55] text-text font-display" style={{ borderLeft: '3px solid var(--accent)' }}>
         The Tirthankara shows the path. The Tirthankara does not walk it for you.
@@ -180,15 +180,15 @@ function TirthankarasArticle() {
             &ldquo;Mohakṣayāj-jnāna-darśanāvaraṇa-antarāya-kṣayācca kevalam&rdquo; — Kevala-jnana arises from the destruction of mohaniya, jnana-avarana, darshana-avarana, and antaraya karmas (the four ghati karmas).
           </Cite>
           <Cite id="cite3" n="3." source="Tattvartha Sutra 10.5–10.7">
-            Description of the Siddha state, including 10.7 &ldquo;Tadanantaramūrdhvaṁ gacchatyālokāntāt&rdquo; — &ldquo;Immediately after liberation [the soul] travels upward to the end of the loka.&rdquo;
+            Description of the Siddha state, including 10.5 &ldquo;Tadanantaramūrdhvaṁ gacchatyālokāntāt&rdquo; — &ldquo;Immediately after liberation [the soul] travels upward to the end of the loka.&rdquo;
           </Cite>
-          <Cite id="cite4" n="4." source="Samayasara — gathas on kartritva">
-            (Acharya Kundakunda) — The doctrine that the soul is the doer of its own karma and the enjoyer of its own fruits, and that liberation requires the soul&apos;s own internal purification.
+          <Cite id="cite4" n="4." source="Samayasara 82–84 (Amritachandra numbering)">
+            (Acharya Kundakunda) — In reality (<em>niścaya</em>) the soul does and experiences only itself (83) and is the doer of its own states, not of those produced by material karma (82); only in conventional speech (<em>vyavahāra</em>) is it said to do and experience material karma (84). Liberation requires the soul&apos;s own internal purification.
           </Cite>
-          <Cite id="cite5" n="5." source="Ratnakaranda Shravakachara 1.5">
-            (Acharya Samantabhadra) — Defines the qualities of the <em>apta</em>: <em>&ldquo;Āpta-Āgama-Padārthāḥ&rdquo;</em> — the trustworthy one defined by being free of flaws and possessing complete knowledge.
+          <Cite id="cite5" n="5." source="Ratnakaranda Shravakachara 5–6">
+            (Acharya Samantabhadra) — Defines the qualities of the <em>apta</em>: <em>&ldquo;Āptenocchinna-doṣeṇa sarvajñenāgameśinā&rdquo;</em> — the trustworthy one must be free of flaws, omniscient, and the source of scripture; verse 6 lists the flaws, among them attachment, aversion and delusion.
           </Cite>
-          <Cite id="cite6" n="6." source="Bhaktamara Stotra, verses 22, 31, 32">
+          <Cite id="cite6" n="6." source="Bhaktamara Stotra, verses 1–2, 22, 31, 36">
             (Acharya Manatunga) — Verses recognizing Adinath&apos;s uniqueness and the veneration of cosmological devas (Indra) toward him, without solicitation.
           </Cite>
         </ul>
@@ -230,7 +230,7 @@ function KarmaArticle() {
         Karma is not what happens to you. Karma is what you accumulate from how you respond to what happens.
       </blockquote>
       <P>
-        Acharya Kundakunda&apos;s <em>Samayasara</em> is unambiguous: the soul, in its true nature, is the doer (<em>kartā</em>) of its own karma. External circumstances do not bind karma; <em>your relation to circumstances</em> binds karma.<CiteMark id="cite3" label="3" /> A person facing pain who responds with rage accumulates one kind of karma. A person facing the same pain who responds with equanimity accumulates almost none. The pain is not the karma. The response is.
+        Acharya Kundakunda&apos;s <em>Samayasara</em> is unambiguous: in reality the soul is the doer (<em>kartā</em>) only of its own inner states, not of the material karma itself, and bondage comes not from the external object but from the inner disposition toward it. External circumstances do not bind karma; <em>your relation to circumstances</em> binds karma.<CiteMark id="cite3" label="3" /> A person facing pain who responds with rage accumulates one kind of karma. A person facing the same pain who responds with equanimity accumulates almost none. The pain is not the karma. The response is.
       </P>
 
       <H3>What karma is for</H3>
@@ -264,17 +264,17 @@ function KarmaArticle() {
       <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
         <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
         <ul className="list-none m-0 p-0">
-          <Cite id="cite1" n="1." source="Tattvartha Sutra 6.1–6.5">
-            On the nature of <em>āsrava</em> (influx) — karma as <em>pudgala</em> particles binding to the soul through the soul&apos;s own activity. The technical mechanism by which karma becomes substantial.
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 6.1–6.2, 8.2">
+            On <em>āsrava</em> (influx) as the activity of body, speech and mind (6.1–6.2), and bondage as the soul, actuated by passions, taking in particles of matter (<em>pudgala</em>) fit to become karma (8.2). The technical mechanism by which karma becomes substantial.
           </Cite>
-          <Cite id="cite2" n="2." source="Tattvartha Sutra 8.4–8.14">
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 8.4–8.13">
             The eight types of karma (<em>jnāna-āvaraṇīya</em>, <em>darśana-āvaraṇīya</em>, <em>vedanīya</em>, <em>mohanīya</em>, <em>āyu</em>, <em>nāma</em>, <em>gotra</em>, <em>antarāya</em>) and their specific obscurations.
           </Cite>
-          <Cite id="cite3" n="3." source="Samayasara — gathas on kartṛtva">
-            Acharya Kundakunda — the soul as <em>kartā</em> (doer) of its own karma; the inner relation, not the external circumstance, is what binds.
+          <Cite id="cite3" n="3." source="Samayasara 82, 265 (Amritachandra numbering)">
+            Acharya Kundakunda — the soul is the doer of its own states, not of the states produced by material karma (82); bondage comes not from the external object (<em>vastu</em>) but from the inner disposition (<em>adhyavasāna</em>) (265).
           </Cite>
-          <Cite id="cite4" n="4." source="Tattvartha Sutra 6.1, Sarvarthasiddhi commentary">
-            The mechanism of <em>āsrava</em> functions as the Jain alternative to a divine creator: it explains the soul&apos;s present state through its own causal history, not external design.
+          <Cite id="cite4" n="4." source="Tattvartha Sutra 6.1–6.2">
+            Influx (<em>āsrava</em>) arises from the soul&apos;s own activity. Reading this as the Jain alternative to a divine creator — the soul&apos;s present state explained by its own causal history, not external design — is this article&apos;s framing.
           </Cite>
           <Cite id="cite5" n="5." source="Tattvartha Sutra 9.1–9.3">
             On <em>saṁvara</em> (stoppage of new karmic influx) and <em>nirjarā</em> (shedding of accumulated karma) as the two practices that break karmic bondage.
@@ -325,7 +325,7 @@ function NoCreatorArticle() {
         <li><strong>No salvation through grace.</strong> No deity hands out forgiveness or punishment. The path is entirely your own work; the consequences are entirely your own karma. Justice is not external; it is internal to the system.</li>
       </ul>
 
-      <H3>Three traditions, one answer</H3>
+      <H3>Both traditions, one answer</H3>
       <P>
         Both major Jain traditions — Digambara and Shvetambara — agree on the no-creator position. So do all sub-traditions. Across 2500 years of disagreement on dozens of doctrinal points, this is one of the few points of complete unity in Jain philosophy. The Tattvartha Sutra, accepted by both, contains no creator — anywhere.<CiteMark id="cite2" label="2" />
       </P>
@@ -353,8 +353,8 @@ function NoCreatorArticle() {
       <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
         <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
         <ul className="list-none m-0 p-0">
-          <Cite id="cite1" n="1." source="Tattvartha Sutra 5.1–5.4">
-            On the six eternal <em>dravyas</em> (substances): the foundational ontology of Jainism. Each is anādi (without beginning) and ananta (without end).
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 5.1–5.4, 5.39">
+            On the six eternal <em>dravyas</em> (substances): the foundational ontology of Jainism (time, <em>kāla</em>, is named at 5.39). Each is anādi (without beginning) and ananta (without end).
           </Cite>
           <Cite id="cite2" n="2." source="Tattvartha Sutra (entire text)">
             The Tattvartha&apos;s 357 sutras describe the categories of reality, the path of liberation, the structure of the cosmos. There is no sutra invoking or assuming a creator. The omission is not an oversight; it is the position.
@@ -400,7 +400,7 @@ function PratikramanArticle() {
 
       <H3>The structure of daily pratikramaṇa</H3>
       <P>
-        A traditional pratikramaṇa is not a quick prayer. It is a structured sequence — typically 30 to 60 minutes — that includes:
+        A traditional pratikramaṇa is not a quick prayer. It is a structured sequence — typically 30 to 60 minutes — that includes the steps below (sutra names such as Iriyāvahī are those of the Shvetambara liturgy; see the variations further down):
       </P>
       <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
         <li><strong>Sāmāyika</strong> — first, establish equanimity. The mind quiets; attachments are temporarily set aside.</li>
@@ -417,9 +417,9 @@ function PratikramanArticle() {
         Pratikramaṇa is performed in three different intensities:
       </P>
       <ul className="list-disc pl-6 mb-5 [&>li]:mb-2 [&>li]:font-body [&>li]:text-text [&>li]:leading-relaxed">
-        <li><strong>Daily</strong> (<em>devasika</em> in the morning, <em>raika</em> in the evening) — review of the past day or night.</li>
+        <li><strong>Daily</strong> (<em>devasika</em> in the evening, <em>raika</em> in the morning) — review of the past day or night.</li>
         <li><strong>Fortnightly</strong> (<em>pakṣika</em>) — every two weeks, on the new-moon and full-moon days. More extensive.</li>
-        <li><strong>Annual</strong> (<em>sāṁvatsarika</em>) — once a year, on the last day of <em>Paryuṣaṇa</em> (or <em>Daśalakṣaṇa</em> for Digambara). The most thorough, year-long review. This is when Jains traditionally seek forgiveness from those they have wronged across the year (the <em>kṣamāpana</em> tradition: &ldquo;<em>micchami dukkaḍaṁ</em>&rdquo; — &ldquo;may my wrongdoings be forgiven&rdquo;).</li>
+        <li><strong>Annual</strong> (<em>sāṁvatsarika</em>) — once a year, on the last day of <em>Paryuṣaṇa</em> (Shvetambara); Digambaras keep the annual day of forgiveness, <em>Kṣamāvaṇī</em>, just after <em>Daśalakṣaṇa</em> ends. The most thorough, year-long review. This is when Jains traditionally seek forgiveness from those they have wronged across the year (the <em>kṣamāpana</em> tradition: &ldquo;<em>micchami dukkaḍaṁ</em>&rdquo; — &ldquo;may my wrongdoings be forgiven&rdquo;).</li>
       </ul>
 
       <H3>Digambara and Shvetambara variations</H3>
@@ -446,13 +446,13 @@ function PratikramanArticle() {
 
       <H3>Why kṣamāpana matters even more</H3>
       <P>
-        The annual <em>sāṁvatsarika pratikramaṇa</em>, performed on the closing day of Paryuṣaṇa (in Shvetambara) or Daśalakṣaṇa (in Digambara), includes the most beautiful Jain practice: <em>kṣamāpana</em>. The practitioner sends — by message, in person, in writing — to every person they may have wronged in the past year, the words: <em>micchami dukkaḍaṁ</em> (Prakrit) or <em>uttam kṣamā</em> (Sanskrit).
+        The annual <em>sāṁvatsarika pratikramaṇa</em> on the closing day of Paryuṣaṇa (in Shvetambara practice) — and, for Digambaras, <em>Kṣamāvaṇī</em>, just after Daśalakṣaṇa ends — centers on the most beautiful Jain practice: <em>kṣamāpana</em>. The practitioner sends — by message, in person, in writing — to every person they may have wronged in the past year, the words: <em>micchami dukkaḍaṁ</em> (Prakrit) or <em>uttam kṣamā</em> (Sanskrit).
       </P>
       <P>
         &ldquo;May my wrongdoings be forgiven.&rdquo; &ldquo;Forgive me; I forgive you.&rdquo;
       </P>
       <P>
-        This is unique in world religious practice. Once a year, an entire community spends a day asking forgiveness — actively, individually, by name — from anyone they may have hurt. No deity mediates. No priest absolves. The practitioner does the work directly, and then the relationship is renewed.
+        This is rare in world religious practice (the closest parallel may be the Jewish Days of Awe, when people seek forgiveness from those they have wronged). Once a year, an entire community spends a day asking forgiveness — actively, individually, by name — from anyone they may have hurt. No deity mediates. No priest absolves. The practitioner does the work directly, and then the relationship is renewed.
       </P>
 
       <H3>For a modern reader</H3>
@@ -470,8 +470,8 @@ function PratikramanArticle() {
       <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
         <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
         <ul className="list-none m-0 p-0">
-          <Cite id="cite1" n="1." source="Tattvartha Sutra 9.20 — six āvaśyakas">
-            On the six daily essential duties of a Jain practitioner: sāmāyika, caturviṁśati-stava, vandanā, pratikramaṇa, kāyotsarga, pratyākhyāna.
+          <Cite id="cite1" n="1." source="Mūlācāra 22 (Acharya Vattakera) — six āvaśyakas">
+            On the six daily essential duties, counted among the 28 root virtues of a Digambara monk: sāmāyika, stava (caturviṁśati-stava), vandanā, pratikramaṇa, pratyākhyāna, kāyotsarga. (Tattvartha Sutra 9.22 separately lists pratikramaṇa among the nine kinds of expiation.)
           </Cite>
           <Cite id="cite2" n="2." source="Tattvartha Sutra 9.1–9.3 — saṁvara and nirjarā">
             On the two mechanisms of liberation: stopping new karmic inflow (saṁvara) and shedding accumulated karma (nirjarā). Pratikramaṇa is a primary practice for both.
@@ -501,7 +501,7 @@ function LiberationArticle() {
         The Tattvartha Sutra opens with: <em>samyag-darśana-jnāna-cāritrāṇi mokṣa-mārgaḥ</em> — &ldquo;right faith, right knowledge, right conduct: the path to liberation.&rdquo;<CiteMark id="cite1" label="1" /> Three components, one path. Notice what is not in the sentence: no agent other than the practitioner. No deity. No grace. The path is constituted entirely by the practitioner&apos;s own faith, knowledge, and conduct.
       </P>
       <P>
-        Acharya Kundakunda&apos;s <em>Samayasara</em> makes the same point in stronger terms. The soul (<em>jīva</em>) is its own doer (<em>kartā</em>) and its own enjoyer (<em>bhoktā</em>) of the fruits of its actions.<CiteMark id="cite2" label="2" /> Liberation comes when the soul recognizes its true nature and ceases to act under the influence of passions; nothing external accomplishes this.
+        Acharya Kundakunda&apos;s <em>Samayasara</em> makes the same point in stronger terms. The soul (<em>jīva</em>) is its own doer (<em>kartā</em>) and its own enjoyer (<em>bhoktā</em>): in reality it does and experiences only its own states.<CiteMark id="cite2" label="2" /> Liberation comes when the soul recognizes its true nature and ceases to act under the influence of passions; nothing external accomplishes this.
       </P>
       <P>
         The Tirthankaras themselves cannot liberate anyone. (See <Link href="/foundations/tirthankaras-and-gods" className="text-accent">Foundation 01</Link>.) They are the <em>avalambana</em> — the example, the support — not the agent. They show the path; they cannot walk it for you.
@@ -523,7 +523,7 @@ function LiberationArticle() {
         Read another way, this is a remarkably empowering position. Your liberation does not depend on whether you were born into the right family, whether you said the right prayer, whether you happened to be loved by the right deity. It depends on what <em>you</em> do.
       </P>
       <P>
-        For a modern reader trained to be skeptical of religion&apos;s arbitrary mechanisms — chosen people, predestination, salvation only through specific rituals — Jainism&apos;s position is unusually clean. The path is open to anyone, regardless of birth, gender, or community. The work is the same. The result is the same.
+        For a modern reader trained to be skeptical of religion&apos;s arbitrary mechanisms — chosen people, predestination, salvation only through specific rituals — Jainism&apos;s position is unusually clean. The path is open to anyone, regardless of birth or community (though Digambara doctrine holds that final liberation itself requires a male birth; see Foundation 09). The work is the same. The result is the same.
       </P>
 
       <H3>The catch</H3>
@@ -540,8 +540,8 @@ function LiberationArticle() {
           <Cite id="cite1" n="1." source="Tattvartha Sutra 1.1">
             The path to liberation as right faith, knowledge, and conduct — entirely constituted by the practitioner.
           </Cite>
-          <Cite id="cite2" n="2." source="Samayasara — gathas on kartṛtva">
-            Acharya Kundakunda — the soul as its own doer and enjoyer; liberation by self-purification.
+          <Cite id="cite2" n="2." source="Samayasara 82–84 (Amritachandra numbering)">
+            Acharya Kundakunda — in reality the soul does and experiences only itself, its own states (82–83); only conventionally is it said to do and experience material karma (84). Liberation by self-purification.
           </Cite>
           <Cite id="cite3" n="3." source="Tattvartha Sutra 9.1–9.3">
             On saṁvara and nirjarā as the practical mechanisms of karmic shedding.
@@ -580,7 +580,7 @@ function AhimsaArticle() {
         Killing animals for food directly violates ahimsa toward multi-sensed beings. So Jains are vegetarian — and traditionally also avoid root vegetables (whose harvest kills countless tiny soul-bearing organisms in the soil).
       </P>
       <P>
-        But ahimsa demands much more. A traditional Jain monk sweeps the ground before sitting, filters water before drinking, walks only in daylight (to avoid stepping on insects invisible at night), wears a mouth-cover (to avoid inhaling tiny life). The visible practices look extreme until you understand the logic: the practitioner is taking ahimsa to its consistent conclusion.
+        But ahimsa demands much more. A traditional Jain monk sweeps the ground before sitting, filters water before drinking, walks only in daylight (to avoid stepping on insects invisible at night), and — in some Shvetambara orders — wears a mouth-cover (<em>muhapatti</em>). The visible practices look extreme until you understand the logic: the practitioner is taking ahimsa to its consistent conclusion.
       </P>
 
       <H3>Ahimsa in speech and thought</H3>
@@ -588,7 +588,7 @@ function AhimsaArticle() {
         Modern moral philosophy mostly addresses physical harm. Jain ahimsa is older and broader: harsh speech is <em>himsā</em>; deceptive speech is <em>himsā</em>; cruel thought, even unspoken, is <em>himsā</em>. Each binds karma. Each is something to confess in pratikramaṇa.
       </P>
       <P>
-        For a modern reader, this maps surprisingly well to current debates: psychological harm, structural harm, harms-by-omission, the moral weight of speech that incites violence. Jainism was working through these questions in the form of <em>vāñ-māna-kāya-yoga</em> — the threefold yoga of speech, thought, and body — for over two millennia.
+        For a modern reader, this maps surprisingly well to current debates: psychological harm, structural harm, harms-by-omission, the moral weight of speech that incites violence. Jainism was working through these questions in the form of <em>kāya-vāṅ-manaḥ yoga</em> — the threefold activity (yoga) of body, speech, and mind — for over two millennia.
       </P>
 
       <H3>Why this matters now</H3>
@@ -605,10 +605,10 @@ function AhimsaArticle() {
       <div className="rounded-md p-5 mt-12 mb-4 font-ui text-[0.82rem] leading-relaxed" style={{ background: 'var(--bg-elev-2)', border: '1px solid var(--border-2)' }}>
         <h4 className="font-display font-semibold text-[0.7rem] tracking-[0.18em] uppercase text-accent m-0 mb-3">Sources cited</h4>
         <ul className="list-none m-0 p-0">
-          <Cite id="cite1" n="1." source="Tattvartha Sutra 7.8 — definition of himsā">
+          <Cite id="cite1" n="1." source="Tattvartha Sutra 7.13 — definition of himsā">
             <em>&ldquo;Pramatta-yogāt prāṇa-vyaparopaṇaṁ hiṁsā&rdquo;</em> — Severance of life-energies through careless activity is <em>hiṁsā</em>. The definition is technical: harm caused even by carelessness counts.
           </Cite>
-          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.1, 7.4">
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.1–7.2">
             On <em>vrata</em> (vows), with ahimsa as the first and foundational. The five great vows of monks (mahāvrata) and the lesser vows of laity (anuvrata) both begin with ahimsa.
           </Cite>
           <Cite id="cite3" n="3." source="Acharanga Sutra (Shvetambara canonical)">
@@ -633,7 +633,7 @@ function AparigrahaArticle() {
         <em>Parigraha</em> means &ldquo;grasping&rdquo; — taking hold of, claiming as one&apos;s own. <em>Aparigraha</em> is its negation: non-grasping, non-attachment, non-possessiveness. It is the fifth and final great vow of Jain monastic life.<CiteMark id="cite1" label="1" />
       </P>
       <P>
-        For Jain monks, this is taken to its logical conclusion: a Digambara monk owns literally nothing — no clothes, no money, no property. Even shelter is borrowed; even food is consumed only as it is given. The practice is austere because the principle is uncompromising.
+        For Jain monks, this is taken to its logical conclusion: a Digambara monk keeps only a feather-whisk (<em>picchī</em>), a water-pot (<em>kamaṇḍalu</em>), and scripture — no clothes, no money, no property. Even shelter is borrowed; even food is consumed only as it is given. The practice is austere because the principle is uncompromising.
       </P>
 
       <H3>Why possessions matter</H3>
@@ -649,7 +649,7 @@ function AparigrahaArticle() {
         Jain analysis distinguishes <em>bāhya parigraha</em> (external possessions — money, property, clothes, relationships) and <em>antaraṅga parigraha</em> (internal possessions — attachments, aversions, false views, deluded passions). Both bind karma.
       </P>
       <P>
-        For lay practitioners, the limit on external possessions is <em>parigraha-parimāṇa-vrata</em> — voluntarily setting an upper limit on how much one will own. Beyond that limit, the surplus is given away. The principle: you choose what you need, not what you can accumulate.<CiteMark id="cite3" label="3" />
+        For lay practitioners, the limit on external possessions is <em>parigraha-parimāṇa-vrata</em> — voluntarily setting an upper limit on how much one will own. Beyond that limit, one cultivates freedom from desire for more. The principle: you choose what you need, not what you can accumulate.<CiteMark id="cite3" label="3" />
       </P>
 
       <H3>Why this is more than minimalism</H3>
@@ -674,10 +674,10 @@ function AparigrahaArticle() {
           <Cite id="cite1" n="1." source="Tattvartha Sutra 7.1 — five vows">
             Aparigraha as the fifth of the five great vows (mahāvrata) for monks; with anuvrata version for lay practitioners.
           </Cite>
-          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.12 — definition">
-            <em>&ldquo;Mūrcchā parigrahaḥ&rdquo;</em> — &ldquo;Parigraha is delusion (mūrcchā).&rdquo; The most precise Jain analysis: it is not the object but the mental state that constitutes parigraha.
+          <Cite id="cite2" n="2." source="Tattvartha Sutra 7.17 — definition">
+            <em>&ldquo;Mūrcchā parigrahaḥ&rdquo;</em> — &ldquo;Infatuation (mūrcchā) is parigraha.&rdquo; The most precise Jain analysis: it is not the object but the mental state that constitutes parigraha.
           </Cite>
-          <Cite id="cite3" n="3." source="Ratnakaranda Shravakachara">
+          <Cite id="cite3" n="3." source="Ratnakaranda Shravakachara 61">
             On <em>parigraha-parimāṇa-vrata</em> — the lay vow of voluntarily setting limits on possessions.
           </Cite>
         </ul>
@@ -715,7 +715,7 @@ function AnekantavadaArticle() {
         Syādvāda (the doctrine of conditional predication) is the linguistic counterpart of anekantavāda. Every assertion is to be qualified with <em>syāt</em> — &ldquo;in some respect,&rdquo; &ldquo;from a certain standpoint.&rdquo; <em>The pot exists</em> becomes <em>in some respect, the pot exists</em>; <em>the pot does not exist</em> becomes <em>in some respect, the pot does not exist</em>. Both can be true — they refer to different aspects.<CiteMark id="cite3" label="3" />
       </P>
       <P>
-        This is not equivocation. It is precision. Jain logicians worked out a sevenfold predication — the <em>saptabhaṅgī</em> — that handles assertion, negation, both, neither, and the inexpressible across multiple standpoints simultaneously.
+        This is not equivocation. It is precision. Jain logicians worked out a sevenfold predication — the <em>saptabhaṅgī</em> — that handles assertion, negation, both in succession, the inexpressible, and the combinations of these across multiple standpoints.
       </P>
 
       <H3>Why this matters historically</H3>
@@ -723,7 +723,7 @@ function AnekantavadaArticle() {
         Anekantavāda gave Jainism a built-in protection against the kind of dogmatism that produces violent religious conflict. If your own doctrine assures you that every statement is perspectival, you cannot easily claim absolute certainty against another tradition.
       </P>
       <P>
-        The historical record bears this out. Jainism, alone among major traditions, has essentially no history of religious warfare against other faiths. Internal disagreements (Digambara/Shvetambara, Bispanthi/Terapanthi) exist; missionary aggression and sectarian violence largely do not. Anekantavāda is part of the reason.
+        The historical record bears this out. Jainism, alone among major traditions, has essentially no history of religious warfare against other faiths. Internal disagreements (Digambara/Shvetambara, Bispanthi/Terapanthi) exist; missionary aggression and sectarian violence largely do not. Anekantavāda is part of the reason. (Scholars such as Paul Dundas and John Cort caution, however, that reading anekantavāda as religious tolerance is largely a modern interpretation; classical Jain logicians also wielded it as a polemical tool against rival schools.)
       </P>
 
       <H3>Why this matters now</H3>
@@ -746,7 +746,7 @@ function AnekantavadaArticle() {
           <Cite id="cite1" n="1." source="Tattvartha Sutra 1.6 — pramāṇa and naya">
             Knowledge of categories is achieved through both pramāṇa (full means of valid knowledge) and naya (perspectival standpoints). This sutra is the seed from which anekantavāda develops.
           </Cite>
-          <Cite id="cite2" n="2." source="Pramāṇa-naya-tattvāloka (Vādideva Sūri)">
+          <Cite id="cite2" n="2." source="Pramāṇa-naya-tattvāloka (Vādideva Sūri, Shvetambara)">
             Classical Jain epistemological text systematizing the seven-naya analysis. Jain logic developed extensively through the medieval period as a counter-tradition to Buddhist and Hindu logical schools.
           </Cite>
           <Cite id="cite3" n="3." source="Aapta-mīmāṁsā (Acharya Samantabhadra)">
@@ -825,7 +825,7 @@ function HardQuestionsArticle() {
 
       <H3>6. The historical reality of the 24 Tirthankaras</H3>
       <P>
-        Of the 24 Tirthankaras, modern historical evidence supports the existence of Mahavir (24th, 6th c. BCE) and likely Parshvanath (23rd, ~9-8th c. BCE). The earlier 22 are not corroborated by external historical evidence; the traditional dates (Adinath at the dawn of the present time-cycle, billions of years ago) do not align with modern cosmology.
+        Of the 24 Tirthankaras, modern historical evidence supports the existence of Mahavir (24th, 6th or 5th c. BCE) and likely Parshvanath (23rd; ~8th–7th c. BCE by historians&apos; estimates, a century earlier by tradition). The earlier 22 are not corroborated by external historical evidence; the traditional dates (Adinath near the end of the third era of the present half-cycle, unimaginably long ago) do not align with modern cosmology.
       </P>
       <P>
         For a modern reader: how to take these accounts? Different practitioners take different positions. Some hold them as literal history; others as sacred narrative whose function is doctrinal rather than historical; others as a layered text of multiple kinds of truth. The library does not adjudicate; it presents what the tradition holds.

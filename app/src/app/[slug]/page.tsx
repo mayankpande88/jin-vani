@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllTexts, loadText, toDevanagariNum } from '@/lib/content';
+import { getAllTexts, loadText, loadTextMeta } from '@/lib/content';
 import { Markdown } from '@/components/Markdown';
 
 export function generateStaticParams() {
   return getAllTexts().map((t) => ({ slug: t.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return { title: loadTextMeta(slug)?.title_en };
 }
 
 export default async function TextPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -44,7 +49,7 @@ export default async function TextPage({ params }: { params: Promise<{ slug: str
             </h1>
             <p className="font-display font-medium text-base text-text-2 m-0 mb-6 tracking-wide">{text.title_en}</p>
             <div className="inline-flex gap-1 font-ui text-[0.78rem] flex-wrap justify-center">
-              <Pill>{text.verseCount} {text.category === 'mantra' ? 'lines' : 'verses'}</Pill>
+              <Pill>{text.verseCount} {text.category === 'mantra' ? 'line' : 'verse'}{text.verseCount === 1 ? '' : 's'}</Pill>
               <Pill>~{text.estReadingMinutes} min</Pill>
               <Pill>{text.author}</Pill>
             </div>
@@ -92,7 +97,7 @@ export default async function TextPage({ params }: { params: Promise<{ slug: str
 
           {/* Begin reading */}
           <Link
-            href={`/${slug}/1`}
+            href={`/${slug}/${text.verses[0]?.number ?? 1}`}
             className="flex items-center justify-center gap-2 w-full font-ui font-semibold text-[0.95rem] py-5 px-6 rounded-pill no-underline transition-all hover:-translate-y-0.5"
             style={{ background: 'var(--accent)', color: 'var(--bg)', boxShadow: '0 0 24px rgba(232, 137, 58, 0.18)' }}
           >
@@ -108,7 +113,7 @@ export default async function TextPage({ params }: { params: Promise<{ slug: str
               {text.category === 'mantra' ? 'Lines' : 'All Verses'}
             </h2>
             <span className="font-ui text-[0.78rem] text-text-3">
-              {text.verseCount} {text.category === 'mantra' ? 'lines' : 'verses'}
+              {text.verseCount} {text.category === 'mantra' ? 'line' : 'verse'}{text.verseCount === 1 ? '' : 's'}
             </span>
           </div>
           <div className="grid grid-cols-6 lg:grid-cols-6 gap-2 mb-12">

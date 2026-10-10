@@ -3,12 +3,12 @@ title_en: Chattari Mangalam
 title_sk: चत्तारि मंगलं
 category: mantra
 author: Traditional · agamic
-era: Found in early agamas
-verseCount: 4
+era: Traditional liturgy; part of Digambara pratikramaṇa
+verseCount: 3
 estReadingMinutes: 2
 tradition: digambara
 authorCard: |
-  The *Chattari Mangalam* is a foundational Jain prayer found in the agamas, recited by both Digambara and Shvetambara traditions. It has no individual author; like the Navkar Mantra, it is part of the irreducible core of Jain liturgy.
+  The *Chattari Mangalam* is a foundational Jain prayer, recited by both Digambara and Shvetambara traditions; in Digambara practice it is part of the pratikramaṇa liturgy. It has no individual author; like the Navkar Mantra, it is part of the irreducible core of Jain liturgy.
 
   The structure is fourfold and parallel: four are auspicious, four are excellent, four are refuges. The same four — Arihants, Siddhas, sadhus, and the Jina-taught Dharma — are venerated under three different aspects.
 

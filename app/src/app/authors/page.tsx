@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { AUTHORS } from '@/lib/authors';
 
 export const metadata = {
-  title: 'Authors · Jin-vani',
+  title: 'Authors',
   description: 'The acharyas, pandits, and seers whose works form the Jain library — Kundakunda, Umaswami, Pujyapada, Samantabhadra, Manatunga, Daulatram, and others.',
 };
 

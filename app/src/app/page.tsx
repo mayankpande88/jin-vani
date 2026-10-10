@@ -1,12 +1,14 @@
 import Link from 'next/link';
-import { getAllTexts, type TextMeta } from '@/lib/content';
-import { ContinueCard } from '@/components/ContinueCard';
+import { getAllTexts, loadText, type TextMeta } from '@/lib/content';
+import { ContinueCard, ReaderStats, type ContinueTextInfo } from '@/components/ContinueCard';
 
 export default function HomePage() {
   const all = getAllTexts();
   const byCategory: Record<string, TextMeta[]> = {};
+  const continueInfo: Record<string, ContinueTextInfo> = {};
   for (const t of all) {
     (byCategory[t.category] ||= []).push(t);
+    continueInfo[t.slug] = { title: t.title_en, total: loadText(t.slug)?.verses.length || 1 };
   }
 
   return (
@@ -46,12 +48,8 @@ export default function HomePage() {
         </Link>
 
         <div className="flex flex-col gap-3">
-          <ContinueCard />
-          <div className="flex gap-3">
-            <Stat num="5" label="Day streak" />
-            <Stat num="12" label="Verses read" />
-            <Stat num="2" label="Memorized" />
-          </div>
+          <ContinueCard texts={continueInfo} />
+          <ReaderStats />
         </div>
       </div>
 
@@ -138,15 +136,6 @@ export default function HomePage() {
   );
 }
 
-function Stat({ num, label }: { num: string; label: string }) {
-  return (
-    <div className="flex-1 p-4 rounded-md" style={{ background: 'var(--bg-elev-1)', border: '1px solid var(--border)' }}>
-      <div className="font-display text-[1.6rem] font-semibold text-accent leading-none">{num}</div>
-      <div className="font-ui text-[0.7rem] tracking-wider uppercase text-text-3 mt-0.5">{label}</div>
-    </div>
-  );
-}
-
 function LibCard({ text }: { text: TextMeta }) {
   return (
     <Link
@@ -171,7 +160,7 @@ function LibCard({ text }: { text: TextMeta }) {
           className="font-bold text-[0.65rem] tracking-[0.1em] uppercase px-2 py-0.5 rounded-pill"
           style={{ background: 'var(--bg-elev-3)', color: 'var(--accent)' }}
         >
-          {text.verseCount} {text.category === 'mantra' ? 'lines' : 'verses'}
+          {text.verseCount} {text.category === 'mantra' ? 'line' : 'verse'}{text.verseCount === 1 ? '' : 's'}
         </span>
         <span>·</span>
         <span>{text.estReadingMinutes} min</span>

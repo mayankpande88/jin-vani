@@ -9,7 +9,12 @@ export function OnboardingModal() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const onboarded = localStorage.getItem(LS_KEY);
+    let onboarded: string | null = null;
+    try {
+      onboarded = localStorage.getItem(LS_KEY);
+    } catch {
+      return; // storage blocked: don't show a modal we can't remember dismissing
+    }
     if (!onboarded) {
       const t = setTimeout(() => setVisible(true), 600);
       return () => clearTimeout(t);
@@ -19,9 +24,15 @@ export function OnboardingModal() {
   // Allow Shift+R to reset onboarding for testing
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
+      // Ignore typing (a capital R in the search box) and Ctrl/Cmd+Shift+R hard reloads.
+      const t = e.target as HTMLElement | null;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
       if (e.shiftKey && e.key === 'R') {
-        localStorage.removeItem(LS_KEY);
-        localStorage.removeItem('jinvani.level');
+        try {
+          localStorage.removeItem(LS_KEY);
+          localStorage.removeItem('jinvani.level');
+        } catch {}
         location.reload();
       }
     };
@@ -31,8 +42,10 @@ export function OnboardingModal() {
 
   function close(level: string | null) {
     setVisible(false);
-    localStorage.setItem(LS_KEY, 'true');
-    if (level) localStorage.setItem('jinvani.level', level);
+    try {
+      localStorage.setItem(LS_KEY, 'true');
+      if (level) localStorage.setItem('jinvani.level', level);
+    } catch {}
   }
 
   if (!visible) return null;

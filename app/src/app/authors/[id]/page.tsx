@@ -9,7 +9,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const a = getAuthor(id);
-  return { title: `${a?.name ?? 'Author'} · Jin-vani` };
+  return { title: a?.name ?? 'Author' };
 }
 
 export default async function AuthorPage({ params }: { params: Promise<{ id: string }> }) {

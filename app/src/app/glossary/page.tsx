@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { GLOSSARY, CATEGORY_LABELS, type GlossaryEntry } from '@/lib/glossary';
 
 export const metadata = {
-  title: 'Glossary · Jin-vani',
+  title: 'Glossary',
   description: 'A glossary of key Sanskrit, Prakrit, and Jain terms used across the library — soul, karma, moksha, anekantavada, and others, with citations to primary texts.',
 };
 

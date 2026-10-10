@@ -19,6 +19,6 @@ authorCard: |
 
 The *Tattvartha Sutra* — literally "*The Sutra on the True Meaning of the Categories*" — is the most important systematic text in Jain philosophy. Composed by Acharya Umaswami around the 2nd–4th century CE, it crystallizes the entire Jain worldview into 357 highly-compressed Sanskrit sutras across 10 chapters.
 
-Chapter 1, opens with one of the most famous sutras in all of Jain literature: *samyag-darśana-jnāna-cāritrāṇi mokṣa-mārgaḥ* — "Right faith, right knowledge, right conduct: this is the path to liberation." From there, the chapter establishes the categories of reality, the means of valid knowledge, and the kinds of knowing the soul is capable of.
+Chapter 1 opens with one of the most famous sutras in all of Jain literature: *samyag-darśana-jñāna-cāritrāṇi mokṣa-mārgaḥ* — "Right faith, right knowledge, right conduct: this is the path to liberation." From there, the chapter establishes the categories of reality, the means of valid knowledge, and the kinds of knowing the soul is capable of.
 
-This library presents the first 10 sutras of Chapter 1 in the Digambara recension, drawing on Acharya Pujyapada's *Sarvarthasiddhi* as the authoritative reading.
+This library presents all 33 sutras of Chapter 1 in the Digambara recension, drawing on Acharya Pujyapada's *Sarvarthasiddhi* as the authoritative reading.

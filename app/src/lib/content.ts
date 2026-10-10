@@ -42,6 +42,38 @@ export type Text = TextMeta & { verses: VerseContent[] };
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content');
 
+// Content files carry HTML entities (&apos;, &ldquo;, ...) that React would
+// otherwise render literally, since every field is rendered as plain text.
+// Single-quoted YAML strings also keep "\n" as two literal characters; turn
+// those into real line breaks so paragraph splitting works.
+const NAMED_ENTITIES: Record<string, string> = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00A0',
+  lsquo: '\u2018', rsquo: '\u2019', ldquo: '\u201C', rdquo: '\u201D',
+  ndash: '\u2013', mdash: '\u2014', hellip: '\u2026',
+};
+export function decodeEntities<T>(v: T): T {
+  if (typeof v !== 'string') return v;
+  return v.replace(/&(#x[0-9a-f]+|#[0-9]+|[a-z]+);/gi, (m, e: string) => {
+    if (e[0] === '#') {
+      const code = e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : m;
+    }
+    return NAMED_ENTITIES[e.toLowerCase()] ?? m;
+  }).replace(/\\n/g, '\n') as T;
+}
+
+type Gloss = { sk: string; translit: string; gloss: string };
+function decodeGlosses(list: unknown): Gloss[] {
+  if (!Array.isArray(list)) return [];
+  return list.map((g) => ({ sk: decodeEntities(g?.sk), translit: decodeEntities(g?.translit), gloss: decodeEntities(g?.gloss) }));
+}
+
+// Citation files use either `ref:` or `source:` for the label.
+function decodeCitations(list: unknown): Citation[] {
+  if (!Array.isArray(list)) return [];
+  return list.map((c) => ({ ref: decodeEntities(c?.ref ?? c?.source ?? ''), text: decodeEntities(c?.text ?? '') }));
+}
+
 export function getAllTexts(): TextMeta[] {
   const textsDir = path.join(CONTENT_ROOT, 'texts');
   if (!fs.existsSync(textsDir)) return [];
@@ -59,16 +91,16 @@ export function loadTextMeta(slug: string): TextMeta | null {
   const { data, content } = matter(raw);
   return {
     slug,
-    title_en: data.title_en,
-    title_sk: data.title_sk,
+    title_en: decodeEntities(data.title_en),
+    title_sk: decodeEntities(data.title_sk),
     category: data.category,
-    author: data.author,
-    era: data.era,
+    author: decodeEntities(data.author),
+    era: decodeEntities(data.era),
     verseCount: data.verseCount,
     estReadingMinutes: data.estReadingMinutes,
     tradition: data.tradition,
-    intro_md: content,
-    authorCard_md: data.authorCard,
+    intro_md: decodeEntities(content),
+    authorCard_md: decodeEntities(data.authorCard),
     storySlug: data.storySlug,
   };
 }
@@ -97,19 +129,19 @@ export function loadVerse(slug: string, num: number): VerseContent | null {
   return {
     number: num,
     numberDevanagari: data.numberDevanagari || toDevanagariNum(num),
-    sanskrit: data.sanskrit,
-    transliteration: data.transliteration,
-    simple_hi: data.simple_hi,
-    simple_en: data.simple_en,
-    translation_hi: data.translation_hi,
-    bhavarth_hi: data.bhavarth_hi,
-    translation_en: data.translation_en,
-    meaning_en: data.meaning_en,
-    today_title: data.today_title,
-    today_md: content || data.today_md,
-    glosses: data.glosses || [],
-    word_by_word: data.word_by_word || [],
-    citations: data.citations || [],
+    sanskrit: decodeEntities(data.sanskrit),
+    transliteration: decodeEntities(data.transliteration),
+    simple_hi: decodeEntities(data.simple_hi),
+    simple_en: decodeEntities(data.simple_en),
+    translation_hi: decodeEntities(data.translation_hi),
+    bhavarth_hi: decodeEntities(data.bhavarth_hi),
+    translation_en: decodeEntities(data.translation_en),
+    meaning_en: decodeEntities(data.meaning_en),
+    today_title: decodeEntities(data.today_title),
+    today_md: decodeEntities(content || data.today_md),
+    glosses: decodeGlosses(data.glosses),
+    word_by_word: decodeGlosses(data.word_by_word),
+    citations: decodeCitations(data.citations),
     isStub: data.isStub === true,
   };
 }

@@ -53,13 +53,13 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
       </StorySection>
 
       <StorySection num="Part Two · The Court" title="The King Wanted Proof">
-        <p>Tradition tells us that there was a powerful king in Ujjayini — often remembered as <strong>King Bhoja</strong>. His court was filled with famous poets: Mayura, who praised the sun-god Surya; Bana, who praised the goddess Chandi. Both had composed beautiful hymns and were said to have shown miraculous powers through their devotion.</p>
-        <p>The king had heard of Acharya Manatunga, the Digambara monk who lived without anything, who praised the Jina above all else. The king wanted to know: <em>was Manatunga&apos;s devotion as powerful as the others?</em></p>
+        <p>Tradition tells us that there was a powerful king in Ujjayini — often remembered as <strong>King Bhoja</strong>. In the Digambara telling, the trouble began at his court: the poet Kalidasa, jealous of the Jain poet Dhananjaya, lost a debate to him, and then demanded to debate Dhananjaya&apos;s teacher, Acharya Manatunga. (Shvetambara tellings name other rivals: the poets Mayura, who praised the sun-god Surya, and Bana, who praised the goddess Chandi, both said to have shown miraculous powers through their hymns.)</p>
+        <p>The king sent for Acharya Manatunga, the Digambara monk who lived without anything, who praised the Jina above all else. A monk has no business at a royal court, and the Acharya would not come; in the end the king&apos;s servants brought him by force, and he stood before the court in silence.</p>
         <p>&ldquo;Show me,&rdquo; the king said. &ldquo;Show me the power of your Jain teachings. Show me what your Adinath can do.&rdquo;</p>
       </StorySection>
 
       <StorySection num="Part Three · The Challenge" title="Forty-eight Chains">
-        <p>To make the test impossible, the king ordered Acharya Manatunga to be bound — not in one chain, not in ten, but in <strong>forty-eight iron chains</strong>. He was locked in a room behind forty-eight locked doors.</p>
+        <p>To make the test impossible, the king ordered Acharya Manatunga to be bound — not in one chain, not in ten, but in <strong>forty-eight iron chains</strong>. He was locked in the innermost of forty-eight chambers, behind forty-eight locks.</p>
         <p>&ldquo;If your devotion is real,&rdquo; the king said, &ldquo;let your Jina free you now.&rdquo;</p>
         <SymbolRow />
       </StorySection>
@@ -83,7 +83,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
       </StorySection>
 
       <StorySection num="Part Six · Today" title="Why we read it">
-        <p>The stotra Acharya Manatunga composed in that prison cell is the same Bhaktamara Stotra we read today — all <strong>forty-eight verses</strong> of it. Across the Digambara tradition, it is recited daily in temples, in homes, by elders, and by children just learning their first prayers.</p>
+        <p>Tradition holds that the stotra Acharya Manatunga composed in that prison cell is the same Bhaktamara Stotra we read today — all <strong>forty-eight verses</strong> of it in the Digambara recension (Shvetambaras recite forty-four). Across the Digambara tradition, it is recited daily in temples, in homes, by elders, and by children just learning their first prayers.</p>
         <p>Every time we read it, we are doing what Acharya Manatunga did. We are turning toward the Jina&apos;s example. We are turning away from fear. And we are turning into <em>bhakti</em> — that pure, quiet devotion that is stronger than any chain.</p>
       </StorySection>
 
@@ -108,7 +108,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
         style={{ background: 'var(--bg-elev-1)', borderLeft: '3px solid var(--accent)' }}
       >
         <strong className="text-text-2 block mb-1 font-semibold">Note on this account</strong>
-        The story of the 48 chains is a traditional account told widely across the Digambara community for many centuries. Specific details — the exact identity of the king, the precise circumstances — vary across sources, and the historical Manatunga predates the famous King Bhoja of Dhar by some centuries. What is consistent across the tradition is the central image: an Acharya bound in 48 chains, freed by 48 verses of devotion.{' '}
+        The story of the 48 chains is a traditional account told widely across the Digambara community for many centuries. Specific details — the exact identity of the king, the precise circumstances — vary across sources, all of them medieval and written centuries after Manatunga, and the historical Manatunga predates the famous King Bhoja of Dhar by some centuries. Shvetambara accounts count 44 chains, matching their 44-verse text. What is consistent across the Digambara tradition is the central image: an Acharya bound in 48 chains, freed by 48 verses of devotion.{' '}
         <strong className="text-accent">This page is a draft pending review by the project&apos;s Digambara cultural reviewer.</strong>
       </div>
     </main>

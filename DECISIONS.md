@@ -146,7 +146,7 @@ Acceptable profiles (in order of preference):
 2. **Chattari Mangalam** — universal, short
 3. **Bhaktamara Stotra (48-verse Digambara version)** by Acharya Manatunga — flagship
 4. **Mangalashtak** — Digambara daily prayer
-5. **Chhah Dhala** by Pt. Daulatram (Terapanthi pandit, read across both Digambara sub-traditions) — most-read Digambara primer
+5. **Chhah Dhala** by Pt. Daulatram of Sasni (19th c., read across both Digambara sub-traditions) — most-read Digambara primer
 6. **Tattvartha Sutra Chapter 1** by Acharya Umaswami — read with *Sarvarthasiddhi* (Acharya Pujyapada's commentary) as the Digambara reading
 7. **Dravya Sangraha** (58 gathas) by Acharya Nemichandra — Digambara philosophical primer
 8. **Ratnakaranda Shravakachara** by Acharya Samantabhadra — Digambara lay ethics

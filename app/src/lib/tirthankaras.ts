@@ -32,7 +32,7 @@ He is the son of King Nabhiraj and Queen Marudevi, born in Ayodhya. Before his r
 
 After renouncing his kingdom, he undertook severe austerity for a thousand years. He attained kevala-jnana under a banyan tree at Purimatal. He is said to have given his first sermon at Mount Kailasha (also called Ashtapada), where he later attained mokṣa.
 
-His mother Marudevi is herself a celebrated figure: she is said to have attained mokṣa shortly after seeing her son's *samavasaraṇa*, becoming, by some traditions, the first liberated soul of this era.
+His mother Marudevi is honoured as the mother of a Jina. The story that she attained mokṣa on learning of her son's omniscience, becoming the first liberated soul of this era, belongs to the Shvetambara tradition. Digambaras, who hold that liberation requires a male body, name one of Rishabhanatha's sons as the first liberated soul of this era.
 
 For Digambara Jains, Rishabhanatha holds a position of unique importance. The *Bhaktamara Stotra*, the most beloved devotional hymn in the tradition, is composed entirely in his praise. The famous opening verse — *bhaktāmara-praṇata-mauli-maṇi-prabhāṇām...* — bows to his feet specifically.`,
     connections: [
@@ -45,9 +45,9 @@ For Digambara Jains, Rishabhanatha holds a position of unique importance. The *B
     num: 2, slug: 'ajitanatha',
     name: 'Ajitanatha', nameSk: 'अजितनाथ',
     lanchhana: 'Elephant', lanchhanaSk: 'गज', complexion: 'Golden',
-    fatherSk: 'राजा जितशत्रु', motherSk: 'महारानी विजया',
+    fatherSk: 'राजा जितशत्रु', motherSk: 'महारानी विजयसेना',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
-    bio: `Ajitanatha — &ldquo;the Unconquered&rdquo; — is the second Tirthankara, born in Ayodhya to King Jitashatru and Queen Vijaya. Tradition holds that during his mother&apos;s pregnancy she was so concentrated and serene that no one could defeat her, even at games of chance — hence the epithet *Ajita* (unconquered) given to her son.
+    bio: `Ajitanatha — &ldquo;the Unconquered&rdquo; — is the second Tirthankara, born in Ayodhya to King Jitashatru and Queen Vijayasenā. Shvetambara accounts (Hemacandra) say that during his mother&apos;s pregnancy no one could defeat her, even at dice — hence the name *Ajita* (unconquered). The Digambara *Uttarapurāṇa* explains the name differently: he was called Ajita because neither sin nor any opponent could conquer him.
 
 He inherited the kingdom of Ayodhya before renouncing it. He attained kevala-jnana under a *saptaparna* tree, and reached mokṣa at Mount Sammed Shikhar — the destination of nearly all subsequent Tirthankaras.`,
   },
@@ -69,7 +69,7 @@ He renounced the throne after a period of kingship. He attained kevala-jnana und
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
     bio: `Abhinandananatha — &ldquo;the joy-giver&rdquo; — is the fourth Tirthankara, born in Ayodhya to King Samvara and Queen Siddhartha. Tradition holds that his birth was attended with celebrations of unusual joy, even by celestial standards — hence the name.
 
-His distinguishing iconographic feature is the monkey *(kapi)* lañchana — drawn from a story in his pre-Tirthankara births. He attained kevala-jnana under a *priyangu* tree; reached mokṣa at Mt. Sammed Shikhar.`,
+His distinguishing iconographic feature is the monkey *(kapi)* lañchana — drawn from a story in his pre-Tirthankara births. He attained kevala-jnana under a *sarala* tree (the *Mahāpurāṇa*; the Digambara *Harivaṁśapurāṇa* names the *asana*); reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 5, slug: 'sumatinatha',
@@ -85,15 +85,15 @@ His distinguishing iconographic feature is the monkey *(kapi)* lañchana — dra
     lanchhana: 'Red lotus', lanchhanaSk: 'रक्त-कमल', complexion: 'Red',
     fatherSk: 'राजा धरण', motherSk: 'महारानी सुसीमा',
     birthplace: 'Kausambi', mokshaPlace: 'Mt. Sammed Shikhar',
-    bio: `Padmaprabha — &ldquo;the lotus-radiant&rdquo; — is the sixth Tirthankara, born in Kausambi to King Dharaṇa and Queen Susīmā. Distinguished from the golden-complexioned Tirthankaras, his complexion is traditionally described as *red* — like the petal of a red lotus, hence the name. The lotus-iconography on his pedestal extends this. He attained kevala-jnana under a *chatraka* tree; reached mokṣa at Mt. Sammed Shikhar.`,
+    bio: `Padmaprabha — &ldquo;the lotus-radiant&rdquo; — is the sixth Tirthankara, born in Kausambi to King Dharaṇa and Queen Susīmā. Distinguished from the golden-complexioned Tirthankaras, his complexion is traditionally described as *red* — like the petal of a red lotus, hence the name. The lotus-iconography on his pedestal extends this. He attained kevala-jnana under a *priyaṅgu* tree; reached mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 7, slug: 'suparshvanatha',
     name: 'Suparshvanatha', nameSk: 'सुपार्श्वनाथ',
-    lanchhana: 'Swastika', lanchhanaSk: 'स्वस्तिक', complexion: 'Golden',
-    fatherSk: 'राजा सुप्रतिष्ठ', motherSk: 'महारानी पृथ्वी',
+    lanchhana: 'Swastika', lanchhanaSk: 'स्वस्तिक', complexion: 'Green',
+    fatherSk: 'राजा सुप्रतिष्ठ', motherSk: 'महारानी पृथ्वीषेणा',
     birthplace: 'Varanasi', mokshaPlace: 'Mt. Sammed Shikhar',
-    bio: `Suparshvanatha — &ldquo;Lord of beautiful sides&rdquo; — is the seventh Tirthankara, born in Varanasi (Banaras) — the same sacred city that would later be the birthplace of Parshvanatha (the 23rd Tirthankara) and the Buddha.
+    bio: `Suparshvanatha — &ldquo;Lord of beautiful sides&rdquo; — is the seventh Tirthankara, born in Varanasi (Banaras) — the same sacred city that would later be the birthplace of Parshvanatha (the 23rd Tirthankara).
 
 His lañchana is the *svastika* (an ancient auspicious symbol used in Jain, Hindu, and Buddhist iconography across Asia, predating its 20th-century appropriations by more than two millennia). He reached mokṣa at Mt. Sammed Shikhar.`,
   },
@@ -120,12 +120,12 @@ White-complexioned. Lañchana is the *makara* (a mythological crocodile-like cre
   {
     num: 10, slug: 'shitalanatha',
     name: 'Shitalanatha', nameSk: 'शीतलनाथ',
-    lanchhana: 'Śrīvatsa', lanchhanaSk: 'श्रीवत्स', complexion: 'Golden',
+    lanchhana: 'Kalpavṛkṣa (wish-fulfilling tree)', lanchhanaSk: 'कल्पवृक्ष', complexion: 'Golden',
     fatherSk: 'राजा दृढरथ', motherSk: 'महारानी सुनन्दा',
     birthplace: 'Bhaddilapura', mokshaPlace: 'Mt. Sammed Shikhar',
     bio: `Shitalanatha — &ldquo;the cool one&rdquo; — is the tenth Tirthankara, born in Bhaddilapura to King Dṛḍharatha and Queen Sunandā. Tradition holds that his presence cooled fevers and calmed agitated minds — both his name and several stories about him reflect this. *Shitala* (cool, calm) carries connotations of relief from suffering.
 
-His lañchana is the *śrīvatsa* — an auspicious mark also seen on the chest of Vishnu in Hindu iconography. Mokṣa at Mt. Sammed Shikhar.`,
+His lañchana in the Digambara tradition is the *kalpavṛkṣa* (wish-fulfilling tree); Shvetambara sources give the *śrīvatsa*. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 11, slug: 'shreyamsanatha',
@@ -143,7 +143,7 @@ His lañchana is the *śrīvatsa* — an auspicious mark also seen on the chest 
     birthplace: 'Champapuri', mokshaPlace: 'Champapuri',
     bio: `Vasupujya — &ldquo;honored by Vasus&rdquo; (the celestial Vasu deities of Indian tradition) — is the twelfth Tirthankara, and the only one in the present cycle who **attained mokṣa at his own birthplace**: Champapuri (modern Champapur in Bihar).
 
-He renounced as a young prince, never married. Red-complexioned (like Padmaprabha and Vasupujya, exception to the predominantly golden coloring of Tirthankaras). Lañchana is the *mahiṣa* (buffalo).
+He renounced as a young prince, never married. Red-complexioned (like Padmaprabha, an exception to the predominantly golden coloring of Tirthankaras). Lañchana is the *mahiṣa* (buffalo).
 
 Champapuri, his birthplace and place of liberation, is one of the few Jain pilgrimage sites that is *not* Mt. Sammed Shikhar.`,
   },
@@ -151,21 +151,21 @@ Champapuri, his birthplace and place of liberation, is one of the few Jain pilgr
     num: 13, slug: 'vimalanatha',
     name: 'Vimalanatha', nameSk: 'विमलनाथ',
     lanchhana: 'Boar (varāha)', lanchhanaSk: 'वराह', complexion: 'Golden',
-    fatherSk: 'राजा कृतवर्मा', motherSk: 'महारानी सुरमा / श्यामा',
+    fatherSk: 'राजा कृतवर्मा', motherSk: 'महारानी जयश्यामा',
     birthplace: 'Kampilya', mokshaPlace: 'Mt. Sammed Shikhar',
-    bio: `Vimalanatha — &ldquo;the stainless lord&rdquo; — is the thirteenth Tirthankara, born in Kampilya to King Kritavarma and Queen Suramā (Shyāmā in some accounts). His name *vimala* (stainless, pure) reflects the central Jain idea of the soul&apos;s pure nature being uncovered, not added.
+    bio: `Vimalanatha — &ldquo;the stainless lord&rdquo; — is the thirteenth Tirthankara, born in Kampilya to King Kritavarma and Queen Jayaśyāmā (Śyāmā in Shvetambara accounts). His name *vimala* (stainless, pure) reflects the central Jain idea of the soul&apos;s pure nature being uncovered, not added.
 
 Lañchana is the *varāha* (boar). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 14, slug: 'anantanatha',
     name: 'Anantanatha', nameSk: 'अनन्तनाथ',
-    lanchhana: 'Falcon (śyena)', lanchhanaSk: 'श्येन', complexion: 'Golden',
-    fatherSk: 'राजा सिंहसेन', motherSk: 'महारानी सर्वयशा',
+    lanchhana: 'Porcupine (sehī)', lanchhanaSk: 'सेही', complexion: 'Golden',
+    fatherSk: 'राजा सिंहसेन', motherSk: 'महारानी जयश्यामा',
     birthplace: 'Ayodhya', mokshaPlace: 'Mt. Sammed Shikhar',
-    bio: `Anantanatha — &ldquo;the infinite lord&rdquo; — is the fourteenth Tirthankara, born in Ayodhya to King Simhasena and Queen Sarvayasā. The name *ananta* (infinite, unending) points to the soul&apos;s infinite knowledge, perception, bliss, and energy — which a kevali manifests fully.
+    bio: `Anantanatha — &ldquo;the infinite lord&rdquo; — is the fourteenth Tirthankara, born in Ayodhya to King Simhasena and Queen Jayaśyāmā. The name *ananta* (infinite, unending) points to the soul&apos;s infinite knowledge, perception, bliss, and energy — which a kevali manifests fully.
 
-Lañchana is the *śyena* (falcon). Mokṣa at Mt. Sammed Shikhar.`,
+Lañchana in the Digambara tradition is the porcupine (*sehī*); Shvetambara sources give the falcon (*śyena*). Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 15, slug: 'dharmanatha',
@@ -181,12 +181,12 @@ His lañchana is the *vajra* — the diamond-thunderbolt — an ancient symbol o
     num: 16, slug: 'shantinatha',
     name: 'Shantinatha', nameSk: 'शान्तिनाथ',
     lanchhana: 'Deer (mṛga)', lanchhanaSk: 'मृग', complexion: 'Golden',
-    fatherSk: 'राजा विश्वसेन', motherSk: 'महारानी अचिरा',
+    fatherSk: 'राजा विश्वसेन', motherSk: 'महारानी ऐरा',
     birthplace: 'Hastinapur', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'Also a Chakravartin emperor before renunciation.',
     bio: `Shantinatha — &ldquo;Lord of Peace&rdquo; — holds an unusual triple distinction in Jain tradition: he was a *Tirthankara*, a *Chakravartin* (universal monarch), and a *Kāmadeva* (a paragon of beauty/charisma) before renouncing the world.
 
-Born in Hastinapur to King Vishvasena and Queen Achira, his birth is said to have ended a great pestilence (*śānti* = peace, calm) — hence the name. As Chakravartin, he ruled vast territories with unusual restraint and justice; as Kāmadeva, he was without equal in physical form. As Tirthankara, he relinquished all of this.
+Born in Hastinapur to King Vishvasena and Queen Airā, his birth is said to have ended a great pestilence (*śānti* = peace, calm) — hence the name. As Chakravartin, he ruled vast territories with unusual restraint and justice; as Kāmadeva, he was without equal in physical form. As Tirthankara, he relinquished all of this.
 
 His decision to renounce universal kingship is often cited as the canonical example of *aparigraha* (non-attachment) at the highest level. To turn away from the position of the Chakravartin — when most beings would consider it the apex of worldly attainment — is to demonstrate, in the most visible way possible, that no external achievement satisfies the soul.
 
@@ -199,28 +199,28 @@ He attained mokṣa at Mt. Sammed Shikhar.`,
     num: 17, slug: 'kunthunatha',
     name: 'Kunthunatha', nameSk: 'कुन्थुनाथ',
     lanchhana: 'Goat (chāgala)', lanchhanaSk: 'छागल', complexion: 'Golden',
-    fatherSk: 'राजा सूर्य', motherSk: 'महारानी श्री',
+    fatherSk: 'राजा सूर्य', motherSk: 'महारानी श्रीकान्ता',
     birthplace: 'Hastinapur', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'Also a Chakravartin emperor.',
-    bio: `Kunthunatha is the seventeenth Tirthankara, born in Hastinapur to King Sūrya and Queen Śrī. Like his predecessor Shantinatha (#16) and his successor Aranatha (#18), Kunthunatha is one of the small group of figures who held both the position of *Chakravartin* (universal monarch) and *Tirthankara* — exceptional even among Tirthankaras.
+    bio: `Kunthunatha is the seventeenth Tirthankara, born in Hastinapur to King Sūrya and Queen Śrīkāntā. Like his predecessor Shantinatha (#16) and his successor Aranatha (#18), Kunthunatha is one of the small group of figures who held both the position of *Chakravartin* (universal monarch) and *Tirthankara* — exceptional even among Tirthankaras.
 
 The name *kunthu* refers to a tiny insect (the smallest soul-bearing creature recognizable in Jain biology), expressing his concern for even the smallest forms of life. Lañchana is the goat. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 18, slug: 'aranatha',
     name: 'Aranatha', nameSk: 'अरनाथ',
-    lanchhana: 'Nandyāvarta', lanchhanaSk: 'नन्द्यावर्त', complexion: 'Golden',
+    lanchhana: 'Fish (matsya)', lanchhanaSk: 'मत्स्य', complexion: 'Golden',
     fatherSk: 'राजा सुदर्शन', motherSk: 'महारानी मित्रसेना',
     birthplace: 'Hastinapur', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'Also a Chakravartin emperor.',
     bio: `Aranatha is the eighteenth Tirthankara, also born in Hastinapur — the third Chakravartin-Tirthankara in succession (after Shantinatha and Kunthunatha). His parents were King Sudarśana and Queen Mitrasenā.
 
-His lañchana is the *nandyāvarta* — an auspicious geometric figure, a complex pattern resembling a four-pointed śrīvatsa, found across Indian iconographic traditions. Mokṣa at Mt. Sammed Shikhar.`,
+His lañchana in the Digambara tradition is the fish (*matsya*); Shvetambara sources give the *nandyāvarta*, an auspicious diagram. Mokṣa at Mt. Sammed Shikhar.`,
   },
   {
     num: 19, slug: 'mallinatha',
     name: 'Mallinatha', nameSk: 'मल्लिनाथ',
-    lanchhana: 'Pitcher (kalaśa)', lanchhanaSk: 'कलश', complexion: 'Blue (in Digambara) / Variable',
+    lanchhana: 'Pitcher (kalaśa)', lanchhanaSk: 'कलश', complexion: 'Golden (Digambara; dark blue in Shvetambara)',
     fatherSk: 'राजा कुम्भ', motherSk: 'महारानी प्रभावती',
     birthplace: 'Mithila', mokshaPlace: 'Mt. Sammed Shikhar',
     note: 'In Digambara tradition: a male Tirthankara. In Shvetambara tradition: female. This is the most-cited example of doctrinal difference between the traditions.',
@@ -268,9 +268,9 @@ The name *nami* (he who bows) is sometimes connected to a tradition that even ki
 
 His renunciation story is the most-told renunciation tale in Jainism. As a young prince, he was being escorted to his wedding to Princess Rajimati. As the wedding procession approached the bride&apos;s palace, he heard the cries of animals being slaughtered to feed the wedding feast. The sight and sound of the suffering animals — caged, terrified, awaiting death — pierced him utterly. He turned the procession around. He renounced the kingdom, the marriage, and worldly life on the spot.
 
-Princess Rajimati, devastated but inspired by his decision, soon herself renounced the world and joined the women&apos;s order. The tradition holds that she too attained mokṣa.
+The two traditions end Princess Rajimati&apos;s story differently. In Shvetambara versions she becomes a nun and attains mokṣa. In Digambara versions she is reborn as a male deva in heaven, since Digambara doctrine holds that liberation requires a male birth.
 
-Neminatha attained kevala-jnana on Mount Girnar (in modern Gujarat) and attained mokṣa at the same place. **Mount Girnar** is now one of the most sacred Jain pilgrimage sites — the only major Tirthankara mokṣa-place that is not Mt. Sammed Shikhar.
+Neminatha attained kevala-jnana on Mount Girnar (in modern Gujarat) and attained mokṣa at the same place. **Mount Girnar** is now one of the most sacred Jain pilgrimage sites — one of the four Tirthankara mokṣa-places other than Mt. Sammed Shikhar (with Kailasha, Champapuri and Pavapuri).
 
 For a tradition that holds *ahimsa* as its first vow, Neminatha&apos;s renunciation is the most concrete narrative expression of what that vow means: when you truly see harm being done, the only honest response is to stop participating in the system that causes it.`,
     connections: [
@@ -280,17 +280,17 @@ For a tradition that holds *ahimsa* as its first vow, Neminatha&apos;s renunciat
   {
     num: 23, slug: 'parshvanatha',
     name: 'Parshvanatha', nameSk: 'पार्श्वनाथ',
-    lanchhana: 'Snake (sarpa, with hood)', lanchhanaSk: 'सर्प', complexion: 'Blue / Dark',
+    lanchhana: 'Snake (sarpa, with hood)', lanchhanaSk: 'सर्प', complexion: 'Green (blue / dark in some texts)',
     fatherSk: 'राजा अश्वसेन', motherSk: 'महारानी वामा',
     birthplace: 'Varanasi', mokshaPlace: 'Mt. Sammed Shikhar',
-    note: 'Historical Tirthankara (~9th–8th century BCE). His teaching of four vows preceded Mahavir, who added the fifth (brahmacarya).',
-    bio: `Parshvanatha is the 23rd Tirthankara and one of two whose historical existence is supported by independent evidence (the other being Mahavir). Most scholars place his life in the 9th–8th century BCE, predating Mahavir by approximately 250 years.
+    note: 'The earliest Tirthankara accepted by scholars as a likely historical figure (traditional dates 9th–8th century BCE). Shvetambara texts say he taught four vows and Mahavir added the fifth (brahmacarya); Digambaras hold that their teachings did not differ.',
+    bio: `Parshvanatha is the 23rd Tirthankara and the earliest whom scholars accept as a likely historical figure. Tradition places his life in the 9th–8th century BCE, about 250 years before Mahavir; historians who accept his historicity date him somewhere between the 8th and 6th centuries BCE.
 
 He was born to King Ashvasena and Queen Vama of Varanasi. As a young prince, he is said to have witnessed an ascetic (Kamatha) performing severe austerities involving fire, and to have noticed two snakes trapped in a piece of wood about to be burned. Parshvanatha&apos;s compassion for the snakes, and his rebuke of the ascetic for unconscious harm, led to a famous incident in which the snakes were rescued — and reborn as the deities **Dharanendra** (the cobra-king) and **Padmavati** (his consort), who would later protect Parshvanatha in his ascetic life.
 
 The most famous iconographic detail of Parshvanatha — the seven-hooded cobra that arches protectively over his head in nearly every image — comes from this connection. When Parshvanatha later sat in deep meditation and a malicious being attempted to disturb him with floods, Dharanendra and Padmavati appeared and shielded him. The cobra-hood, in Jain art, is the visible memory of this protection.
 
-Parshvanatha taught the **four vows** (*chaturyāma*): non-violence, truth, non-stealing, and non-attachment. Mahavir, 250 years later, added the fifth vow — *brahmacarya* (celibacy) — which had been implicit in Parshvanatha&apos;s teaching but became explicit in Mahavir&apos;s formulation.
+Shvetambara texts say Parshvanatha taught **four restraints** (*cāturyāma*): non-violence, truth, non-stealing, and non-possession, and that Mahavir, 250 years later, added the fifth vow — *brahmacarya* (celibacy). Digambaras hold that the teachings of Parshvanatha and Mahavir did not differ.
 
 Parshvanatha attained mokṣa at Mount Sammed Shikhar (modern Parasnath Hill in Jharkhand) — which now bears his name in popular usage.
 
@@ -309,17 +309,17 @@ Among the 24 Tirthankaras, Parshvanatha is exceptionally venerated. The serpent-
     note: 'The 24th and last Tirthankara of this time-cycle. NOT the founder of Jainism.',
     bio: `Mahavira — born as *Vardhamana*, &ldquo;the Increasing One&rdquo; — is the 24th and final Tirthankara of the present time-cycle. The traditional dates are 599–527 BCE, making him a contemporary of the Buddha. He is **not the founder** of Jainism; he is the last in a long line of 24 Tirthankaras, and built his teaching on the foundation laid by Parshvanatha 250 years earlier.
 
-He was born in Kundalapura, near present-day Vaishali in Bihar, to King Siddhartha and Queen Trishala (also called Priyakarini in the Shvetambara tradition). His birth is celebrated as Mahavir Jayanti — one of the most important festivals in modern Jain practice.
+He was born in Kundalapura, near present-day Vaishali in Bihar, to King Siddhartha and Queen Trishala (called Priyakāriṇī in the Digambara *Uttarapurāṇa*). His birth is celebrated as Mahavir Jayanti — one of the most important festivals in modern Jain practice.
 
-At the age of thirty, he renounced the world. He spent **twelve and a half years** in severe ascetic practice — wandering, meditating, fasting, often in conditions of extreme privation. The traditional accounts describe ordeals that test the limits of physical endurance: nights spent in hostile villages, periods of complete fasting, exposure to extreme weather, attacks by both humans and animals. Through it all, he maintained perfect equanimity (*sāmāyika*) — the central practice of his teaching.
+At the age of thirty, he renounced the world. He spent **twelve years** in severe ascetic practice — wandering, meditating, fasting, often in conditions of extreme privation. The traditional accounts describe ordeals that test the limits of physical endurance: nights spent in hostile villages, periods of complete fasting, exposure to extreme weather, attacks by both humans and animals. Through it all, he maintained perfect equanimity (*sāmāyika*) — the central practice of his teaching.
 
-At age 42, on the banks of the Rijuvaluka river, he attained **kevala-jnana** — omniscient knowledge.
+At age 42, on the banks of the Ṛjukūlā river, he attained **kevala-jnana** — omniscient knowledge.
 
 For the next 30 years, he taught. He established the four-fold *saṅgha* — monks (*sādhu*), nuns (*sādhvī* / *aryikā*), laymen (*śrāvaka*), and laywomen (*śrāvikā*). His chief disciples were the eleven *gaṇadharas*, of whom **Indrabhuti Gautama** was the foremost; the gaṇadharas organized his teaching into the canonical scriptures.
 
 He attained mokṣa at age 72, at **Pavapuri** in modern-day Bihar. The night of his liberation — *Dīpāvalī* in some traditions — is associated with the festival of lights; many Jains observe Diwali specifically as Mahavir-nirvana day.
 
-Mahavir&apos;s teaching consolidated and refined what came before. He explicitly added the fifth vow — *brahmacarya* (celibacy) — to Parshvanatha&apos;s four. He emphasized the equality of all souls and admitted women to the monastic order. His doctrines of *anekāntavāda* (multiple viewpoints) and *syādvāda* (conditional predication) became hallmarks of Jain philosophy.
+Mahavir&apos;s teaching consolidated and refined what came before. Shvetambara texts say he added a fifth vow — *brahmacarya* (celibacy) — to Parshvanatha&apos;s four; Digambaras hold that the two taught the same path. He emphasized the equality of all souls and admitted women to the monastic order. His doctrines of *anekāntavāda* (multiple viewpoints) and *syādvāda* (conditional predication) became hallmarks of Jain philosophy.
 
 For the modern world, Mahavir occupies an unusual position: a fully historical religious founder-figure (in practice, even if not in tradition) whose teachings — rigorous non-violence, careful epistemic humility, individual responsibility for liberation — are unusually compatible with secular modern thought.`,
     connections: [

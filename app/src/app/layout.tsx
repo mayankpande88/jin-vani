@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     'A reading library for Digambara Jain texts — Bhaktamara, Tattvartha, Samayasara, Chhah Dhala, and more — in Sanskrit, Hindi, and English.',
   manifest: (process.env.NEXT_PUBLIC_BASE_PATH ?? '') + '/manifest.webmanifest',
+  // Explicit icon so browsers don't fall back to /favicon.ico, which sits
+  // outside the basePath on GitHub Pages.
+  icons: { icon: (process.env.NEXT_PUBLIC_BASE_PATH ?? '') + '/icon.svg' },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',

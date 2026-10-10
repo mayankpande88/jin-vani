@@ -5,9 +5,15 @@ import { usePathname } from 'next/navigation';
 
 export function Tabbar() {
   const pathname = usePathname();
-  const is = (m: (p: string) => boolean) => m(pathname || '');
+
+  // The verse reader (/<text>/<n>) has its own sticky bottom bar with
+  // prev / bookmark / share / next; the fixed tab bar would cover it.
+  if (/^\/[^/]+\/\d+\/?$/.test(pathname || '')) return null;
 
   return (
+    <>
+    {/* In-flow spacer so the fixed bar doesn't cover the end of the page */}
+    <div className="lg:hidden" aria-hidden="true" style={{ height: 'calc(4.5rem + env(safe-area-inset-bottom))' }} />
     <nav
       className="lg:hidden fixed bottom-0 left-0 right-0 z-40 backdrop-blur-xl backdrop-saturate-150 py-2"
       style={{
@@ -19,11 +25,12 @@ export function Tabbar() {
     >
       <div className="grid grid-cols-4 max-w-[480px] mx-auto">
         <TabItem href="/" icon="⌂" label="Library" active={pathname === '/'} />
-        <TabItem href="/search" icon="⌕" label="Search" active={pathname === '/search'} />
+        <TabItem href="/search" icon="⌕" label="Search" active={pathname?.startsWith('/search') || false} />
         <TabItem href="/foundations" icon="◈" label="Foundations" active={pathname?.startsWith('/foundations') || false} />
-        <TabItem href="/me" icon="☰" label="You" active={pathname === '/me'} />
+        <TabItem href="/glossary" icon="☰" label="Glossary" active={pathname?.startsWith('/glossary') || false} />
       </div>
     </nav>
+    </>
   );
 }
 

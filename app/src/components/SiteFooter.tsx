@@ -46,6 +46,8 @@ export function SiteFooter() {
             <li><Link href="/what-is-jainism" className="text-text-2 hover:text-accent">What is Jainism?</Link></li>
             <li><Link href="/foundations" className="text-text-2 hover:text-accent">Foundations</Link></li>
             <li><Link href="/glossary" className="text-text-2 hover:text-accent">Glossary</Link></li>
+            <li><Link href="/tirthankaras" className="text-text-2 hover:text-accent">Tirthankaras</Link></li>
+            <li><Link href="/authors" className="text-text-2 hover:text-accent">Authors</Link></li>
             <li>
               <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="text-text-2 hover:text-accent">
                 Source code (GitHub) ↗
