@@ -20,4 +20,4 @@ authorCard: |
 
 The Bhaktamara Stotra is one of the most beloved devotional hymns in Jainism, composed in praise of *Bhagavan Adinath* — Rishabhanatha, the first Tirthankara — by Acharya Manatunga. Its 48 verses are recited daily across the Digambara tradition.
 
-Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja. With each verse, one chain miraculously broke; by the 48th, he was free. The four additional verses unique to this Digambara recension are traditionally associated with the breaking of the final chains.
+Tradition holds that Acharya Manatunga composed the stotra while bound in 48 chains by King Bhoja. With each verse, one chain miraculously broke; by the 48th, he was free. This library follows the Digambara recension of 48 verses. Verses 32–35, which complete the description of the eight prātihāryas, are absent from the 44-verse Shvetambara recension, so from verse 36 onward Digambara verse numbers run four ahead of Shvetambara ones.

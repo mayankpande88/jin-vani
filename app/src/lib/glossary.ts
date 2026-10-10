@@ -322,9 +322,9 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Aṣṭa-mahā-prātihārya',
     termSk: 'अष्टमहाप्रातिहार्य',
     category: 'cosmology',
-    short: 'The eight great signs that mark a Tirthankara during the samavasarana: aśoka tree, simhāsana (lion-throne), cāmara (fly-whisks), three umbrellas, golden lotuses underfoot, dundubhi (divine drum), puṣpa-vṛṣṭi (rain of flowers), bhāmaṇḍala (halo).',
+    short: 'The eight great signs that mark a Tirthankara during the samavasarana: aśoka tree, simhāsana (lion-throne), cāmara (fly-whisks), three umbrellas, dundubhi (divine drum), puṣpa-vṛṣṭi (rain of flowers), bhāmaṇḍala (halo), divya-dhvani (divine voice).',
     seeAlso: ['samavasarana', 'tirthankara'],
-    citedIn: [{ source: 'Bhaktamara Stotra v.28–32, 45–47' }],
+    citedIn: [{ source: 'Bhaktamara Stotra v.28–35' }],
   },
   {
     id: 'lanchhana',
@@ -341,7 +341,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'cosmology',
     short: 'The "divine voice" of a Tirthankara during the samavasarana — speech that arises spontaneously and is heard by every being in their own language. A unique attribute in Digambara doctrine.',
     seeAlso: ['samavasarana', 'tirthankara'],
-    citedIn: [{ source: 'Bhaktamara Stotra v.48' }],
+    citedIn: [{ source: 'Bhaktamara Stotra v.35' }],
   },
 
   // === Ethics / Vows ===

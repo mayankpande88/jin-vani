@@ -159,7 +159,7 @@ Acceptable profiles (in order of preference):
 
 **Reviewer override expected:** Reviewer (D-004) may prefer to substitute texts (e.g., add *Niyamasara* or *Pravachansara* of Kundakunda, or *Aapta Mimansa* of Samantabhadra). Reviewer rebalancing within Digambara corpus is welcomed.
 
-**Implementation note:** Bhaktamara is now **48 verses** everywhere — content production, mockups, schema, all UI labels. The verses 33-36 (or numbering as per the Digambara edition we use; verify in Sprint 2) are the additional verses absent from the Shvetambara 44-verse version.
+**Implementation note:** Bhaktamara is now **48 verses** everywhere — content production, mockups, schema, all UI labels. Verses 32-35 are the additional verses absent from the Shvetambara 44-verse version; from verse 36 on, Digambara numbering runs four ahead of Shvetambara. (Content was first drafted with these four appended as 45-48 — wrong; corrected 2026-10-10 after a reader reported it.)
 
 **Cost of reversal:** Adding/removing one text is cheap. Switching back to mixed-tradition or Shvetambara focus would supersede C-014 with full re-charter consequences.
 
